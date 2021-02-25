@@ -27,8 +27,9 @@ def get_ingred_and_instr(url):
     This function fetches html doc/content from the recipe url.
     It then uses BeautifulSoup to extract a JSON object that
     contains the recipe ingredients and instructions
-    :param url: url of recipe to fetch
-    :return: a JSON object containing the recipe ingredients and instructions
+
+    :param url: (string) url of recipe to fetch
+    :return: (dict) a dictionary containing the recipe ingredients and instructions
     '''
     fetch_response = urllib.request.urlopen(url)
 
@@ -40,7 +41,7 @@ def get_ingred_and_instr(url):
     # documentation: https://www.crummy.com/software/BeautifulSoup/bs4/doc/#navigating-the-tree
 
     recipe_json_as_tag = html_doc_parser.find_all('script')[0]
-    # extracts the json information from the HTML content,
+    # extracts the JavaScript information from the HTML content,
     # which contains the recipe ingredients and cooking directions
 
     recipe_json_as_str = (recipe_json_as_tag.contents[0].replace("\n", ""))
@@ -123,6 +124,8 @@ if __name__ == "__main__":
 
     print(len(lst_of_urls))
 
+    # a series of asserts to verify that the HTML doc format
+    # is consistent throughout the AllRecipes website
     for url in lst_of_urls:
         assert get_ingred_and_instr(url) is not None
 
