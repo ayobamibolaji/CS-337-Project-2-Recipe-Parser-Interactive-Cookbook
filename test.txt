@@ -1,0 +1,35 @@
+RecipeInfo{}
+    Ingredients[]
+        i = Ingredient{}
+            'name': ""
+            'measurement': ""
+            'quantity': ""
+            'descriptor': "" (pure adjective)
+            'preparation': "" (verb-based adjective)
+
+    Steps[]
+        i = {}
+            'text': ""
+            SubSteps[]
+                i = ""
+    
+    Methods[]
+        Method{}
+            'name':
+            'tools':
+
+    Tools[]
+        Tool{}
+            'name': ""
+            'actions': []
+
+
+Ideas for Transformations:
+OpenFoodFacts for ingredient transformations
+WikiData for Tools and Methods transformations
+Google Search for ingredient transformations
+
+Cuisine transformations:
+- Get first result from OpenFoodFacts and use that item's country
+- 
+
