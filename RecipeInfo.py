@@ -5,6 +5,7 @@ from Ingredient import Ingredient
 class RecipeInfo():
     def __init__(self, url):
         self.rcp = GetRecipe(url)
+        self.name = self.rcp['name']
 
         self.Ingredients = []
         self.Steps = []
@@ -36,3 +37,5 @@ class RecipeInfo():
     def extractTools(self, step):
         pass
         
+    def __repr__(self):
+        return f"{self.name}"

@@ -43,3 +43,10 @@ class DecomposedText():
             if token.text == str:
                 return token
 
+    def getTextFromNouns(self, str):
+        for noun in self.nouns:
+            for word in noun.text.split():
+                if str in word:
+                    return word
+        return False
+

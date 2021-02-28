@@ -8,13 +8,6 @@ from bs4 import BeautifulSoup  # for parsing the html content
 # documentation: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
 
-# These things are just for debugging/testing
-from DecomposedText import DecomposedText
-from Ingredient import Ingredient
-test_ingredients = []
-# End of debugging stuffs
-
-
 '''
 Parser Must Recognize:
     Ingredients
@@ -66,15 +59,14 @@ def GetRecipe(url):
     recipe_ingredients = recipe_json[1]["recipeIngredient"]
     # recipe_json is a list of two dictionaries
     recipe_instructions = [dict['text'] for dict in recipe_json[1]["recipeInstructions"]]
+    recipe_name = recipe_json[1]['name']
 
     recipe_info = dict()
-    # dictionary to store the ingredients and instructions
+    # dictionary to store the recipe name, ingredients and instructions
+    recipe_info["name"] = recipe_name
     recipe_info["ingredients"] = recipe_ingredients
     recipe_info["instructions"] = recipe_instructions
 
-    # This is for debugging/testing
-    for ing in recipe_ingredients:
-        test_ingredients.append(ing)
 
 
 

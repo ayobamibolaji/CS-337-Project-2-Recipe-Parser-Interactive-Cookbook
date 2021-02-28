@@ -42,6 +42,7 @@ def combineQuantity(txt):
     return ' '.join(split_txt)
 
 
+# Token helpers
 def previousToken(token):
     if token.i == 0:
         return False
@@ -54,13 +55,13 @@ def nextToken(token):
     else:
         return token.doc[token.i + 1]
 
-def precedingWords(token, pos='NOUN', restrictions=[]):
+def precedingWords(token, pos=['NOUN', 'PROPN'], restrictions=[]):
     words = ""
 
     currToken = token
     while True:
         prevToken = previousToken(currToken)
-        if prevToken and prevToken.pos_ == 'NOUN' and prevToken.text not in restrictions:
+        if prevToken and prevToken.pos_ in pos and prevToken.text not in restrictions:
             words = prevToken.text + " " + words
             currToken = prevToken
         else:
@@ -69,19 +70,27 @@ def precedingWords(token, pos='NOUN', restrictions=[]):
     return words
 
 
-def proceedingWords(token, pos='NOUN', restrictions=[]):
+def proceedingWords(token, pos=['NOUN', 'PROPN'], restrictions=[]):
     words = ""
 
     currToken = token
     while True:
         nxtToken = nextToken(currToken)
-        if nxtToken and nxtToken.pos_ == 'NOUN' and nxtToken.text not in restrictions:
+        if nxtToken and nxtToken.pos_ in pos and nxtToken.text not in restrictions:
             words = nxtToken.text + " " + words
             currToken = nxtToken
         else:
             break
 
     return words
+
+def tokenHasProperties(token, pos="", tag="", dep="", parent="", child=[]):
+    if pos and token.pos_ != pos: return False
+    if tag and token.tag_ != tag: return False
+    if dep and token.dep_ != dep: return False
+    if parent and token.parent.text != parent: return False
+    if child and child not in [child.text for child in token.children]: return False
+    return True
 
 
 def containsAnyOf(str, lst):
