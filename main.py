@@ -6,13 +6,19 @@ recipes = []
 test_ingredients = []
 
 def main():
+    '''
     for i, url in enumerate(lst_of_urls[:10]):
         print("Checked {}/{} URLs".format(i+1, len(lst_of_urls)), end='\r')
         rcp = RecipeInfo(url)
         recipes.append(rcp)
         for ing in rcp.Ingredients:
             test_ingredients.append(ing)
-    
+    '''
+    # copy & pasted the loop for testing
+    for i, url in enumerate(lst_of_urls[:10]):
+        print("Checked {}/{} URLs".format(i + 1, len(lst_of_urls)), end='\r')
+        rcp = RecipeInfo(url)
+        recipes.append(rcp)
 
 
 if __name__ == "__main__":
