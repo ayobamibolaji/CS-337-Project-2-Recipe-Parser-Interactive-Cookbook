@@ -34,7 +34,8 @@ class Ingredient():
                     break
         
         if root.pos_ != 'NOUN' and self.measurement != None:
-            if nextToken(self.doc.getToken(self.measurement)).pos_ == 'NOUN':
+            if not nextToken(self.doc.getToken(self.measurement)): pass
+            elif nextToken(self.doc.getToken(self.measurement)).pos_ == 'NOUN':
                 root = nextToken(self.doc.getToken(self.measurement))
             elif nextToken(self.doc.getToken(self.measurement)).head.pos_ == 'NOUN':
                 root = nextToken(self.doc.getToken(self.measurement)).head

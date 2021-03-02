@@ -12,8 +12,21 @@ the_replacements = {
 
 measures = [
     'tablespoon',
-    'pinch'
+    'teaspoon',
+    'pinch',
+    'quart',
+    'clove',
+    'ounce'
 ]
+
+common_ingredients = [
+    "salt",
+    "sugar",
+    "water",
+    "all-purpose flour"
+]
+
+
 
 def cleanIngredientText(txt):
     txt = ' '.join(txt.split())
@@ -85,6 +98,7 @@ def proceedingWords(token, pos=['NOUN', 'PROPN'], restrictions=[]):
     return words
 
 def tokenHasProperties(token, pos="", tag="", dep="", parent="", child=[]):
+    if not token: return False
     if pos and token.pos_ != pos: return False
     if tag and token.tag_ != tag: return False
     if dep and token.dep_ != dep: return False
@@ -100,7 +114,8 @@ def containsAnyOf(str, lst):
     return False
 
 
-lst_of_urls = ["https://www.allrecipes.com/recipe/279984/air-fryer-sweet-and-spicy-roasted-carrots/",
+lst_of_urls = ["https://www.allrecipes.com/recipe/184255/quick-savory-cranberry-glazed-pork-loin-roast/",
+               "https://www.allrecipes.com/recipe/279984/air-fryer-sweet-and-spicy-roasted-carrots/",
                "https://www.allrecipes.com/recipe/18344/cheese-and-bacon-potato-rounds/",
                "https://www.allrecipes.com/recipe/230695/cheddar-bacon-ranch-pulls/",
                "https://www.allrecipes.com/recipe/21061/bacon-and-cheddar-stuffed-mushrooms/",

@@ -33,3 +33,55 @@ Cuisine transformations:
 - Get first result from OpenFoodFacts and use that item's country
 - 
 
+
+
+Main Methods
+Dry Heat Cooking:
+    Bake
+    Grill
+    Roast
+    Sauté
+    Air Fry
+
+Mosit Heat Cooking:
+    Poach
+    Simmer
+    Boil
+    Steam
+    Fry
+    Stir Fry
+
+
+Combination Cooking:
+    Braise
+    Stew
+
+
+Ingredient properties (for transformations)
+    plant-based
+    animal-based
+    fiber
+    binder
+    lipid
+    carbohydrate
+    protein
+    mineral
+    vitamin
+
+Transformations:
+    To/From Vegetarian
+        - Find all ingredients with meat-based property
+        - Replace with ingredients with plant-based property, with similar other properties
+    To/From healthy
+        - Find all ingredients with low nutri-scores
+        - Replace with similar ingredients with higher nutri-scores
+    Style of Cuisine
+        - Find ingredients with a particular country of origin
+        - Replace with ingredients with other country of origin, say "Italy"
+    Additional Style of Cuisine
+        - Same as above
+    Double/Half the amount
+        - Self-explanatory.
+    Cooking Method
+        - Pick another cooking method from the list ^^^
+

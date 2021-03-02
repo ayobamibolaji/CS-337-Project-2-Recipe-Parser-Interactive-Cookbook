@@ -79,3 +79,6 @@ class Method():
                 # for testing
                 #info_list = [token.text, (token.dep_), (spacy.explain(token.tag_), token.tag_), (token.head)]
                 #self.methods.append(info_list)
+
+    def __repr__(self):
+        return self.methods[0]

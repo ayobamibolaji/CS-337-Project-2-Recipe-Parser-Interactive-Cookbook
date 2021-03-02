@@ -40,7 +40,11 @@ class RecipeInfo():
 
         for full_ingredient in self.rcp['ingredients']:
             # The Ingredient class in Ingredient.py does all of the extraction
-            self.Ingredients.append(Ingredient(full_ingredient))
+            try:
+                self.Ingredients.append(Ingredient(full_ingredient))
+            except:
+                print("Ingredient could not be extracted. Skipping...")
+                continue
         
         for step_text in self.rcp['instructions']:
             # formatting each instruction then updating the
@@ -60,7 +64,7 @@ class RecipeInfo():
 
     def extractMethods(self, step):
         # the Method class in Method.py does all of the extraction
-        self.Methods.append(Method(step))
+        pass#self.Methods.append(Method(step))
 
     def extractTools(self, step):
         pass
