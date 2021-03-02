@@ -77,6 +77,14 @@ class RecipeInfo():
 
     def extractTools(self, step):
         pass
+
+    def double(self):
+        for ing in self.Ingredients:
+            ing.quantity *= 2
+
+    def halve(self):
+        for ing in self.Ingredients:
+            ing.quantity = ing.quantity / 2
         
     def __repr__(self):
         return f"{self.name}"

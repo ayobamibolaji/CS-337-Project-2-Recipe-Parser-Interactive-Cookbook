@@ -35,9 +35,17 @@ if __name__ == "__main__":
         rcp = RecipeInfo(url)
         print("Got it! Please enter the integer from the list below "+
               "corresponding to a transformation to apply to the recipe." +
-              "\n1) Identity transformation (no transformation)")
+              "\n1) Identity transformation (no transformation)"+
+              "\n2) Double the quantity"
+              "\n3) Halve the quantity")
         transformation = input()
         if transformation == "1":
+            print(str(rcp))
+        elif transformation == "2":
+            rcp.double()
+            print(str(rcp))
+        elif transformation == "3":
+            rcp.halve()
             print(str(rcp))
         else:
             print("Sorry, that was an invalid option. Goodbye.")
