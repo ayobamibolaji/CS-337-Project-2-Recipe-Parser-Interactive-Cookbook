@@ -52,6 +52,10 @@ class Method():
             token_0 = decomposed_step[0]
             token_1 = decomposed_step[1]
 
+            # check for a common method: 'place'
+            if token_0.text == "Place":
+                return token_0.text
+
             if token_0.dep_ == "ROOT" or token_1.dep_ == "ROOT" and token_0.head == token_1.head:
                 if token_0.tag_ == "NN" and token_1.tag_ == "NN":
                     return token_0.text + " " + token_1.text
