@@ -1,9 +1,11 @@
+import sys
 from helpers import lst_of_urls
 from RecipeInfo import RecipeInfo
 import sys
 
 recipes = []
 test_ingredients = []
+
 
 def main():
     '''
@@ -22,7 +24,20 @@ def main():
 
 
 if __name__ == "__main__":
-    # from Ingredient import Ingredient
-    # Ingredient('2.00 ounces shredded extra-sharp white Cheddar cheese')
-    main()
-    print('\nBREAKPOINT HERE')
+    if len(sys.argv) == 0:
+        # from Ingredient import Ingredient
+        # Ingredient('2.00 ounces shredded extra-sharp white Cheddar cheese')
+        main()
+        print('\nBREAKPOINT HERE')
+    else:
+        print("Welcome. Please enter an AllRecipes url for us to parse.")
+        url = input()
+        rcp = RecipeInfo(url)
+        print("Got it! Please enter the integer from the list below "+
+              "corresponding to a transformation to apply to the recipe." +
+              "\n1) Identity transformation (no transformation)")
+        transformation = input()
+        if transformation == "1":
+            print(str(rcp))
+        else:
+            print("Sorry, that was an invalid option. Goodbye.")
