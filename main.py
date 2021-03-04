@@ -33,10 +33,10 @@ def askForTransformation():
     if transformation == "1":
         print(str(rcp))
     elif transformation == "2":
-        rcp.double()
+        rcp.transformQuantities(2)
         print(str(rcp))
     elif transformation == "3":
-        rcp.halve()
+        rcp.transformQuantities(.5)
         print(str(rcp))
     elif transformation == "4":
         rcp.healthify()
@@ -48,10 +48,8 @@ def askForTransformation():
 
 if __name__ == "__main__":
     if len(sys.argv) == 0:
-        # from Ingredient import Ingredient
-        # Ingredient('2.00 ounces shredded extra-sharp white Cheddar cheese')
+        print("hey")
         main()
-        print('\nBREAKPOINT HERE')
     elif sys.argv[1].startswith("https://www.allrecipes.com"):
         url = sys.argv[1]
         rcp = RecipeInfo(url)
