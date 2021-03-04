@@ -26,7 +26,13 @@ common_ingredients = [
     "all-purpose flour"
 ]
 
-
+colors = [
+    "white",
+    "brown",
+    "green",
+    "red",
+    "blue"
+]
 
 def cleanIngredientText(txt):
     txt = ' '.join(txt.split())

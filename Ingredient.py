@@ -47,6 +47,7 @@ class Ingredient():
                     root = child
                     break
         
+        # Get all neighboring nouns to build up ingredient name
         if root.pos_ != 'NOUN' and self.measurement != None:
             if not nextToken(self.doc.getToken(self.measurement)): pass
             elif nextToken(self.doc.getToken(self.measurement)).pos_ == 'NOUN':
@@ -54,7 +55,11 @@ class Ingredient():
             elif nextToken(self.doc.getToken(self.measurement)).head.pos_ == 'NOUN':
                 root = nextToken(self.doc.getToken(self.measurement)).head
 
-        self.name = precedingWords(root, restrictions=[self.measurement]) + root.text + proceedingWords(root)
+        # Check if ingredient name has a color in its name
+        possible_color = previousToken(root).text if previousToken(root) and previousToken(root).text in colors else ""
+
+
+        self.name = precedingWords(root, restrictions=[self.measurement]) + possible_color + root.text + proceedingWords(root)
 
 
         # Extract descriptors

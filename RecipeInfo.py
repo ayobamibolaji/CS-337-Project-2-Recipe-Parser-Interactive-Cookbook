@@ -26,6 +26,7 @@ class RecipeInfo():
         # call function that extracts all important
         # information from the recipe
         self.extractInfo()
+
     def __str__(self):
         return (
             "Name: " +
@@ -82,13 +83,16 @@ class RecipeInfo():
     def extractTools(self, step):
         pass
 
-    def double(self):
+    def transformQuantity(self, factor):
         for ing in self.Ingredients:
-            ing.quantity *= 2
+            ing.quantity *= factor
 
-    def halve(self):
+    def makeVegetarian(self):
         for ing in self.Ingredients:
-            ing.quantity = ing.quantity / 2
+            pass
+
+    def makeNonVegetarian(self):
+        pass
         
     def __repr__(self):
         return f"{self.name}"
