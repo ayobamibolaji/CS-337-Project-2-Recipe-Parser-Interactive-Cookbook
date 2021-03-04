@@ -15,8 +15,13 @@ measures = [
     'teaspoon',
     'pinch',
     'quart',
+    'liter',
+    'cup',
+    'gallon',
     'clove',
-    'ounce'
+    'ounce',
+    'serving',
+    'slice',
 ]
 
 common_ingredients = [

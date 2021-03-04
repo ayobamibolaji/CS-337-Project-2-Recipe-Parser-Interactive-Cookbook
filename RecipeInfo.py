@@ -1,6 +1,7 @@
 from fetch_recipe import GetRecipe
 from Ingredient import Ingredient
 from Method import Method
+import re
 
 '''
 Helpful documentation:
@@ -83,16 +84,33 @@ class RecipeInfo():
     def extractTools(self, step):
         pass
 
-    def transformQuantity(self, factor):
+    def transformQuantities(self, factor):
         for ing in self.Ingredients:
             ing.quantity *= factor
 
-    def makeVegetarian(self):
+    def transformIngredient(self, old, new, oldToNewRatio, condition):
+        self.name = "Modified " + self.name
         for ing in self.Ingredients:
-            pass
+            if condition(ing):
+                if isinstance(new, str):
+                    ing.name = new
+                    ing.quantity = ing.quantity * oldToNewRatio
+                else:
+                    ing.name = new.name
+                    ing.doc = new.doc
+                    ing.measurement = new.measurement
+                    ing.quantity = ing.quantity * oldToNewRatio
+                    ing.descriptors = new.descriptors
+                    ing.preparation = new.preparation
+        for idx, step in enumerate(self.Steps):
+            pattern = re.compile(old, re.IGNORECASE)
+            if isinstance(new, str):
+                self.Steps[idx] = pattern.sub(new, step)
+            else:
+                self.Steps[idx] = pattern.sub(new.name, step)
 
-    def makeNonVegetarian(self):
-        pass
+    def healthify(self):
+        self.transformIngredient("sugar", "Splenda", 0.5, (lambda ing: "sugar" in ing.name))
         
     def __repr__(self):
         return f"{self.name}"
