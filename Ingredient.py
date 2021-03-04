@@ -1,5 +1,7 @@
 from DecomposedText import DecomposedText
 from helpers import *
+from tabulate import tabulate
+
 
 class Ingredient():
     def __init__(self, str):

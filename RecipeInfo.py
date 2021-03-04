@@ -2,6 +2,7 @@ from fetch_recipe import GetRecipe
 from Ingredient import Ingredient
 from Method import Method
 import re
+from tabulate import tabulate
 
 '''
 Helpful documentation:
@@ -33,7 +34,13 @@ class RecipeInfo():
             "Name: " +
             self.name
             + "\n\nIngredients:\n" +
-            "\n".join([str(ing) for ing in self.Ingredients])
+            "\n"+
+            tabulate([[ing.quantity,
+                       ing.measurement,
+                       ing.name,
+                       ing.descriptors,
+                       ing.preparation] for ing in self.Ingredients],
+                     headers=['Quantity', "Measurement", 'Name', "Descriptors", "Preparation"])
             + "\n\nSteps:\n" +
             "\n".join([str(step) for step in self.Steps])
             + "\n\nMethods:\n" +
@@ -88,8 +95,8 @@ class RecipeInfo():
         for ing in self.Ingredients:
             ing.quantity *= factor
 
-    def transformIngredient(self, old, new, oldToNewRatio, condition):
-        self.name = "Modified " + self.name
+    def transformIngredient(self, old: str, new, oldToNewRatio, condition):
+        # see if the ingredient is in the recipe
         for ing in self.Ingredients:
             if condition(ing):
                 if isinstance(new, str):
@@ -102,6 +109,7 @@ class RecipeInfo():
                     ing.quantity = ing.quantity * oldToNewRatio
                     ing.descriptors = new.descriptors
                     ing.preparation = new.preparation
+        # regex replace the ingredient name in the steps.
         for idx, step in enumerate(self.Steps):
             pattern = re.compile(old, re.IGNORECASE)
             if isinstance(new, str):
@@ -110,6 +118,8 @@ class RecipeInfo():
                 self.Steps[idx] = pattern.sub(new.name, step)
 
     def healthify(self):
+        # mark the title as healthy
+        self.name = "Healthy " + self.name
         self.transformIngredient("sugar", "Splenda", 0.5, (lambda ing: "sugar" in ing.name))
         
     def __repr__(self):
