@@ -70,18 +70,35 @@ Ingredient properties (for transformations)
 
 Transformations:
     To/From Vegetarian
-        - Find all ingredients with meat-based property
-        - Replace with ingredients with plant-based property, with similar other properties
+        - Hard code
+
     To/From healthy
-        - Find all ingredients with low nutri-scores
-        - Replace with similar ingredients with higher nutri-scores
+        - Quantity Change
+        - Remove/Add certain ingredients
+        - Lower/higher calorie foods!
+
     Style of Cuisine
-        - Find ingredients with a particular country of origin
-        - Replace with ingredients with other country of origin, say "Italy"
+        - To Asian!
+        - Add soy sauce
+        - Replace fake meats to real meats?
+        - Change cooking method to stir fry if possible
+        - Wok 
+        - Sides to white rice
+        - Asian herbs and spices
+
     Additional Style of Cuisine
         - Same as above
+
     Double/Half the amount
         - Self-explanatory.
+
     Cooking Method
         - Pick another cooking method from the list ^^^
+
+
+
+Spices:
+?item wdt:P279 wd:Q42527 .
+
+
 

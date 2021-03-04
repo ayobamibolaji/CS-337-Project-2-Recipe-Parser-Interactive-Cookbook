@@ -79,6 +79,11 @@ def filterAndSortDictBy(a_dict, property):
 
 print('wow')
 
+# Filter/Sort examples
+# filterAndSortDictBy(ID, 'meat')
+# filterDictBy(filterAndSortDictBy(ID, 'healthy'), ['mexican'])
+# filterDictBy(filterAndSortDictBy(ID, 'healthy'), ['healthy'], ['meat'])
+
 # import time
 # start = time.time()
 
