@@ -26,6 +26,10 @@ class Method():
         self.tools = []
 
         self.getMethods()
+    def __str__(self):
+        return (
+            ",".join([method for method in self.methods])
+        )
 
     def addTool(self, tool):
         self.append(tool)

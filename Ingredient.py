@@ -12,6 +12,20 @@ class Ingredient():
         self.preparation = None
 
         self.extractProperties(self.str)
+    def __str__(self):
+        return(
+            "Name: "+
+            self.name +
+            "\tQuantity: "+
+            str(self.quantity)+
+            "\tMeasurement: "+
+            self.measurement +
+            (("\tDescriptor: "+
+            ",".join(self.descriptors)) if self.descriptors else "")
+            +
+            (("\tPreparation:"+
+            self.preparation) if self.preparation else "")
+        )
 
     def extractProperties(self, str):
         # Extract quantity
