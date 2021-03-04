@@ -125,6 +125,9 @@ class RecipeInfo():
         self.name = "Healthy " + self.name
         self.transformIngredient("sugar", "Splenda", 0.5, (lambda ing: "sugar" in ing.name))
 
+    def unHealthify(self):
+        self.transformIngredient("sugar", "sugar", 1.5, (lambda ing: "sugar" in ing.name))
+
 
 
         

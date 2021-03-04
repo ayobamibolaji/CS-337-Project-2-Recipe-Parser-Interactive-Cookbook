@@ -28,21 +28,24 @@ def askForTransformation():
           "\n1) Identity transformation (no transformation)" +
           "\n2) Double the quantity"
           "\n3) Halve the quantity"
-          "\n4) Make it healthier")
+          "\n4) Make it healthier"
+          "\n5) Make it less healthy")
     transformation = input()
     if transformation == "1":
-        print(str(rcp))
+        pass
     elif transformation == "2":
         rcp.double()
-        print(str(rcp))
     elif transformation == "3":
         rcp.halve()
-        print(str(rcp))
     elif transformation == "4":
         rcp.healthify()
-        print(str(rcp))
+    elif transformation == "5":
+        rcp.unHealthify()
+
     else:
         print("Sorry, that was an invalid option. Goodbye.")
+        return
+    print(str(rcp))
 
 
 
