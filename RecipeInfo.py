@@ -88,6 +88,7 @@ class RecipeInfo():
             ing.quantity = ing.quantity / 2
 
     def transformIngredient(self, old, new, oldToNewRatio, condition):
+        self.name = "Modified " + self.name
         for ing in self.Ingredients:
             if condition(ing):
                 if isinstance(new, str):
@@ -103,7 +104,6 @@ class RecipeInfo():
         for idx, step in enumerate(self.Steps):
             pattern = re.compile(old, re.IGNORECASE)
             if isinstance(new, str):
-
                 self.Steps[idx] = pattern.sub(new, step)
             else:
                 self.Steps[idx] = pattern.sub(new.name, step)
