@@ -20,8 +20,8 @@ class Ingredient():
             str(self.quantity)+
             "\tMeasurement: "+
             self.measurement +
-            (("\tDescriptor: "+
-            ",".join(self.descriptors)) if self.descriptors else "")
+            (("\tDescriptors: "+
+            self.descriptors) if self.descriptors else "")
             +
             (("\tPreparation:"+
             self.preparation) if self.preparation else "")
