@@ -37,7 +37,8 @@ if __name__ == "__main__":
               "corresponding to a transformation to apply to the recipe." +
               "\n1) Identity transformation (no transformation)"+
               "\n2) Double the quantity"
-              "\n3) Halve the quantity")
+              "\n3) Halve the quantity"
+              "\n4) Make it healthier")
         transformation = input()
         if transformation == "1":
             print(str(rcp))
@@ -46,6 +47,9 @@ if __name__ == "__main__":
             print(str(rcp))
         elif transformation == "3":
             rcp.halve()
+            print(str(rcp))
+        elif transformation == "4":
+            rcp.healthify()
             print(str(rcp))
         else:
             print("Sorry, that was an invalid option. Goodbye.")
