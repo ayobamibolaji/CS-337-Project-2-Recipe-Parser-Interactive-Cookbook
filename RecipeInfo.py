@@ -26,6 +26,19 @@ class RecipeInfo():
         # call function that extracts all important
         # information from the recipe
         self.extractInfo()
+    def __str__(self):
+        return (
+            "Name: " +
+            self.name
+            + "\n\nIngredients:\n" +
+            "\n".join([str(ing) for ing in self.Ingredients])
+            + "\n\nSteps:\n" +
+            "\n".join([str(step) for step in self.Steps])
+            + "\n\nMethods:\n" +
+            ", ".join([str(method) for method in self.Methods])
+            + "\n\nTools:\n" +
+            ", ".join([str(tool) for tool in self.Tools])
+        )
 
     def extractInfo(self):
         '''
@@ -64,6 +77,14 @@ class RecipeInfo():
 
     def extractTools(self, step):
         pass
+
+    def double(self):
+        for ing in self.Ingredients:
+            ing.quantity *= 2
+
+    def halve(self):
+        for ing in self.Ingredients:
+            ing.quantity = ing.quantity / 2
         
     def __repr__(self):
         return f"{self.name}"
