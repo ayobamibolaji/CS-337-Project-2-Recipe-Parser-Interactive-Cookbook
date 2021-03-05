@@ -34,7 +34,7 @@ def askForTransformation():
           "\n7) Make it un-vegetarian")
     transformation = input()
     if transformation == "1":
-        pass
+        print(str(rcp))
     elif transformation == "2":
         rcp.transformQuantities(2)
         print(str(rcp))
@@ -67,6 +67,7 @@ if __name__ == "__main__":
         url = sys.argv[1]
         rcp = RecipeInfo(url)
         print("We received your recipe!")
+        print(str(rcp))
         while True:
             askForTransformation()
     else:
@@ -74,5 +75,6 @@ if __name__ == "__main__":
         url = input()
         rcp = RecipeInfo(url)
         print("Got it!")
+        print(str(rcp))
         while True:
             askForTransformation()
