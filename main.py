@@ -28,7 +28,9 @@ def askForTransformation():
           "\n1) Identity transformation (no transformation)" +
           "\n2) Double the quantity"
           "\n3) Halve the quantity"
-          "\n4) Make it healthier")
+          "\n4) Make it healthier"
+          "\n5) Make it vegetarian"
+          "\n6) Make it un-vegetarian")
     transformation = input()
     if transformation == "1":
         print(str(rcp))
@@ -41,23 +43,32 @@ def askForTransformation():
     elif transformation == "4":
         rcp.healthify()
         print(str(rcp))
+    elif transformation == "5":
+        rcp.makeVegetarian()
+        print(str(rcp))
+    elif transformation == "6":
+        rcp.makeUnVegetarian()
+        print(str(rcp))
     else:
         print("Sorry, that was an invalid option. Goodbye.")
+        quit()
 
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 0:
+    if len(sys.argv) <= 1:
         print("hey")
         main()
     elif sys.argv[1].startswith("https://www.allrecipes.com"):
         url = sys.argv[1]
         rcp = RecipeInfo(url)
         print("We received your recipe!")
-        askForTransformation()
+        while True:
+            askForTransformation()
     else:
         print("Welcome. Please enter an AllRecipes url for us to parse.")
         url = input()
         rcp = RecipeInfo(url)
         print("Got it!")
-        askForTransformation()
+        while True:
+            askForTransformation()

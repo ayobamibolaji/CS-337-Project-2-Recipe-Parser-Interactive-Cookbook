@@ -1,6 +1,7 @@
 from fetch_recipe import GetRecipe
 from Ingredient import Ingredient
 from Method import Method
+from helpers import MEAT_SUBSTITUTES, VEGGIE_SUBSTITUTES
 import re
 from tabulate import tabulate
 
@@ -118,9 +119,24 @@ class RecipeInfo():
                 self.Steps[idx] = pattern.sub(new.name, step)
 
     def healthify(self):
-        # mark the title as healthy
+        # Mark the title as healthy
         self.name = "Healthy " + self.name
         self.transformIngredient("sugar", "Splenda", 0.5, (lambda ing: "sugar" in ing.name))
+
+    def makeVegetarian(self):
+        # Mark the title as vegetarian
+        self.name = "Vegetarian " + self.name
+        for meat_ing, meat_alt in MEAT_SUBSTITUTES.items():
+            self.transformIngredient(meat_ing, meat_alt, 1, (lambda ing: meat_ing in ing.name))
+
+    def makeUnVegetarian(self):
+        self.name = "Un-Vegetarian " + self.name
+        for veggie_ing, veggie_alt in VEGGIE_SUBSTITUTES.items():
+            self.transformIngredient(veggie_ing, veggie_alt, 1, (lambda ing: veggie_ing in ing.name))
+        
+        # Maybe add a conditional for this next step lol
+        self.Ingredients.append(Ingredient(".5 cups bacon strips"))
+        self.Steps.append("Sprinkle bacon strips on top of final dish.")
         
     def __repr__(self):
         return f"{self.name}"

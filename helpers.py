@@ -39,6 +39,78 @@ colors = [
     "blue"
 ]
 
+MEAT_SUBSTITUTES = {
+    'beef broth': 'mushroom broth',
+    'chicken broth': 'vegetable broth',
+    'beef': 'jackfruit',
+    'chicken': 'seitan',
+    'pork': 'seitan',
+    'ground beef': 'tempeh',
+    'bacon': 'tempeh',
+    'sirloin': 'jackfruit',
+    'liver': 'tofu',
+    'veal': 'jackfruit',
+    'lamb': 'jackfruit',
+    'duck': 'seitan',
+    'poultry': 'seitan',
+    'steak': 'jackfruit',
+    'loin': 'jackfruit',
+    'oyster': 'mushrooms',
+    'salmon': 'mushrooms',
+    'fillet': 'tofu',
+    'shrimp': 'mushrooms',
+    'crab': 'tofu',
+    'tuna': 'tofu',
+    'scallop': 'mushrooms',
+    'lobster': 'tofu',
+    'fish': 'tofu',
+    'cod': 'tofu',
+    'escargot': 'tofu',
+    'goat': 'seitan',
+    'mutton': 'seitan',
+    'sausage': 'beyond sausage',
+    'frog': 'tofu',
+    'toad': 'tofu',
+    'meat': 'tofu',
+    'hamburger': 'veggie burger',
+    'french fries': 'salad'
+}
+
+VEGGIE_SUBSTITUTES = {
+    'tofu': 'pork',
+    'mushroom broth': 'beef broth',
+    'vegetable broth': 'chicken broth',
+    'seitan': 'chicken',
+    'mushroom': 'salmon',
+    'jackfruit': 'beef',
+    'tempeh': 'ground beef',
+    'butter': 'lard',
+    'veggie burger': 'hamburger'
+}
+
+UNHEALTHY_SUBTITUTES = {
+    'sugar': ('Splenda', .5),
+    'chicken': ('skinless chicken', 1),
+    'butter': ('avocado', .8),
+    'rice': ('quinoa', .9),
+    'noodles': ('zoodles', 1),
+    'sour cream': ('Greek yogurt', 1),
+    'all-purpose flour': ('whole wheat flour', 1),
+    'flour tortilla': ('corn tortilla', 1)
+}
+
+HEALTHY_SUBTITUTES = {
+    'Splenda': 'sugar',
+    'skinless chicken': 'chicken',
+    'artificial sweetener': 'sugar',
+    'quinoa': 'white rice',
+    'zoodles': 'noodles',
+    'whole wheat flour': 'all-purpose flour'
+    'corn tortilla': 'flour tortilla'
+
+}
+
+
 def cleanIngredientText(txt):
     txt = ' '.join(txt.split())
     for str, rep in the_replacements.items():
