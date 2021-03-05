@@ -1,12 +1,12 @@
-#CS 337 Project 2: Recipe Parser and Transformer
-##Installation:
+# CS 337 Project 2: Recipe Parser and Transformer
+## Installation:
 ```
 pip install -U pip setuptools wheel
 pip install -U spacy
 python -m spacy download en_core_web_sm
 pip install -r requirements.txt
 ```
-##Run code:
+## Run code:
 ```
 python main.py custom
 ```
