@@ -3,6 +3,7 @@ from Ingredient import Ingredient
 from Method import Method
 import re
 from tabulate import tabulate
+from helpers import fats
 
 '''
 Helpful documentation:
@@ -107,23 +108,50 @@ class RecipeInfo():
                     ing.quantity = ing.quantity * oldToNewRatio
                 else:
                     ing.name = new.name
-                    ing.doc = new.doc
-                    ing.measurement = new.measurement
-                    ing.quantity = ing.quantity * oldToNewRatio
+                    ing.measurement = new.measurement if new.measurement else ing.measurement
+                    if ing.quantity is not None:
+                        ing.quantity = ing.quantity * oldToNewRatio
                     ing.descriptors = new.descriptors
                     ing.preparation = new.preparation
-        # regex replace the ingredient name in the steps.
-        for idx, step in enumerate(self.Steps):
-            pattern = re.compile(old, re.IGNORECASE)
-            if isinstance(new, str):
-                self.Steps[idx] = pattern.sub(new, step)
-            else:
-                self.Steps[idx] = pattern.sub(new.name, step)
+                # regex replace the ingredient name in the steps.
+                for idx, step in enumerate(self.Steps):
+                    pattern = re.compile(old, re.IGNORECASE)
+                    if isinstance(new, str):
+                        self.Steps[idx] = pattern.sub(new, step)
+                    else:
+                        self.Steps[idx] = pattern.sub(new.name, step)
 
     def healthify(self):
         # mark the title as healthy
         self.name = "Healthy " + self.name
-        self.transformIngredient("sugar", "Splenda", 0.5, (lambda ing: "sugar" in ing.name))
+        self.transformIngredient("sugar", "Splenda", 0.5,
+                                 (lambda ing: "sugar" in ing.name and "brown" not in ing.descriptors))
+
+        self.transformIngredient("sugar",  Ingredient(name="Splenda Blend", descriptors="Brown Sugar"), 0.5,
+                                 (lambda ing: "sugar" in ing.name and "brown" in ing.descriptors))
+        self.transformIngredient("flour", Ingredient(name="flour",descriptors="whole wheat"), 1,
+                                 (lambda ing: "flour" in ing.name))
+        for fat in fats:
+            self.transformIngredient(fat, Ingredient(name="oil", descriptors="olive"), 0.5,
+                                     (lambda ing: fat in ing.name and "foil" not in ing.name))
+        self.transformIngredient("chicken", Ingredient(name="chicken", descriptors="skinless"), 1,
+                                 (lambda ing: "chicken" in ing.name))
+        self.transformIngredient("rice", Ingredient(name="cauliflower", preparation="riced"), 1,
+                                 (lambda ing: "rice" in ing.name and "white" in ing.descriptors))
+        self.transformIngredient("noodles", "zoodles", 1, (lambda ing: "noodles" in ing.name))
+        self.transformIngredient("beef", Ingredient(name="ground turkey"), 1, (lambda ing: "ground beef" in ing.name))
+        self.transformIngredient("potato", Ingredient(name="sweet potato"), 1,
+                                 (lambda ing: "potato" in ing.name and "sweet" not in ing.name))
+        self.transformIngredient("yogurt", Ingredient(name="Greek yogurt"), 1,
+                                 (lambda ing: "yogurt" in ing.name and "Greek" not in ing.name))
+        self.transformIngredient("bacon", Ingredient(name="turkey bacon"), 1,
+                                 (lambda ing: "bacon" in ing.name and "turkey" not in ing.name))
+        self.transformIngredient("milk chocolate", Ingredient(name="dark chocolate"), 1,
+                                 (lambda ing: "milk chocolate" in ing.name))
+        self.transformIngredient("milk", Ingredient(name="milk", descriptors="skim"), 1,
+                                 (lambda ing: "milk" in ing.name and "milk chocolate" not in ing.name))
+
+
 
     def unHealthify(self):
         self.transformIngredient("sugar", "sugar", 1.5, (lambda ing: "sugar" in ing.name))

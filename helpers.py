@@ -15,6 +15,14 @@ measures = [
     'pinch'
 ]
 
+fats = [
+    "butter",
+    "margarine",
+    "shortening",
+    "oil",
+    "lard"
+]
+
 def cleanIngredientText(txt):
     txt = ' '.join(txt.split())
     for str, rep in the_replacements.items():
@@ -149,4 +157,5 @@ lst_of_urls = ["https://www.allrecipes.com/recipe/279984/air-fryer-sweet-and-spi
                "https://www.allrecipes.com/recipe/261394/instant-pot-mashed-potatoes/",
                "https://www.allrecipes.com/recipe/269144/instant-pot-sweet-potato-casserole/",
                "https://www.allrecipes.com/recipe/279426/instant-pot-bangers-and-mash/",
-               "https://www.allrecipes.com/recipe/280718/instant-pot-broccolini-and-potato-salad/"]
+               "https://www.allrecipes.com/recipe/280718/instant-pot-broccolini-and-potato-salad/",
+               "https://www.allrecipes.com/recipe/16354/easy-meatloaf/"]

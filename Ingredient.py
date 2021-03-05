@@ -4,16 +4,24 @@ from tabulate import tabulate
 
 
 class Ingredient():
-    def __init__(self, str):
-        self.str = cleanIngredientText(str)
-        self.name = ""
-        self.doc = DecomposedText(self.str)
-        self.measurement = None
-        self.quantity = None
-        self.descriptors = None
-        self.preparation = None
+    def __init__(self, str="", name="", measurement=None, quantity=None, descriptors=None, preparation=None):
+        if str is not "":
+            self.str = cleanIngredientText(str)
+            self.name = ""
+            self.doc = DecomposedText(self.str)
+            self.measurement = None
+            self.quantity = None
+            self.descriptors = None
+            self.preparation = None
+            self.extractProperties(self.str)
+        else:
+            self.name = name
+            self.measurement = measurement
+            self.quantity = quantity
+            self.descriptors = descriptors
+            self.preparation = preparation
 
-        self.extractProperties(self.str)
+
     def __str__(self):
         return(
             "Name: "+

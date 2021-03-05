@@ -55,7 +55,7 @@ if __name__ == "__main__":
         # Ingredient('2.00 ounces shredded extra-sharp white Cheddar cheese')
         main()
         print('\nBREAKPOINT HERE')
-    elif sys.argv[1].startswith("https://www.allrecipes.com"):
+    elif len(sys.argv) > 0 and sys.argv[1].startswith("https://www.allrecipes.com"):
         url = sys.argv[1]
         rcp = RecipeInfo(url)
         print("We received your recipe!")
