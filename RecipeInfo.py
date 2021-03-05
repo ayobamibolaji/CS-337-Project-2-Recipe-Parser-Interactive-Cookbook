@@ -1,6 +1,7 @@
 from fetch_recipe import GetRecipe
 from Ingredient import Ingredient
 from Method import Method
+from helpers import MEAT_SUBSTITUTES, VEGGIE_SUBSTITUTES, HEALTHY_SUBSTITUTES, UNHEALTHY_SUBSTITUTES
 import re
 from tabulate import tabulate
 from helpers import fats
@@ -29,6 +30,7 @@ class RecipeInfo():
         # call function that extracts all important
         # information from the recipe
         self.extractInfo()
+
     def __str__(self):
         return (
             "Name: " +
@@ -62,7 +64,11 @@ class RecipeInfo():
 
         for full_ingredient in self.rcp['ingredients']:
             # The Ingredient class in Ingredient.py does all of the extraction
-            self.Ingredients.append(Ingredient(full_ingredient))
+            try:
+                self.Ingredients.append(Ingredient(full_ingredient))
+            except:
+                print("Ingredient could not be extracted. Skipping...")
+                continue
         
         for step_text in self.rcp['instructions']:
             # formatting each instruction then updating the
@@ -82,22 +88,14 @@ class RecipeInfo():
 
     def extractMethods(self, step):
         # the Method class in Method.py does all of the extraction
-        self.Methods.append(Method(step))
+        if Method(step).methods: self.Methods.append(Method(step))
 
     def extractTools(self, step):
         pass
 
-    def double(self):
-        self.name = self.name + " (double recipe)"
+    def transformQuantities(self, factor):
         for ing in self.Ingredients:
-            if ing.quantity is not None:
-                ing.quantity = ing.quantity * 2
-
-    def halve(self):
-        self.name = self.name + " (half recipe)"
-        for ing in self.Ingredients:
-            if ing.quantity is not None:
-                ing.quantity = ing.quantity / 2
+            if ing.quantity != None: ing.quantity *= factor
 
     def transformIngredient(self, old: str, new, oldToNewRatio, condition):
         # see if the ingredient is in the recipe
@@ -122,15 +120,13 @@ class RecipeInfo():
                         self.Steps[idx] = pattern.sub(new.name, step)
 
     def healthify(self):
-        # mark the title as healthy
+        # Mark the title as healthy
         self.name = "Healthy " + self.name
         self.transformIngredient("sugar", "Splenda", 0.5,
                                  (lambda ing: "sugar" in ing.name and "brown" not in ing.descriptors))
 
         self.transformIngredient("sugar",  Ingredient(name="Splenda Blend", descriptors="Brown Sugar"), 0.5,
                                  (lambda ing: "sugar" in ing.name and "brown" in ing.descriptors))
-        self.transformIngredient("flour", Ingredient(name="flour",descriptors="whole wheat"), 1,
-                                 (lambda ing: "flour" in ing.name))
         for fat in fats:
             self.transformIngredient(fat, Ingredient(name="oil", descriptors="olive"), 0.5,
                                      (lambda ing: fat in ing.name and "foil" not in ing.name))
@@ -138,7 +134,6 @@ class RecipeInfo():
                                  (lambda ing: "chicken" in ing.name))
         self.transformIngredient("rice", Ingredient(name="cauliflower", preparation="riced"), 1,
                                  (lambda ing: "rice" in ing.name and "white" in ing.descriptors))
-        self.transformIngredient("noodles", "zoodles", 1, (lambda ing: "noodles" in ing.name))
         self.transformIngredient("beef", Ingredient(name="ground turkey"), 1, (lambda ing: "ground beef" in ing.name))
         self.transformIngredient("potato", Ingredient(name="sweet potato"), 1,
                                  (lambda ing: "potato" in ing.name and "sweet" not in ing.name))
@@ -151,13 +146,39 @@ class RecipeInfo():
         self.transformIngredient("milk", Ingredient(name="milk", descriptors="skim"), 1,
                                  (lambda ing: "milk" in ing.name and "milk chocolate" not in ing.name))
 
-
+        for unhealthy_ing, healthy_alt in UNHEALTHY_SUBSTITUTES.items():
+            self.transformIngredient(unhealthy_ing, healthy_alt[0], healthy_alt[1], (lambda ing: unhealthy_ing in ing.name))
+        
+        self.transformQuantities(.8)
 
     def unHealthify(self):
-        self.transformIngredient("sugar", "sugar", 1.5, (lambda ing: "sugar" in ing.name))
+        # Mark the title as unhealthy
+        self.name = "Unhealthy " + self.name
+        for healthy_ing, unhealthy_alt in HEALTHY_SUBSTITUTES.items():
+            self.transformIngredient(healthy_ing, unhealthy_alt[0], unhealthy_alt[1], (lambda ing: healthy_ing in ing.name))
 
+        self.transformQuantities(1.3)
 
+        # Maybe add a conditional for this next step lol
+        if 'Coca Cola' not in [ing.name for ing in self.Ingredients]: 
+            self.Ingredients.append(Ingredient("1 can Coca Cola"))
+            self.Steps.append("Enjoy the meal alongside an ice cold Coca Cola.")
 
+    def makeVegetarian(self):
+        # Mark the title as vegetarian
+        self.name = "Vegetarian " + self.name
+        for meat_ing, meat_alt in MEAT_SUBSTITUTES.items():
+            self.transformIngredient(meat_ing, meat_alt, 1, (lambda ing: meat_ing in ing.name))
+
+    def makeUnVegetarian(self):
+        self.name = "Un-Vegetarian " + self.name
+        for veggie_ing, veggie_alt in VEGGIE_SUBSTITUTES.items():
+            self.transformIngredient(veggie_ing, veggie_alt, 1, (lambda ing: veggie_ing in ing.name))
+        
+        # Maybe add a conditional for this next step lol
+        if 'bacon' not in [ing.name for ing in self.Ingredients]:
+            self.Ingredients.append(Ingredient(".5 cups bacon strips"))
+            self.Steps.append("Sprinkle bacon strips on top of final dish.")
         
     def __repr__(self):
         return f"{self.name}"

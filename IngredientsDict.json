@@ -1,0 +1,5954 @@
+{
+    "ground pork": {
+        "tally": 18,
+        "asian": 5,
+        "italian": 4,
+        "meat": 8,
+        "mexican": 1
+    },
+    "garlic": {
+        "tally": 548,
+        "asian": 96,
+        "italian": 95,
+        "vegetarian": 78,
+        "seafood": 66,
+        "meat": 76,
+        "healthy": 62,
+        "mexican": 75
+    },
+    "onions": {
+        "tally": 137,
+        "asian": 44,
+        "italian": 8,
+        "vegetarian": 17,
+        "seafood": 27,
+        "meat": 13,
+        "healthy": 9,
+        "mexican": 19
+    },
+    "ginger": {
+        "tally": 43,
+        "asian": 29,
+        "vegetarian": 5,
+        "seafood": 1,
+        "meat": 4,
+        "healthy": 3,
+        "mexican": 1
+    },
+    "soy sauce": {
+        "tally": 157,
+        "asian": 96,
+        "vegetarian": 7,
+        "seafood": 13,
+        "meat": 26,
+        "healthy": 10,
+        "mexican": 5
+    },
+    "sesame oil": {
+        "tally": 45,
+        "asian": 33,
+        "vegetarian": 1,
+        "seafood": 4,
+        "meat": 5,
+        "mexican": 2
+    },
+    "cayenne pepper": {
+        "tally": 106,
+        "asian": 22,
+        "italian": 7,
+        "vegetarian": 10,
+        "seafood": 17,
+        "meat": 21,
+        "healthy": 11,
+        "mexican": 18
+    },
+    "cabbage": {
+        "tally": 23,
+        "asian": 9,
+        "vegetarian": 4,
+        "seafood": 1,
+        "meat": 4,
+        "healthy": 3,
+        "mexican": 2
+    },
+    "purpose flour": {
+        "tally": 190,
+        "asian": 18,
+        "italian": 36,
+        "vegetarian": 35,
+        "seafood": 26,
+        "meat": 41,
+        "healthy": 5,
+        "mexican": 29
+    },
+    "salt": {
+        "tally": 832,
+        "asian": 106,
+        "italian": 127,
+        "vegetarian": 143,
+        "seafood": 112,
+        "meat": 131,
+        "healthy": 94,
+        "mexican": 119
+    },
+    "water": {
+        "tally": 345,
+        "asian": 85,
+        "italian": 48,
+        "vegetarian": 36,
+        "seafood": 24,
+        "meat": 61,
+        "healthy": 40,
+        "mexican": 51
+    },
+    "rice vinegar": {
+        "tally": 38,
+        "asian": 29,
+        "vegetarian": 3,
+        "seafood": 2,
+        "meat": 2,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "vegetable oil": {
+        "tally": 203,
+        "asian": 71,
+        "italian": 12,
+        "vegetarian": 23,
+        "seafood": 22,
+        "meat": 31,
+        "healthy": 17,
+        "mexican": 27
+    },
+    "ghee": {
+        "tally": 2,
+        "asian": 2
+    },
+    "onion": {
+        "tally": 514,
+        "asian": 75,
+        "italian": 64,
+        "vegetarian": 71,
+        "seafood": 43,
+        "meat": 91,
+        "healthy": 66,
+        "mexican": 104
+    },
+    "ground cumin": {
+        "tally": 123,
+        "asian": 18,
+        "italian": 1,
+        "vegetarian": 19,
+        "seafood": 3,
+        "meat": 12,
+        "healthy": 12,
+        "mexican": 58
+    },
+    "ground ginger": {
+        "tally": 28,
+        "asian": 21,
+        "seafood": 1,
+        "meat": 2,
+        "healthy": 3,
+        "mexican": 1
+    },
+    "ground cinnamon": {
+        "tally": 34,
+        "asian": 7,
+        "italian": 2,
+        "vegetarian": 7,
+        "healthy": 6,
+        "mexican": 12
+    },
+    "ground turmeric": {
+        "tally": 20,
+        "asian": 15,
+        "vegetarian": 3,
+        "meat": 1,
+        "healthy": 1
+    },
+    "ounce": {
+        "tally": 119,
+        "asian": 11,
+        "italian": 35,
+        "vegetarian": 16,
+        "seafood": 5,
+        "meat": 21,
+        "healthy": 13,
+        "mexican": 18
+    },
+    "whipping cream": {
+        "tally": 22,
+        "asian": 3,
+        "italian": 6,
+        "vegetarian": 3,
+        "seafood": 3,
+        "meat": 3,
+        "mexican": 4
+    },
+    "paprika": {
+        "tally": 93,
+        "asian": 11,
+        "italian": 2,
+        "vegetarian": 12,
+        "seafood": 23,
+        "meat": 25,
+        "healthy": 9,
+        "mexican": 11
+    },
+    "sugar": {
+        "tally": 308,
+        "asian": 110,
+        "italian": 46,
+        "vegetarian": 42,
+        "seafood": 10,
+        "meat": 30,
+        "healthy": 41,
+        "mexican": 29
+    },
+    "skinless": {
+        "tally": 62,
+        "asian": 21,
+        "italian": 6,
+        "seafood": 2,
+        "meat": 13,
+        "healthy": 4,
+        "mexican": 16
+    },
+    "curry powder": {
+        "tally": 17,
+        "asian": 11,
+        "vegetarian": 3,
+        "seafood": 2,
+        "meat": 1
+    },
+    "chives": {
+        "tally": 7,
+        "asian": 4,
+        "italian": 1,
+        "vegetarian": 1,
+        "seafood": 1
+    },
+    "sesame seeds": {
+        "tally": 24,
+        "asian": 15,
+        "vegetarian": 2,
+        "seafood": 2,
+        "meat": 4,
+        "healthy": 1
+    },
+    "garlic sauce": {
+        "tally": 3,
+        "asian": 1,
+        "vegetarian": 1,
+        "seafood": 1
+    },
+    "egg": {
+        "tally": 95,
+        "asian": 14,
+        "italian": 22,
+        "vegetarian": 15,
+        "seafood": 16,
+        "meat": 16,
+        "healthy": 7,
+        "mexican": 5
+    },
+    "wrappers": {
+        "tally": 4,
+        "asian": 3,
+        "healthy": 1
+    },
+    "oil": {
+        "tally": 355,
+        "asian": 33,
+        "italian": 82,
+        "vegetarian": 64,
+        "seafood": 46,
+        "meat": 41,
+        "healthy": 48,
+        "mexican": 41
+    },
+    "bay leaf": {
+        "tally": 28,
+        "asian": 3,
+        "italian": 3,
+        "vegetarian": 3,
+        "seafood": 4,
+        "meat": 7,
+        "healthy": 7,
+        "mexican": 1
+    },
+    "ginger root": {
+        "tally": 48,
+        "asian": 35,
+        "vegetarian": 3,
+        "seafood": 2,
+        "meat": 2,
+        "healthy": 4,
+        "mexican": 2
+    },
+    "cut": {
+        "tally": 15,
+        "asian": 6,
+        "italian": 3,
+        "meat": 3,
+        "healthy": 3
+    },
+    "tomato paste": {
+        "tally": 15,
+        "asian": 4,
+        "italian": 2,
+        "vegetarian": 2,
+        "seafood": 1,
+        "meat": 3,
+        "healthy": 2,
+        "mexican": 1
+    },
+    "yogurt": {
+        "tally": 17,
+        "asian": 8,
+        "vegetarian": 2,
+        "seafood": 1,
+        "meat": 1,
+        "healthy": 3,
+        "mexican": 2
+    },
+    "coconut milk": {
+        "tally": 8,
+        "asian": 5,
+        "vegetarian": 3
+    },
+    "lemon": {
+        "tally": 61,
+        "asian": 5,
+        "italian": 7,
+        "vegetarian": 2,
+        "seafood": 29,
+        "meat": 7,
+        "healthy": 10,
+        "mexican": 1
+    },
+    "pork butt": {
+        "tally": 3,
+        "asian": 2,
+        "mexican": 1
+    },
+    "white": {
+        "tally": 6,
+        "asian": 3,
+        "italian": 2,
+        "seafood": 1
+    },
+    "cornstarch": {
+        "tally": 63,
+        "asian": 32,
+        "italian": 2,
+        "vegetarian": 4,
+        "seafood": 6,
+        "meat": 8,
+        "healthy": 8,
+        "mexican": 3
+    },
+    "stalks celery": {
+        "tally": 27,
+        "asian": 5,
+        "italian": 2,
+        "vegetarian": 7,
+        "seafood": 1,
+        "meat": 7,
+        "healthy": 5
+    },
+    "bell pepper": {
+        "tally": 123,
+        "asian": 22,
+        "italian": 10,
+        "vegetarian": 27,
+        "seafood": 10,
+        "meat": 21,
+        "healthy": 16,
+        "mexican": 17
+    },
+    "medium onion": {
+        "tally": 13,
+        "asian": 2,
+        "vegetarian": 2,
+        "meat": 1,
+        "healthy": 2,
+        "mexican": 6
+    },
+    "apple cider vinegar": {
+        "tally": 5,
+        "asian": 1,
+        "vegetarian": 2,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "ketchup": {
+        "tally": 33,
+        "asian": 9,
+        "vegetarian": 4,
+        "seafood": 2,
+        "meat": 12,
+        "healthy": 5,
+        "mexican": 1
+    },
+    "chunks": {
+        "tally": 3,
+        "asian": 2,
+        "healthy": 1
+    },
+    "butter": {
+        "tally": 276,
+        "asian": 18,
+        "italian": 46,
+        "vegetarian": 45,
+        "seafood": 93,
+        "meat": 39,
+        "healthy": 10,
+        "mexican": 25
+    },
+    "cream": {
+        "tally": 126,
+        "asian": 7,
+        "italian": 19,
+        "vegetarian": 17,
+        "seafood": 10,
+        "meat": 26,
+        "healthy": 4,
+        "mexican": 43
+    },
+    "garam masala": {
+        "tally": 19,
+        "asian": 15,
+        "vegetarian": 2,
+        "meat": 1,
+        "healthy": 1
+    },
+    "tandoori masala": {
+        "tally": 2,
+        "asian": 2
+    },
+    "boneless": {
+        "tally": 13,
+        "asian": 7,
+        "italian": 1,
+        "meat": 2,
+        "mexican": 3
+    },
+    "pepper": {
+        "tally": 408,
+        "asian": 45,
+        "italian": 61,
+        "vegetarian": 59,
+        "seafood": 62,
+        "meat": 85,
+        "healthy": 45,
+        "mexican": 51
+    },
+    "chilies": {
+        "tally": 8,
+        "asian": 1,
+        "meat": 2,
+        "mexican": 5
+    },
+    "strip orange": {
+        "tally": 1,
+        "asian": 1
+    },
+    "chicken broth": {
+        "tally": 80,
+        "asian": 16,
+        "italian": 12,
+        "seafood": 8,
+        "meat": 17,
+        "healthy": 6,
+        "mexican": 21
+    },
+    "peanut oil": {
+        "tally": 15,
+        "asian": 9,
+        "vegetarian": 2,
+        "seafood": 1,
+        "meat": 3
+    },
+    "sodium soy sauce": {
+        "tally": 11,
+        "asian": 9,
+        "meat": 2
+    },
+    "pepper flakes": {
+        "tally": 96,
+        "asian": 18,
+        "italian": 26,
+        "vegetarian": 11,
+        "seafood": 10,
+        "meat": 13,
+        "healthy": 10,
+        "mexican": 8
+    },
+    "garlic clove": {
+        "tally": 3,
+        "asian": 2,
+        "meat": 1
+    },
+    "mushrooms": {
+        "tally": 54,
+        "asian": 4,
+        "italian": 17,
+        "vegetarian": 10,
+        "seafood": 10,
+        "meat": 8,
+        "healthy": 4,
+        "mexican": 1
+    },
+    "bamboo shoots": {
+        "tally": 4,
+        "asian": 3,
+        "healthy": 1
+    },
+    "cup": {
+        "tally": 98,
+        "asian": 12,
+        "italian": 22,
+        "vegetarian": 13,
+        "seafood": 11,
+        "meat": 9,
+        "healthy": 8,
+        "mexican": 23
+    },
+    "wine vinegar": {
+        "tally": 23,
+        "asian": 6,
+        "italian": 3,
+        "vegetarian": 3,
+        "seafood": 1,
+        "meat": 2,
+        "healthy": 4,
+        "mexican": 4
+    },
+    "curry paste": {
+        "tally": 1,
+        "asian": 1
+    },
+    "cardamom pods": {
+        "tally": 2,
+        "asian": 2
+    },
+    "milk": {
+        "tally": 123,
+        "asian": 25,
+        "italian": 14,
+        "vegetarian": 29,
+        "seafood": 16,
+        "meat": 15,
+        "healthy": 2,
+        "mexican": 22
+    },
+    "beef top sirloin steak": {
+        "tally": 1,
+        "asian": 1
+    },
+    "tomatoes": {
+        "tally": 182,
+        "asian": 11,
+        "italian": 36,
+        "vegetarian": 30,
+        "seafood": 14,
+        "meat": 22,
+        "healthy": 25,
+        "mexican": 44
+    },
+    "carrot": {
+        "tally": 31,
+        "asian": 10,
+        "italian": 5,
+        "vegetarian": 2,
+        "seafood": 2,
+        "meat": 5,
+        "healthy": 5,
+        "mexican": 2
+    },
+    "apple": {
+        "tally": 5,
+        "asian": 1,
+        "vegetarian": 1,
+        "healthy": 3
+    },
+    "rice": {
+        "tally": 54,
+        "asian": 14,
+        "italian": 2,
+        "vegetarian": 5,
+        "seafood": 6,
+        "meat": 13,
+        "healthy": 4,
+        "mexican": 10
+    },
+    "ground": {
+        "tally": 39,
+        "asian": 3,
+        "italian": 7,
+        "vegetarian": 10,
+        "seafood": 7,
+        "meat": 5,
+        "healthy": 4,
+        "mexican": 3
+    },
+    "thyme": {
+        "tally": 58,
+        "asian": 1,
+        "italian": 14,
+        "vegetarian": 11,
+        "seafood": 14,
+        "meat": 8,
+        "healthy": 10
+    },
+    "chicken wings": {
+        "tally": 11,
+        "asian": 6,
+        "meat": 5
+    },
+    "fish sauce": {
+        "tally": 21,
+        "asian": 17,
+        "seafood": 2,
+        "meat": 2
+    },
+    "vinegar": {
+        "tally": 68,
+        "asian": 16,
+        "italian": 10,
+        "vegetarian": 11,
+        "seafood": 5,
+        "meat": 5,
+        "healthy": 12,
+        "mexican": 9
+    },
+    "style": {
+        "tally": 3,
+        "asian": 2,
+        "seafood": 1
+    },
+    "wheat flour": {
+        "tally": 2,
+        "asian": 1,
+        "healthy": 1
+    },
+    "rice wine vinegar": {
+        "tally": 11,
+        "asian": 8,
+        "vegetarian": 1,
+        "meat": 1,
+        "healthy": 1
+    },
+    "celery": {
+        "tally": 30,
+        "asian": 2,
+        "italian": 3,
+        "vegetarian": 1,
+        "seafood": 10,
+        "meat": 6,
+        "healthy": 5,
+        "mexican": 3
+    },
+    "lemon juice": {
+        "tally": 89,
+        "asian": 7,
+        "italian": 9,
+        "vegetarian": 8,
+        "seafood": 42,
+        "meat": 6,
+        "healthy": 14,
+        "mexican": 3
+    },
+    "oyster sauce": {
+        "tally": 11,
+        "asian": 8,
+        "meat": 2,
+        "healthy": 1
+    },
+    "luncheon meat": {
+        "tally": 1,
+        "asian": 1
+    },
+    "sushi nori": {
+        "tally": 1,
+        "asian": 1
+    },
+    "walnuts": {
+        "tally": 9,
+        "asian": 1,
+        "italian": 5,
+        "vegetarian": 1,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "egg whites": {
+        "tally": 7,
+        "asian": 3,
+        "seafood": 1,
+        "meat": 1,
+        "mexican": 2
+    },
+    "mochiko": {
+        "tally": 2,
+        "asian": 1,
+        "seafood": 1
+    },
+    "mayonnaise": {
+        "tally": 48,
+        "asian": 6,
+        "vegetarian": 5,
+        "seafood": 23,
+        "meat": 4,
+        "healthy": 4,
+        "mexican": 6
+    },
+    "shrimp": {
+        "tally": 53,
+        "asian": 7,
+        "italian": 4,
+        "seafood": 33,
+        "meat": 1,
+        "healthy": 4,
+        "mexican": 4
+    },
+    "honey": {
+        "tally": 58,
+        "asian": 20,
+        "italian": 3,
+        "vegetarian": 3,
+        "seafood": 9,
+        "meat": 3,
+        "healthy": 12,
+        "mexican": 8
+    },
+    "pineapple juice": {
+        "tally": 1,
+        "asian": 1
+    },
+    "shortening": {
+        "tally": 7,
+        "asian": 1,
+        "italian": 2,
+        "vegetarian": 1,
+        "mexican": 3
+    },
+    "pork loin": {
+        "tally": 5,
+        "asian": 3,
+        "seafood": 1,
+        "mexican": 1
+    },
+    "minced": {
+        "tally": 3,
+        "asian": 1,
+        "vegetarian": 1,
+        "seafood": 1
+    },
+    "mirin": {
+        "tally": 10,
+        "asian": 6,
+        "vegetarian": 1,
+        "seafood": 2,
+        "healthy": 1
+    },
+    "steaks": {
+        "tally": 3,
+        "asian": 1,
+        "seafood": 2
+    },
+    "wasabi paste": {
+        "tally": 1,
+        "asian": 1
+    },
+    "basmati rice": {
+        "tally": 4,
+        "asian": 3,
+        "mexican": 1
+    },
+    "cinnamon stick": {
+        "tally": 3,
+        "asian": 3
+    },
+    "cardamom": {
+        "tally": 2,
+        "asian": 2
+    },
+    "cloves": {
+        "tally": 17,
+        "asian": 5,
+        "italian": 2,
+        "vegetarian": 2,
+        "seafood": 1,
+        "meat": 1,
+        "healthy": 3,
+        "mexican": 3
+    },
+    "cumin seed": {
+        "tally": 1,
+        "asian": 1
+    },
+    "shallot": {
+        "tally": 8,
+        "asian": 1,
+        "italian": 2,
+        "seafood": 3,
+        "meat": 1,
+        "mexican": 1
+    },
+    "ginger garlic paste": {
+        "tally": 1,
+        "asian": 1
+    },
+    "chili powder": {
+        "tally": 95,
+        "asian": 7,
+        "italian": 1,
+        "vegetarian": 11,
+        "seafood": 2,
+        "meat": 9,
+        "healthy": 12,
+        "mexican": 53
+    },
+    "half": {
+        "tally": 14,
+        "asian": 1,
+        "italian": 4,
+        "seafood": 3,
+        "meat": 2,
+        "mexican": 4
+    },
+    "tomato": {
+        "tally": 41,
+        "asian": 7,
+        "italian": 5,
+        "vegetarian": 7,
+        "seafood": 6,
+        "meat": 4,
+        "healthy": 3,
+        "mexican": 9
+    },
+    "eggs": {
+        "tally": 120,
+        "asian": 17,
+        "italian": 27,
+        "vegetarian": 29,
+        "seafood": 9,
+        "meat": 17,
+        "healthy": 4,
+        "mexican": 17
+    },
+    "bean sprouts": {
+        "tally": 9,
+        "asian": 5,
+        "seafood": 3,
+        "meat": 1
+    },
+    "powder": {
+        "tally": 175,
+        "asian": 18,
+        "italian": 23,
+        "vegetarian": 20,
+        "seafood": 28,
+        "meat": 37,
+        "healthy": 17,
+        "mexican": 32
+    },
+    "chickenlegs ": {
+        "tally": 1,
+        "asian": 1
+    },
+    "squash": {
+        "tally": 7,
+        "asian": 1,
+        "italian": 2,
+        "vegetarian": 3,
+        "healthy": 1
+    },
+    "choy": {
+        "tally": 4,
+        "asian": 4
+    },
+    "spinach": {
+        "tally": 35,
+        "asian": 4,
+        "italian": 9,
+        "vegetarian": 11,
+        "seafood": 2,
+        "meat": 3,
+        "healthy": 4,
+        "mexican": 2
+    },
+    "tenderloin": {
+        "tally": 4,
+        "asian": 2,
+        "meat": 2
+    },
+    "chile pepper": {
+        "tally": 1,
+        "asian": 1
+    },
+    "broccoli": {
+        "tally": 17,
+        "asian": 4,
+        "italian": 1,
+        "vegetarian": 5,
+        "meat": 6,
+        "healthy": 1
+    },
+    "duck": {
+        "tally": 1,
+        "asian": 1
+    },
+    "ground nutmeg": {
+        "tally": 13,
+        "asian": 2,
+        "italian": 3,
+        "vegetarian": 7,
+        "healthy": 1
+    },
+    "ground cloves": {
+        "tally": 9,
+        "asian": 3,
+        "vegetarian": 1,
+        "meat": 1,
+        "mexican": 4
+    },
+    "orange": {
+        "tally": 4,
+        "asian": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "parsley": {
+        "tally": 151,
+        "asian": 1,
+        "italian": 39,
+        "vegetarian": 35,
+        "seafood": 32,
+        "meat": 20,
+        "healthy": 16,
+        "mexican": 8
+    },
+    "plum jam": {
+        "tally": 1,
+        "asian": 1
+    },
+    "chutney": {
+        "tally": 1,
+        "asian": 1
+    },
+    "lentils": {
+        "tally": 6,
+        "asian": 1,
+        "vegetarian": 3,
+        "healthy": 2
+    },
+    "curry": {
+        "tally": 6,
+        "asian": 5,
+        "vegetarian": 1
+    },
+    "tapioca starch": {
+        "tally": 2,
+        "asian": 2
+    },
+    "mangos": {
+        "tally": 1,
+        "asian": 1
+    },
+    "skewers": {
+        "tally": 6,
+        "asian": 3,
+        "seafood": 2,
+        "healthy": 1
+    },
+    "jalapeno pepper": {
+        "tally": 20,
+        "asian": 3,
+        "vegetarian": 1,
+        "seafood": 5,
+        "meat": 1,
+        "healthy": 2,
+        "mexican": 8
+    },
+    "cup sake": {
+        "tally": 2,
+        "asian": 1,
+        "seafood": 1
+    },
+    "miso": {
+        "tally": 4,
+        "asian": 2,
+        "seafood": 2
+    },
+    "sea bass": {
+        "tally": 3,
+        "asian": 1,
+        "seafood": 2
+    },
+    "sea salt": {
+        "tally": 29,
+        "asian": 2,
+        "italian": 3,
+        "vegetarian": 7,
+        "seafood": 7,
+        "meat": 3,
+        "healthy": 6,
+        "mexican": 1
+    },
+    "radish": {
+        "tally": 1,
+        "asian": 1
+    },
+    "chicken breast half": {
+        "tally": 4,
+        "asian": 1,
+        "healthy": 1,
+        "mexican": 2
+    },
+    "inch": {
+        "tally": 3,
+        "asian": 1,
+        "vegetarian": 2
+    },
+    "cucumber": {
+        "tally": 16,
+        "asian": 6,
+        "italian": 1,
+        "vegetarian": 2,
+        "seafood": 2,
+        "healthy": 3,
+        "mexican": 2
+    },
+    "cilantro leaves": {
+        "tally": 4,
+        "asian": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "seeded": {
+        "tally": 52,
+        "asian": 6,
+        "italian": 2,
+        "vegetarian": 4,
+        "seafood": 3,
+        "meat": 5,
+        "healthy": 11,
+        "mexican": 21
+    },
+    "wedge lime": {
+        "tally": 1,
+        "asian": 1
+    },
+    "bunch fenugreek leaves": {
+        "tally": 2,
+        "asian": 1,
+        "vegetarian": 1
+    },
+    "canola oil": {
+        "tally": 23,
+        "asian": 9,
+        "italian": 1,
+        "vegetarian": 5,
+        "seafood": 1,
+        "meat": 1,
+        "healthy": 2,
+        "mexican": 4
+    },
+    "paneer": {
+        "tally": 2,
+        "asian": 1,
+        "vegetarian": 1
+    },
+    "cumin seeds": {
+        "tally": 4,
+        "asian": 3,
+        "vegetarian": 1
+    },
+    "ground beef": {
+        "tally": 93,
+        "asian": 5,
+        "italian": 19,
+        "meat": 42,
+        "healthy": 1,
+        "mexican": 26
+    },
+    "head cabbage": {
+        "tally": 19,
+        "asian": 2,
+        "vegetarian": 2,
+        "seafood": 1,
+        "meat": 7,
+        "healthy": 5,
+        "mexican": 2
+    },
+    "cooking wine": {
+        "tally": 3,
+        "asian": 1,
+        "italian": 1,
+        "seafood": 1
+    },
+    "oregano": {
+        "tally": 170,
+        "asian": 2,
+        "italian": 51,
+        "vegetarian": 23,
+        "seafood": 16,
+        "meat": 28,
+        "healthy": 20,
+        "mexican": 30
+    },
+    "ground cayenne pepper": {
+        "tally": 13,
+        "asian": 2,
+        "vegetarian": 2,
+        "seafood": 3,
+        "meat": 2,
+        "healthy": 2,
+        "mexican": 2
+    },
+    "ground paprika": {
+        "tally": 11,
+        "asian": 1,
+        "italian": 2,
+        "vegetarian": 3,
+        "seafood": 3,
+        "meat": 1,
+        "healthy": 1
+    },
+    "skinless chicken thighs": {
+        "tally": 5,
+        "asian": 2,
+        "meat": 3
+    },
+    "skinless chicken breasts": {
+        "tally": 3,
+        "asian": 1,
+        "meat": 1,
+        "mexican": 1
+    },
+    "peas": {
+        "tally": 17,
+        "asian": 7,
+        "italian": 2,
+        "vegetarian": 2,
+        "seafood": 3,
+        "meat": 1,
+        "healthy": 2
+    },
+    "beefsteak flank ": {
+        "tally": 1,
+        "asian": 1
+    },
+    "cup cornstarch": {
+        "tally": 7,
+        "asian": 6,
+        "healthy": 1
+    },
+    "beef bouillon cube": {
+        "tally": 1,
+        "asian": 1
+    },
+    "beefsirloin ": {
+        "tally": 4,
+        "asian": 1,
+        "meat": 2,
+        "mexican": 1
+    },
+    "broccoli florets": {
+        "tally": 10,
+        "asian": 4,
+        "vegetarian": 1,
+        "seafood": 1,
+        "meat": 3,
+        "healthy": 1
+    },
+    "jasmine rice": {
+        "tally": 4,
+        "asian": 3,
+        "seafood": 1
+    },
+    "sesameoil ": {
+        "tally": 4,
+        "asian": 1,
+        "seafood": 1,
+        "meat": 2
+    },
+    "chili garlic sauce": {
+        "tally": 1,
+        "asian": 1
+    },
+    "chicken thighs": {
+        "tally": 8,
+        "asian": 2,
+        "italian": 1,
+        "meat": 5
+    },
+    "pork loin chop": {
+        "tally": 1,
+        "asian": 1
+    },
+    "margarine": {
+        "tally": 8,
+        "asian": 1,
+        "vegetarian": 2,
+        "seafood": 1,
+        "meat": 1,
+        "healthy": 1,
+        "mexican": 2
+    },
+    "ground coriander": {
+        "tally": 16,
+        "asian": 11,
+        "meat": 1,
+        "mexican": 4
+    },
+    "cilantro": {
+        "tally": 74,
+        "asian": 15,
+        "italian": 1,
+        "vegetarian": 5,
+        "seafood": 6,
+        "meat": 4,
+        "healthy": 10,
+        "mexican": 33
+    },
+    "sauce": {
+        "tally": 20,
+        "asian": 8,
+        "seafood": 8,
+        "meat": 2,
+        "mexican": 2
+    },
+    "hoisin sauce": {
+        "tally": 8,
+        "asian": 6,
+        "meat": 2
+    },
+    "chicken breast": {
+        "tally": 6,
+        "asian": 1,
+        "italian": 1,
+        "meat": 2,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "spaghetti": {
+        "tally": 14,
+        "asian": 3,
+        "italian": 7,
+        "seafood": 3,
+        "meat": 1
+    },
+    "carrots": {
+        "tally": 60,
+        "asian": 8,
+        "italian": 5,
+        "vegetarian": 15,
+        "seafood": 3,
+        "meat": 17,
+        "healthy": 9,
+        "mexican": 3
+    },
+    "peanuts": {
+        "tally": 12,
+        "asian": 7,
+        "vegetarian": 1,
+        "seafood": 1,
+        "meat": 2,
+        "healthy": 1
+    },
+    "sake": {
+        "tally": 2,
+        "asian": 1,
+        "seafood": 1
+    },
+    "spice powder": {
+        "tally": 3,
+        "asian": 2,
+        "meat": 1
+    },
+    "pork spareribs": {
+        "tally": 1,
+        "asian": 1
+    },
+    "rice noodles": {
+        "tally": 8,
+        "asian": 4,
+        "seafood": 1,
+        "meat": 2,
+        "healthy": 1
+    },
+    "tamarind": {
+        "tally": 2,
+        "asian": 2
+    },
+    "lime": {
+        "tally": 33,
+        "asian": 3,
+        "vegetarian": 2,
+        "seafood": 1,
+        "healthy": 6,
+        "mexican": 21
+    },
+    "medium shrimp": {
+        "tally": 15,
+        "asian": 4,
+        "seafood": 9,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "panko crumbs": {
+        "tally": 2,
+        "asian": 1,
+        "seafood": 1
+    },
+    "prawns": {
+        "tally": 4,
+        "asian": 2,
+        "seafood": 2
+    },
+    "zucchini": {
+        "tally": 24,
+        "asian": 2,
+        "italian": 5,
+        "vegetarian": 8,
+        "seafood": 2,
+        "meat": 3,
+        "healthy": 2,
+        "mexican": 2
+    },
+    "okra": {
+        "tally": 3,
+        "asian": 1,
+        "vegetarian": 1,
+        "seafood": 1
+    },
+    "beans": {
+        "tally": 132,
+        "asian": 7,
+        "italian": 11,
+        "vegetarian": 34,
+        "seafood": 2,
+        "meat": 18,
+        "healthy": 24,
+        "mexican": 36
+    },
+    "eggplant": {
+        "tally": 10,
+        "asian": 1,
+        "italian": 3,
+        "vegetarian": 5,
+        "seafood": 1
+    },
+    "melon": {
+        "tally": 2,
+        "asian": 1,
+        "seafood": 1
+    },
+    "yucca": {
+        "tally": 1,
+        "asian": 1
+    },
+    "yeast": {
+        "tally": 23,
+        "asian": 2,
+        "italian": 14,
+        "vegetarian": 3,
+        "healthy": 3,
+        "mexican": 1
+    },
+    "teaspoon": {
+        "tally": 17,
+        "asian": 2,
+        "italian": 3,
+        "vegetarian": 5,
+        "meat": 2,
+        "mexican": 5
+    },
+    "food color": {
+        "tally": 2,
+        "asian": 2
+    },
+    "flour": {
+        "tally": 10,
+        "asian": 2,
+        "italian": 2,
+        "vegetarian": 2,
+        "seafood": 2,
+        "meat": 1,
+        "healthy": 1
+    },
+    "jalapeno peppers": {
+        "tally": 8,
+        "asian": 1,
+        "italian": 1,
+        "vegetarian": 1,
+        "mexican": 5
+    },
+    "serrano peppers": {
+        "tally": 6,
+        "asian": 2,
+        "healthy": 1,
+        "mexican": 3
+    },
+    "serrano chile pepper": {
+        "tally": 1,
+        "asian": 1
+    },
+    "potatoes": {
+        "tally": 70,
+        "asian": 5,
+        "vegetarian": 22,
+        "seafood": 8,
+        "meat": 18,
+        "healthy": 13,
+        "mexican": 4
+    },
+    "leaves": {
+        "tally": 27,
+        "asian": 3,
+        "italian": 1,
+        "vegetarian": 5,
+        "seafood": 3,
+        "meat": 4,
+        "healthy": 5,
+        "mexican": 6
+    },
+    "coriander powder": {
+        "tally": 3,
+        "asian": 1,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "chickpeas": {
+        "tally": 4,
+        "asian": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "sherry": {
+        "tally": 7,
+        "asian": 4,
+        "seafood": 2,
+        "meat": 1
+    },
+    "dash sesame oil": {
+        "tally": 1,
+        "asian": 1
+    },
+    "paste": {
+        "tally": 5,
+        "asian": 4,
+        "seafood": 1
+    },
+    "potato starch": {
+        "tally": 3,
+        "asian": 3
+    },
+    "shichimi togarashi": {
+        "tally": 1,
+        "asian": 1
+    },
+    "chili sauce": {
+        "tally": 6,
+        "asian": 3,
+        "seafood": 2,
+        "healthy": 1
+    },
+    "gochujang": {
+        "tally": 2,
+        "asian": 2
+    },
+    "coleslaw dressing": {
+        "tally": 2,
+        "asian": 1,
+        "mexican": 1
+    },
+    "ground chicken": {
+        "tally": 5,
+        "asian": 2,
+        "seafood": 1,
+        "mexican": 2
+    },
+    "fry sauce": {
+        "tally": 2,
+        "asian": 1,
+        "mexican": 1
+    },
+    "wonton wrappers": {
+        "tally": 3,
+        "asian": 1,
+        "seafood": 1,
+        "mexican": 1
+    },
+    "lime juice": {
+        "tally": 46,
+        "asian": 5,
+        "vegetarian": 4,
+        "seafood": 6,
+        "healthy": 6,
+        "mexican": 25
+    },
+    "shallots": {
+        "tally": 8,
+        "asian": 1,
+        "italian": 2,
+        "seafood": 3,
+        "meat": 1,
+        "mexican": 1
+    },
+    "rice vermicelli noodles": {
+        "tally": 2,
+        "asian": 1,
+        "seafood": 1
+    },
+    "lettuce": {
+        "tally": 6,
+        "asian": 1,
+        "vegetarian": 1,
+        "seafood": 1,
+        "mexican": 3
+    },
+    "diakon radish": {
+        "tally": 2,
+        "asian": 1,
+        "seafood": 1
+    },
+    "Thai basil": {
+        "tally": 4,
+        "asian": 3,
+        "seafood": 1
+    },
+    "mint": {
+        "tally": 3,
+        "asian": 2,
+        "seafood": 1
+    },
+    "Worcestershire sauce": {
+        "tally": 47,
+        "asian": 3,
+        "vegetarian": 1,
+        "seafood": 16,
+        "meat": 18,
+        "healthy": 8,
+        "mexican": 1
+    },
+    "skinless chicken breast": {
+        "tally": 1,
+        "asian": 1
+    },
+    "panko bread crumbs": {
+        "tally": 2,
+        "asian": 1,
+        "meat": 1
+    },
+    "cooking spray": {
+        "tally": 42,
+        "asian": 2,
+        "italian": 5,
+        "vegetarian": 8,
+        "seafood": 9,
+        "meat": 5,
+        "healthy": 5,
+        "mexican": 8
+    },
+    "pork": {
+        "tally": 2,
+        "asian": 2
+    },
+    "skinlessbreasts chicken ": {
+        "tally": 2,
+        "asian": 1,
+        "mexican": 1
+    },
+    "stewed": {
+        "tally": 1,
+        "asian": 1
+    },
+    "lemongrass": {
+        "tally": 1,
+        "asian": 1
+    },
+    "chickenthighs ": {
+        "tally": 1,
+        "asian": 1
+    },
+    "soybean sprouts": {
+        "tally": 1,
+        "asian": 1
+    },
+    "seeds": {
+        "tally": 3,
+        "asian": 2,
+        "vegetarian": 1
+    },
+    "cups": {
+        "tally": 17,
+        "asian": 2,
+        "italian": 4,
+        "vegetarian": 3,
+        "seafood": 1,
+        "meat": 3,
+        "healthy": 2,
+        "mexican": 2
+    },
+    "chicken meat": {
+        "tally": 7,
+        "asian": 1,
+        "italian": 1,
+        "meat": 2,
+        "healthy": 3
+    },
+    "chicken breast halves": {
+        "tally": 41,
+        "asian": 2,
+        "italian": 11,
+        "meat": 13,
+        "healthy": 8,
+        "mexican": 7
+    },
+    "daikon radish": {
+        "tally": 3,
+        "asian": 2,
+        "vegetarian": 1
+    },
+    "sliced": {
+        "tally": 10,
+        "asian": 4,
+        "italian": 1,
+        "vegetarian": 3,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "gelatin": {
+        "tally": 3,
+        "asian": 1,
+        "italian": 1,
+        "healthy": 1
+    },
+    "coffee": {
+        "tally": 4,
+        "asian": 1,
+        "italian": 2,
+        "healthy": 1
+    },
+    "salsa": {
+        "tally": 33,
+        "asian": 1,
+        "vegetarian": 2,
+        "meat": 2,
+        "mexican": 28
+    },
+    "chunky peanut butter": {
+        "tally": 1,
+        "asian": 1
+    },
+    "light coconut milk": {
+        "tally": 1,
+        "asian": 1
+    },
+    "peanut butter": {
+        "tally": 14,
+        "asian": 9,
+        "healthy": 5
+    },
+    "ground mace": {
+        "tally": 1,
+        "asian": 1
+    },
+    "ground fenugreek": {
+        "tally": 1,
+        "asian": 1
+    },
+    "ground cardamom": {
+        "tally": 6,
+        "asian": 5,
+        "vegetarian": 1
+    },
+    "pork chops": {
+        "tally": 6,
+        "asian": 1,
+        "italian": 1,
+        "meat": 4
+    },
+    "tamarind soup base": {
+        "tally": 1,
+        "asian": 1
+    },
+    "cashews": {
+        "tally": 3,
+        "asian": 2,
+        "vegetarian": 1
+    },
+    "frozen": {
+        "tally": 1,
+        "asian": 1
+    },
+    "fettuccine": {
+        "tally": 1,
+        "asian": 1
+    },
+    "chicken breast meat": {
+        "tally": 5,
+        "asian": 1,
+        "meat": 2,
+        "mexican": 2
+    },
+    "wood ear mushroom": {
+        "tally": 2,
+        "asian": 1,
+        "healthy": 1
+    },
+    "Chinese": {
+        "tally": 2,
+        "asian": 1,
+        "healthy": 1
+    },
+    "monosodium": {
+        "tally": 2,
+        "asian": 1,
+        "healthy": 1
+    },
+    "egg roll wrappers": {
+        "tally": 3,
+        "asian": 2,
+        "healthy": 1
+    },
+    "egg white": {
+        "tally": 2,
+        "asian": 1,
+        "healthy": 1
+    },
+    "water chestnuts": {
+        "tally": 5,
+        "asian": 2,
+        "vegetarian": 1,
+        "meat": 2
+    },
+    "Sriracha sauce": {
+        "tally": 1,
+        "asian": 1
+    },
+    "orange juice": {
+        "tally": 12,
+        "asian": 2,
+        "vegetarian": 1,
+        "meat": 1,
+        "healthy": 5,
+        "mexican": 3
+    },
+    "tenderloins": {
+        "tally": 1,
+        "asian": 1
+    },
+    "chicken stock": {
+        "tally": 23,
+        "asian": 5,
+        "italian": 5,
+        "seafood": 3,
+        "meat": 6,
+        "healthy": 2,
+        "mexican": 2
+    },
+    "mustard": {
+        "tally": 17,
+        "asian": 1,
+        "vegetarian": 1,
+        "seafood": 6,
+        "meat": 3,
+        "healthy": 5,
+        "mexican": 1
+    },
+    "beef": {
+        "tally": 7,
+        "asian": 1,
+        "italian": 1,
+        "meat": 4,
+        "mexican": 1
+    },
+    "mushroom caps": {
+        "tally": 4,
+        "asian": 1,
+        "italian": 1,
+        "vegetarian": 2
+    },
+    "metal skewers": {
+        "tally": 1,
+        "asian": 1
+    },
+    "head napa cabbage": {
+        "tally": 2,
+        "asian": 1,
+        "vegetarian": 1
+    },
+    "ramen noodles": {
+        "tally": 2,
+        "asian": 1,
+        "vegetarian": 1
+    },
+    "almonds": {
+        "tally": 8,
+        "asian": 1,
+        "vegetarian": 3,
+        "meat": 1,
+        "healthy": 2,
+        "mexican": 1
+    },
+    "cider vinegar": {
+        "tally": 8,
+        "asian": 1,
+        "vegetarian": 2,
+        "meat": 2,
+        "healthy": 3
+    },
+    "corn kernels": {
+        "tally": 17,
+        "asian": 1,
+        "vegetarian": 5,
+        "seafood": 2,
+        "meat": 1,
+        "healthy": 2,
+        "mexican": 6
+    },
+    "coconut": {
+        "tally": 5,
+        "asian": 1,
+        "italian": 2,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "ribs": {
+        "tally": 4,
+        "asian": 1,
+        "meat": 2,
+        "mexican": 1
+    },
+    "cup vegetable broth": {
+        "tally": 6,
+        "asian": 1,
+        "vegetarian": 2,
+        "seafood": 1,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "onion tops": {
+        "tally": 1,
+        "asian": 1
+    },
+    "cubed potatoes": {
+        "tally": 5,
+        "asian": 1,
+        "italian": 1,
+        "seafood": 1,
+        "meat": 1,
+        "healthy": 1
+    },
+    "dashi stock": {
+        "tally": 2,
+        "asian": 1,
+        "vegetarian": 1
+    },
+    "mediumshrimp ": {
+        "tally": 5,
+        "asian": 1,
+        "seafood": 4
+    },
+    "lite soy sauce": {
+        "tally": 1,
+        "asian": 1
+    },
+    "pork tenderloin": {
+        "tally": 2,
+        "asian": 1,
+        "healthy": 1
+    },
+    "Panang curry": {
+        "tally": 1,
+        "asian": 1
+    },
+    "palm sugar": {
+        "tally": 1,
+        "asian": 1
+    },
+    "lime leaves": {
+        "tally": 1,
+        "asian": 1
+    },
+    "peppers": {
+        "tally": 29,
+        "asian": 3,
+        "vegetarian": 2,
+        "meat": 2,
+        "healthy": 6,
+        "mexican": 16
+    },
+    "cup rice vinegar": {
+        "tally": 1,
+        "asian": 1
+    },
+    "sriracha sauce": {
+        "tally": 1,
+        "asian": 1
+    },
+    "sodium chicken broth": {
+        "tally": 9,
+        "asian": 1,
+        "italian": 1,
+        "meat": 4,
+        "healthy": 2,
+        "mexican": 1
+    },
+    "chicken breasts": {
+        "tally": 10,
+        "asian": 1,
+        "italian": 1,
+        "meat": 6,
+        "mexican": 2
+    },
+    "ramennoodles ": {
+        "tally": 1,
+        "asian": 1
+    },
+    "wood fungus mushrooms": {
+        "tally": 2,
+        "asian": 1,
+        "seafood": 1
+    },
+    "rice paper wrappers": {
+        "tally": 2,
+        "asian": 1,
+        "seafood": 1
+    },
+    "cayenne": {
+        "tally": 1,
+        "asian": 1
+    },
+    "asparagus": {
+        "tally": 10,
+        "asian": 1,
+        "italian": 1,
+        "vegetarian": 4,
+        "seafood": 1,
+        "healthy": 3
+    },
+    "scallions": {
+        "tally": 5,
+        "asian": 2,
+        "vegetarian": 1,
+        "seafood": 2
+    },
+    "egg yolk": {
+        "tally": 9,
+        "asian": 2,
+        "italian": 2,
+        "vegetarian": 1,
+        "seafood": 1,
+        "meat": 2,
+        "mexican": 1
+    },
+    "style corn": {
+        "tally": 7,
+        "asian": 1,
+        "healthy": 1,
+        "mexican": 5
+    },
+    "sodiumbroth chicken ": {
+        "tally": 2,
+        "asian": 1,
+        "healthy": 1
+    },
+    "broccoliflorets ": {
+        "tally": 1,
+        "asian": 1
+    },
+    "dashi granules": {
+        "tally": 2,
+        "asian": 1,
+        "healthy": 1
+    },
+    "peppercorns": {
+        "tally": 7,
+        "asian": 1,
+        "vegetarian": 2,
+        "seafood": 2,
+        "healthy": 2
+    },
+    "flank steak": {
+        "tally": 6,
+        "asian": 2,
+        "meat": 2,
+        "mexican": 2
+    },
+    "cup canola oil": {
+        "tally": 1,
+        "asian": 1
+    },
+    "grain rice": {
+        "tally": 4,
+        "asian": 2,
+        "seafood": 1,
+        "mexican": 1
+    },
+    "tuna": {
+        "tally": 12,
+        "asian": 1,
+        "seafood": 10,
+        "healthy": 1
+    },
+    "kitchen shears": {
+        "tally": 1,
+        "asian": 1
+    },
+    "cubed": {
+        "tally": 8,
+        "asian": 2,
+        "italian": 3,
+        "vegetarian": 3
+    },
+    "garlic powder": {
+        "tally": 1,
+        "asian": 1
+    },
+    "olive oil": {
+        "tally": 95,
+        "asian": 1,
+        "italian": 20,
+        "vegetarian": 19,
+        "seafood": 15,
+        "meat": 10,
+        "healthy": 20,
+        "mexican": 10
+    },
+    "potato": {
+        "tally": 7,
+        "asian": 1,
+        "seafood": 1,
+        "meat": 2,
+        "healthy": 3
+    },
+    "flakes": {
+        "tally": 2,
+        "asian": 2
+    },
+    "baby spinach": {
+        "tally": 2,
+        "asian": 1,
+        "italian": 1
+    },
+    "cubed chicken meat": {
+        "tally": 1,
+        "asian": 1
+    },
+    "pea pods": {
+        "tally": 1,
+        "asian": 1
+    },
+    "onion powder": {
+        "tally": 50,
+        "asian": 3,
+        "italian": 7,
+        "vegetarian": 5,
+        "seafood": 8,
+        "meat": 12,
+        "healthy": 7,
+        "mexican": 8
+    },
+    "vanilla extract": {
+        "tally": 40,
+        "asian": 4,
+        "italian": 12,
+        "vegetarian": 8,
+        "healthy": 9,
+        "mexican": 7
+    },
+    "chicken": {
+        "tally": 16,
+        "asian": 2,
+        "italian": 1,
+        "seafood": 1,
+        "meat": 8,
+        "healthy": 2,
+        "mexican": 2
+    },
+    "linguine": {
+        "tally": 4,
+        "asian": 1,
+        "seafood": 2,
+        "healthy": 1
+    },
+    "chicken legs": {
+        "tally": 1,
+        "asian": 1
+    },
+    "shiitake mushrooms": {
+        "tally": 1,
+        "asian": 1
+    },
+    "bean thread noodles": {
+        "tally": 1,
+        "asian": 1
+    },
+    "boneless pork loin": {
+        "tally": 2,
+        "asian": 1,
+        "healthy": 1
+    },
+    "rice wine": {
+        "tally": 5,
+        "asian": 3,
+        "meat": 1,
+        "healthy": 1
+    },
+    "nori": {
+        "tally": 4,
+        "asian": 3,
+        "healthy": 1
+    },
+    "avocado": {
+        "tally": 11,
+        "asian": 1,
+        "vegetarian": 2,
+        "meat": 1,
+        "mexican": 7
+    },
+    "imitation crabmeat": {
+        "tally": 4,
+        "asian": 1,
+        "seafood": 1,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "phyllo dough": {
+        "tally": 2,
+        "asian": 1,
+        "vegetarian": 1
+    },
+    "enoki mushrooms": {
+        "tally": 1,
+        "asian": 1
+    },
+    "clove garlic": {
+        "tally": 6,
+        "asian": 1,
+        "vegetarian": 1,
+        "seafood": 1,
+        "healthy": 1,
+        "mexican": 2
+    },
+    "ouncesnoodles Udon ": {
+        "tally": 1,
+        "asian": 1
+    },
+    "inch matchsticks": {
+        "tally": 1,
+        "asian": 1
+    },
+    "sandwich roll": {
+        "tally": 1,
+        "asian": 1
+    },
+    "pork roast": {
+        "tally": 1,
+        "asian": 1
+    },
+    "pate": {
+        "tally": 1,
+        "asian": 1
+    },
+    "spearscucumber English ": {
+        "tally": 1,
+        "asian": 1
+    },
+    "slices jalapeno pepper": {
+        "tally": 1,
+        "asian": 1
+    },
+    "bonito shavings": {
+        "tally": 2,
+        "asian": 1,
+        "healthy": 1
+    },
+    "papaya": {
+        "tally": 1,
+        "asian": 1
+    },
+    "raisins": {
+        "tally": 5,
+        "asian": 1,
+        "healthy": 4
+    },
+    "cake flour": {
+        "tally": 1,
+        "asian": 1
+    },
+    "ube": {
+        "tally": 1,
+        "asian": 1
+    },
+    "corn syrup": {
+        "tally": 1,
+        "asian": 1
+    },
+    "egg yolks": {
+        "tally": 9,
+        "asian": 1,
+        "italian": 4,
+        "meat": 1,
+        "mexican": 3
+    },
+    "food": {
+        "tally": 2,
+        "asian": 1,
+        "meat": 1
+    },
+    "macapuno": {
+        "tally": 1,
+        "asian": 1
+    },
+    "drop violet food": {
+        "tally": 1,
+        "asian": 1
+    },
+    "beeftenderloin ": {
+        "tally": 1,
+        "asian": 1
+    },
+    "gratedorange ": {
+        "tally": 1,
+        "asian": 1
+    },
+    "food coloring": {
+        "tally": 1,
+        "asian": 1
+    },
+    "bok choy": {
+        "tally": 2,
+        "asian": 2
+    },
+    "lemon grass": {
+        "tally": 1,
+        "asian": 1
+    },
+    "steak fillet": {
+        "tally": 1,
+        "asian": 1
+    },
+    "leaflettuce ": {
+        "tally": 1,
+        "asian": 1
+    },
+    "cherry tomatoes": {
+        "tally": 6,
+        "asian": 1,
+        "italian": 1,
+        "vegetarian": 1,
+        "healthy": 1,
+        "mexican": 2
+    },
+    "napa cabbage": {
+        "tally": 1,
+        "asian": 1
+    },
+    "bell peppers": {
+        "tally": 19,
+        "asian": 1,
+        "italian": 5,
+        "vegetarian": 1,
+        "meat": 6,
+        "healthy": 4,
+        "mexican": 2
+    },
+    "round steak": {
+        "tally": 1,
+        "asian": 1
+    },
+    "slices": {
+        "tally": 3,
+        "asian": 1,
+        "italian": 1,
+        "seafood": 1
+    },
+    "ham": {
+        "tally": 8,
+        "asian": 1,
+        "italian": 1,
+        "seafood": 1,
+        "meat": 4,
+        "healthy": 1
+    },
+    "Cheddar cheese": {
+        "tally": 85,
+        "asian": 1,
+        "italian": 3,
+        "vegetarian": 16,
+        "seafood": 7,
+        "meat": 18,
+        "mexican": 40
+    },
+    "pankobread ": {
+        "tally": 10,
+        "asian": 1,
+        "italian": 1,
+        "vegetarian": 1,
+        "seafood": 4,
+        "meat": 3
+    },
+    "spears": {
+        "tally": 4,
+        "asian": 1,
+        "vegetarian": 1,
+        "healthy": 2
+    },
+    "onion rings": {
+        "tally": 1,
+        "asian": 1
+    },
+    "pepper rings": {
+        "tally": 1,
+        "asian": 1
+    },
+    "avocado wedges": {
+        "tally": 1,
+        "asian": 1
+    },
+    "zucchini slices": {
+        "tally": 1,
+        "asian": 1
+    },
+    "rice flour": {
+        "tally": 2,
+        "asian": 2
+    },
+    "crimini mushrooms": {
+        "tally": 1,
+        "asian": 1
+    },
+    "creamy peanut butter": {
+        "tally": 2,
+        "asian": 1,
+        "vegetarian": 1
+    },
+    "Salt": {
+        "tally": 7,
+        "asian": 1,
+        "italian": 3,
+        "seafood": 2,
+        "healthy": 1
+    },
+    "applesauce": {
+        "tally": 1,
+        "asian": 1
+    },
+    "cucumbers": {
+        "tally": 3,
+        "asian": 2,
+        "vegetarian": 1
+    },
+    "Roma tomatoes": {
+        "tally": 3,
+        "asian": 1,
+        "meat": 1,
+        "healthy": 1
+    },
+    "ground lamb": {
+        "tally": 1,
+        "asian": 1
+    },
+    "mint leaves": {
+        "tally": 2,
+        "asian": 2
+    },
+    "ginger paste": {
+        "tally": 1,
+        "asian": 1
+    },
+    "chile paste": {
+        "tally": 3,
+        "asian": 2,
+        "meat": 1
+    },
+    "8.00": {
+        "tally": 1,
+        "asian": 1
+    },
+    "sausage links": {
+        "tally": 7,
+        "asian": 1,
+        "italian": 3,
+        "seafood": 1,
+        "meat": 2
+    },
+    "roll wrappers": {
+        "tally": 2,
+        "asian": 1,
+        "meat": 1
+    },
+    "oil cooking spray": {
+        "tally": 6,
+        "asian": 1,
+        "vegetarian": 1,
+        "seafood": 1,
+        "meat": 1,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "masala curry paste": {
+        "tally": 1,
+        "asian": 1
+    },
+    "celery stalk": {
+        "tally": 3,
+        "asian": 1,
+        "italian": 1,
+        "seafood": 1
+    },
+    "cloves garlic clove": {
+        "tally": 1,
+        "asian": 1
+    },
+    "sprigs": {
+        "tally": 4,
+        "asian": 1,
+        "italian": 1,
+        "seafood": 2
+    },
+    "lengthwise": {
+        "tally": 1,
+        "asian": 1
+    },
+    "imitation crab legs": {
+        "tally": 1,
+        "asian": 1
+    },
+    "cream cheese": {
+        "tally": 27,
+        "asian": 1,
+        "italian": 6,
+        "vegetarian": 8,
+        "seafood": 4,
+        "mexican": 8
+    },
+    "squid": {
+        "tally": 1,
+        "asian": 1
+    },
+    "saffron": {
+        "tally": 1,
+        "asian": 1
+    },
+    "chai tea bag": {
+        "tally": 1,
+        "asian": 1
+    },
+    "pound": {
+        "tally": 3,
+        "asian": 1,
+        "mexican": 2
+    },
+    "cup pineapple chunks": {
+        "tally": 1,
+        "asian": 1
+    },
+    "stick": {
+        "tally": 1,
+        "asian": 1
+    },
+    "ground allspice": {
+        "tally": 3,
+        "asian": 1,
+        "meat": 1,
+        "mexican": 1
+    },
+    "sirloin": {
+        "tally": 1,
+        "asian": 1
+    },
+    "orange juice concentrate": {
+        "tally": 1,
+        "asian": 1
+    },
+    "steamed": {
+        "tally": 1,
+        "asian": 1
+    },
+    "Dijon mustard": {
+        "tally": 16,
+        "asian": 1,
+        "seafood": 8,
+        "meat": 5,
+        "healthy": 2
+    },
+    "fish fillets": {
+        "tally": 1,
+        "asian": 1
+    },
+    "cashew halves": {
+        "tally": 1,
+        "asian": 1
+    },
+    "vegetable broth": {
+        "tally": 20,
+        "asian": 1,
+        "italian": 2,
+        "vegetarian": 10,
+        "healthy": 5,
+        "mexican": 2
+    },
+    "angel hair pasta": {
+        "tally": 8,
+        "asian": 1,
+        "italian": 3,
+        "vegetarian": 1,
+        "seafood": 2,
+        "healthy": 1
+    },
+    "lasagna noodles": {
+        "tally": 17,
+        "italian": 11,
+        "vegetarian": 4,
+        "meat": 2
+    },
+    "cottage cheese": {
+        "tally": 7,
+        "italian": 5,
+        "meat": 2
+    },
+    "Parmesan cheese": {
+        "tally": 143,
+        "italian": 68,
+        "vegetarian": 22,
+        "seafood": 24,
+        "meat": 21,
+        "healthy": 8
+    },
+    "mozzarella cheese": {
+        "tally": 71,
+        "italian": 39,
+        "vegetarian": 16,
+        "seafood": 2,
+        "meat": 10,
+        "mexican": 4
+    },
+    "seasoning": {
+        "tally": 36,
+        "italian": 15,
+        "vegetarian": 8,
+        "seafood": 1,
+        "meat": 7,
+        "healthy": 5
+    },
+    "sausage": {
+        "tally": 27,
+        "italian": 19,
+        "seafood": 2,
+        "meat": 6
+    },
+    "tomato sauce": {
+        "tally": 25,
+        "italian": 9,
+        "vegetarian": 2,
+        "seafood": 3,
+        "meat": 4,
+        "healthy": 2,
+        "mexican": 5
+    },
+    "basil": {
+        "tally": 140,
+        "italian": 52,
+        "vegetarian": 26,
+        "seafood": 19,
+        "meat": 19,
+        "healthy": 22,
+        "mexican": 2
+    },
+    "fennel seed": {
+        "tally": 6,
+        "italian": 3,
+        "meat": 2,
+        "healthy": 1
+    },
+    "bread crumbs": {
+        "tally": 18,
+        "italian": 5,
+        "vegetarian": 1,
+        "meat": 11,
+        "mexican": 1
+    },
+    "rosemary": {
+        "tally": 26,
+        "italian": 7,
+        "vegetarian": 4,
+        "seafood": 1,
+        "meat": 10,
+        "healthy": 4
+    },
+    "penne pasta": {
+        "tally": 5,
+        "italian": 1,
+        "vegetarian": 2,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "wine": {
+        "tally": 72,
+        "italian": 27,
+        "vegetarian": 5,
+        "seafood": 23,
+        "meat": 8,
+        "healthy": 9
+    },
+    "bread": {
+        "tally": 43,
+        "italian": 10,
+        "vegetarian": 6,
+        "seafood": 17,
+        "meat": 7,
+        "healthy": 2,
+        "mexican": 1
+    },
+    "baguette": {
+        "tally": 1,
+        "italian": 1
+    },
+    "spaghetti sauce": {
+        "tally": 18,
+        "italian": 13,
+        "vegetarian": 2,
+        "meat": 3
+    },
+    "cheese": {
+        "tally": 16,
+        "italian": 2,
+        "vegetarian": 8,
+        "seafood": 2,
+        "meat": 3,
+        "mexican": 1
+    },
+    "ground fennel seed": {
+        "tally": 1,
+        "italian": 1
+    },
+    "style salad": {
+        "tally": 2,
+        "italian": 2
+    },
+    "chocolate chips": {
+        "tally": 3,
+        "italian": 2,
+        "mexican": 1
+    },
+    "chocolate": {
+        "tally": 4,
+        "italian": 2,
+        "mexican": 2
+    },
+    "marinara sauce": {
+        "tally": 14,
+        "italian": 11,
+        "vegetarian": 1,
+        "meat": 1,
+        "mexican": 1
+    },
+    "croutons": {
+        "tally": 2,
+        "italian": 1,
+        "mexican": 1
+    },
+    "veal shanks": {
+        "tally": 1,
+        "italian": 1
+    },
+    "cupButter ": {
+        "tally": 1,
+        "italian": 1
+    },
+    "beef stock": {
+        "tally": 3,
+        "italian": 1,
+        "meat": 1,
+        "mexican": 1
+    },
+    "teaspoons": {
+        "tally": 3,
+        "italian": 1,
+        "seafood": 1,
+        "mexican": 1
+    },
+    "cupsspinach ": {
+        "tally": 1,
+        "italian": 1
+    },
+    "ground oregano": {
+        "tally": 2,
+        "italian": 1,
+        "healthy": 1
+    },
+    "Arborio rice": {
+        "tally": 5,
+        "italian": 4,
+        "vegetarian": 1
+    },
+    "noodles": {
+        "tally": 3,
+        "italian": 1,
+        "meat": 2
+    },
+    "ricotta cheese": {
+        "tally": 19,
+        "italian": 12,
+        "vegetarian": 6,
+        "mexican": 1
+    },
+    "Romano cheese": {
+        "tally": 14,
+        "italian": 5,
+        "vegetarian": 1,
+        "seafood": 5,
+        "meat": 2,
+        "healthy": 1
+    },
+    "tomato pasta sauce": {
+        "tally": 4,
+        "italian": 2,
+        "vegetarian": 2
+    },
+    "lamb shanks": {
+        "tally": 1,
+        "italian": 1
+    },
+    "broth": {
+        "tally": 13,
+        "italian": 3,
+        "seafood": 1,
+        "meat": 5,
+        "healthy": 2,
+        "mexican": 2
+    },
+    "skim milk": {
+        "tally": 2,
+        "italian": 1,
+        "seafood": 1
+    },
+    "baking powder": {
+        "tally": 3,
+        "italian": 1,
+        "vegetarian": 1,
+        "mexican": 1
+    },
+    "anise extract": {
+        "tally": 1,
+        "italian": 1
+    },
+    "mozzarella": {
+        "tally": 1,
+        "italian": 1
+    },
+    "ziti pasta": {
+        "tally": 3,
+        "italian": 2,
+        "meat": 1
+    },
+    "cheese blend": {
+        "tally": 6,
+        "italian": 1,
+        "mexican": 5
+    },
+    "stick butter": {
+        "tally": 1,
+        "italian": 1
+    },
+    "almond extract": {
+        "tally": 1,
+        "italian": 1
+    },
+    "kale leaves": {
+        "tally": 1,
+        "italian": 1
+    },
+    "ounces": {
+        "tally": 8,
+        "italian": 4,
+        "meat": 1,
+        "healthy": 1,
+        "mexican": 2
+    },
+    "anchovy paste": {
+        "tally": 2,
+        "italian": 1,
+        "healthy": 1
+    },
+    "marjoram": {
+        "tally": 15,
+        "italian": 7,
+        "vegetarian": 2,
+        "meat": 1,
+        "healthy": 4,
+        "mexican": 1
+    },
+    "beef broth": {
+        "tally": 13,
+        "italian": 2,
+        "seafood": 2,
+        "meat": 7,
+        "mexican": 2
+    },
+    "butter beans": {
+        "tally": 1,
+        "italian": 1
+    },
+    "pounds": {
+        "tally": 4,
+        "italian": 1,
+        "seafood": 2,
+        "healthy": 1
+    },
+    "bay": {
+        "tally": 5,
+        "italian": 1,
+        "vegetarian": 1,
+        "seafood": 3
+    },
+    "clams": {
+        "tally": 8,
+        "italian": 1,
+        "seafood": 5,
+        "healthy": 2
+    },
+    "mussels": {
+        "tally": 4,
+        "italian": 1,
+        "seafood": 2,
+        "healthy": 1
+    },
+    "crabmeat": {
+        "tally": 13,
+        "italian": 1,
+        "seafood": 11,
+        "mexican": 1
+    },
+    "cod fillets": {
+        "tally": 4,
+        "italian": 1,
+        "seafood": 2,
+        "healthy": 1
+    },
+    "kidney beans": {
+        "tally": 7,
+        "italian": 1,
+        "meat": 3,
+        "healthy": 1,
+        "mexican": 2
+    },
+    "zucchinis": {
+        "tally": 2,
+        "italian": 1,
+        "healthy": 1
+    },
+    "seashell pasta": {
+        "tally": 1,
+        "italian": 1
+    },
+    "Marsala wine": {
+        "tally": 5,
+        "italian": 4,
+        "meat": 1
+    },
+    "wheat lasagna noodles": {
+        "tally": 1,
+        "italian": 1
+    },
+    "basil pasta sauce": {
+        "tally": 1,
+        "italian": 1
+    },
+    "lemons": {
+        "tally": 7,
+        "italian": 1,
+        "vegetarian": 1,
+        "seafood": 2,
+        "meat": 2,
+        "healthy": 1
+    },
+    "vodka": {
+        "tally": 1,
+        "italian": 1
+    },
+    "linguine pasta": {
+        "tally": 6,
+        "italian": 3,
+        "seafood": 3
+    },
+    "pesto": {
+        "tally": 2,
+        "italian": 1,
+        "seafood": 1
+    },
+    "pasta sauce": {
+        "tally": 5,
+        "italian": 2,
+        "vegetarian": 3
+    },
+    "skim ricotta cheese": {
+        "tally": 5,
+        "italian": 4,
+        "vegetarian": 1
+    },
+    "style plum tomatoes": {
+        "tally": 1,
+        "italian": 1
+    },
+    "milk ricotta cheese": {
+        "tally": 4,
+        "italian": 4
+    },
+    "Pecorino Romano cheese": {
+        "tally": 7,
+        "italian": 5,
+        "vegetarian": 1,
+        "seafood": 1
+    },
+    "stalk celery": {
+        "tally": 18,
+        "italian": 3,
+        "vegetarian": 2,
+        "seafood": 4,
+        "meat": 4,
+        "healthy": 4,
+        "mexican": 1
+    },
+    "elbow macaroni": {
+        "tally": 8,
+        "italian": 2,
+        "vegetarian": 3,
+        "seafood": 2,
+        "meat": 1
+    },
+    "Reggiano cheese": {
+        "tally": 14,
+        "italian": 8,
+        "vegetarian": 1,
+        "seafood": 2,
+        "meat": 3
+    },
+    "pesto sauce": {
+        "tally": 2,
+        "italian": 1,
+        "healthy": 1
+    },
+    "herbesProvence de ": {
+        "tally": 3,
+        "italian": 2,
+        "meat": 1
+    },
+    "chicken bouillon": {
+        "tally": 3,
+        "italian": 1,
+        "mexican": 2
+    },
+    "bread flour": {
+        "tally": 7,
+        "italian": 5,
+        "healthy": 2
+    },
+    "degrees C": {
+        "tally": 1,
+        "italian": 1
+    },
+    "capers": {
+        "tally": 12,
+        "italian": 4,
+        "seafood": 5,
+        "meat": 1,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "inch slices": {
+        "tally": 1,
+        "italian": 1
+    },
+    "basil leaves": {
+        "tally": 4,
+        "italian": 3,
+        "meat": 1
+    },
+    "anchovy fillets": {
+        "tally": 4,
+        "italian": 2,
+        "seafood": 2
+    },
+    "cup capers": {
+        "tally": 3,
+        "italian": 1,
+        "seafood": 2
+    },
+    "oats": {
+        "tally": 7,
+        "italian": 1,
+        "vegetarian": 2,
+        "healthy": 4
+    },
+    "eggs eggs": {
+        "tally": 2,
+        "italian": 1,
+        "vegetarian": 1
+    },
+    "part skim milk ricotta cheese": {
+        "tally": 1,
+        "italian": 1
+    },
+    "sprig rosemary": {
+        "tally": 1,
+        "italian": 1
+    },
+    "rotini pasta": {
+        "tally": 3,
+        "italian": 3
+    },
+    "cup mushrooms": {
+        "tally": 2,
+        "italian": 1,
+        "vegetarian": 1
+    },
+    "sandwich bread": {
+        "tally": 1,
+        "italian": 1
+    },
+    "pasta shells": {
+        "tally": 3,
+        "italian": 2,
+        "vegetarian": 1
+    },
+    "curd cottage cheese": {
+        "tally": 3,
+        "italian": 1,
+        "meat": 2
+    },
+    "dried": {
+        "tally": 4,
+        "italian": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "savory": {
+        "tally": 2,
+        "italian": 1,
+        "healthy": 1
+    },
+    "guanciale": {
+        "tally": 3,
+        "italian": 3
+    },
+    "cornmeal": {
+        "tally": 9,
+        "italian": 3,
+        "vegetarian": 2,
+        "seafood": 1,
+        "mexican": 3
+    },
+    "celery salt": {
+        "tally": 5,
+        "italian": 1,
+        "seafood": 2,
+        "mexican": 2
+    },
+    "stems": {
+        "tally": 6,
+        "italian": 1,
+        "seafood": 1,
+        "meat": 1,
+        "healthy": 2,
+        "mexican": 1
+    },
+    "parsley flakes": {
+        "tally": 3,
+        "italian": 1,
+        "vegetarian": 1,
+        "seafood": 1
+    },
+    "cube chicken bouillon": {
+        "tally": 5,
+        "italian": 2,
+        "meat": 1,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "Classico \u00aeMarinara Cabernet ": {
+        "tally": 1,
+        "italian": 1
+    },
+    "pepperoni": {
+        "tally": 1,
+        "italian": 1
+    },
+    "steak seasoning rub": {
+        "tally": 1,
+        "italian": 1
+    },
+    "pork loin roast": {
+        "tally": 1,
+        "italian": 1
+    },
+    "pasta water": {
+        "tally": 1,
+        "italian": 1
+    },
+    "skim mozzarella cheese": {
+        "tally": 2,
+        "italian": 2
+    },
+    "tablespoons": {
+        "tally": 6,
+        "italian": 4,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "mozzarella balls": {
+        "tally": 2,
+        "italian": 2
+    },
+    "fettuccini pasta": {
+        "tally": 4,
+        "italian": 3,
+        "seafood": 1
+    },
+    "peeled": {
+        "tally": 4,
+        "italian": 1,
+        "seafood": 1,
+        "meat": 1,
+        "healthy": 1
+    },
+    "pasta": {
+        "tally": 15,
+        "italian": 6,
+        "meat": 4,
+        "healthy": 3,
+        "mexican": 2
+    },
+    "San Marzano tomatoes": {
+        "tally": 2,
+        "italian": 1,
+        "meat": 1
+    },
+    "fettuccine pasta": {
+        "tally": 3,
+        "italian": 1,
+        "vegetarian": 1,
+        "seafood": 1
+    },
+    "pepperoni sausage": {
+        "tally": 2,
+        "italian": 2
+    },
+    "provolone cheese": {
+        "tally": 2,
+        "italian": 1,
+        "meat": 1
+    },
+    "olives": {
+        "tally": 20,
+        "italian": 4,
+        "vegetarian": 2,
+        "seafood": 1,
+        "meat": 3,
+        "mexican": 10
+    },
+    "ground mustard seed": {
+        "tally": 1,
+        "italian": 1
+    },
+    "style bread crumbs": {
+        "tally": 2,
+        "italian": 1,
+        "vegetarian": 1
+    },
+    "loin chops": {
+        "tally": 1,
+        "italian": 1
+    },
+    "baby spinach leaves": {
+        "tally": 5,
+        "italian": 2,
+        "vegetarian": 1,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "prosciutto": {
+        "tally": 1,
+        "italian": 1
+    },
+    "sage": {
+        "tally": 7,
+        "italian": 2,
+        "vegetarian": 1,
+        "meat": 4
+    },
+    "porktenderloin ": {
+        "tally": 1,
+        "italian": 1
+    },
+    "herb": {
+        "tally": 10,
+        "italian": 4,
+        "vegetarian": 2,
+        "meat": 2,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "spinach fettuccine pasta": {
+        "tally": 1,
+        "italian": 1
+    },
+    "thyme leaves": {
+        "tally": 3,
+        "italian": 1,
+        "vegetarian": 1,
+        "meat": 1
+    },
+    "fines herbs": {
+        "tally": 1,
+        "italian": 1
+    },
+    "bread stuffing mix": {
+        "tally": 1,
+        "italian": 1
+    },
+    "cake mix": {
+        "tally": 1,
+        "italian": 1
+    },
+    "coffee powder": {
+        "tally": 1,
+        "italian": 1
+    },
+    "mascarpone cheese": {
+        "tally": 3,
+        "italian": 2,
+        "vegetarian": 1
+    },
+    "liqueur": {
+        "tally": 4,
+        "italian": 2,
+        "mexican": 2
+    },
+    "cocoa powder": {
+        "tally": 6,
+        "italian": 1,
+        "vegetarian": 2,
+        "healthy": 2,
+        "mexican": 1
+    },
+    "semisweet chocolate": {
+        "tally": 1,
+        "italian": 1
+    },
+    "strawberries": {
+        "tally": 15,
+        "italian": 1,
+        "vegetarian": 3,
+        "healthy": 9,
+        "mexican": 2
+    },
+    "California bay leaf": {
+        "tally": 1,
+        "italian": 1
+    },
+    "sprigs thyme": {
+        "tally": 1,
+        "italian": 1
+    },
+    "twine": {
+        "tally": 1,
+        "italian": 1
+    },
+    "hoagie rolls": {
+        "tally": 1,
+        "italian": 1
+    },
+    "ribs celery": {
+        "tally": 4,
+        "italian": 1,
+        "vegetarian": 1,
+        "meat": 1,
+        "healthy": 1
+    },
+    "basil pesto": {
+        "tally": 2,
+        "italian": 1,
+        "seafood": 1
+    },
+    "plum": {
+        "tally": 9,
+        "italian": 2,
+        "vegetarian": 2,
+        "seafood": 2,
+        "healthy": 1,
+        "mexican": 2
+    },
+    "style sausage": {
+        "tally": 2,
+        "italian": 1,
+        "vegetarian": 1
+    },
+    "ground meat substitute": {
+        "tally": 2,
+        "italian": 1,
+        "vegetarian": 1
+    },
+    "fennel seeds": {
+        "tally": 2,
+        "italian": 1,
+        "vegetarian": 1
+    },
+    "gnocchi": {
+        "tally": 1,
+        "italian": 1
+    },
+    "bulk pork sausage": {
+        "tally": 3,
+        "italian": 1,
+        "meat": 1,
+        "mexican": 1
+    },
+    "russet potatoes": {
+        "tally": 4,
+        "italian": 1,
+        "vegetarian": 2,
+        "meat": 1
+    },
+    "kale": {
+        "tally": 5,
+        "italian": 2,
+        "healthy": 3
+    },
+    "fish": {
+        "tally": 3,
+        "italian": 1,
+        "seafood": 2
+    },
+    "oregano leaves": {
+        "tally": 3,
+        "italian": 2,
+        "seafood": 1
+    },
+    "lemon wedges": {
+        "tally": 5,
+        "italian": 1,
+        "seafood": 4
+    },
+    "loaf": {
+        "tally": 2,
+        "italian": 1,
+        "vegetarian": 1
+    },
+    "slice onion": {
+        "tally": 1,
+        "italian": 1
+    },
+    "citric acid": {
+        "tally": 1,
+        "italian": 1
+    },
+    "degreesF ": {
+        "tally": 1,
+        "italian": 1
+    },
+    "semolina flour": {
+        "tally": 3,
+        "italian": 2,
+        "healthy": 1
+    },
+    "kalamata olives": {
+        "tally": 2,
+        "italian": 2
+    },
+    "%milk ": {
+        "tally": 1,
+        "italian": 1
+    },
+    "plum tomatoes": {
+        "tally": 4,
+        "italian": 3,
+        "healthy": 1
+    },
+    "pinch baking soda": {
+        "tally": 1,
+        "italian": 1
+    },
+    "cherrypie ": {
+        "tally": 1,
+        "italian": 1
+    },
+    "Aleppo pepper flakes": {
+        "tally": 2,
+        "italian": 1,
+        "seafood": 1
+    },
+    "leaf parsley": {
+        "tally": 9,
+        "italian": 1,
+        "seafood": 5,
+        "meat": 3
+    },
+    "nuts": {
+        "tally": 2,
+        "italian": 1,
+        "healthy": 1
+    },
+    "groundalmonds ": {
+        "tally": 1,
+        "italian": 1
+    },
+    "tortellini": {
+        "tally": 1,
+        "italian": 1
+    },
+    "envelopeFleischmann ": {
+        "tally": 1,
+        "italian": 1
+    },
+    "cremini mushrooms": {
+        "tally": 2,
+        "italian": 1,
+        "vegetarian": 1
+    },
+    "salami": {
+        "tally": 1,
+        "italian": 1
+    },
+    "style salad dressing mix": {
+        "tally": 3,
+        "italian": 1,
+        "vegetarian": 1,
+        "meat": 1
+    },
+    "cups tomatoes": {
+        "tally": 1,
+        "italian": 1
+    },
+    "manicotti shells": {
+        "tally": 1,
+        "italian": 1
+    },
+    "bacon": {
+        "tally": 20,
+        "italian": 4,
+        "seafood": 4,
+        "meat": 8,
+        "healthy": 1,
+        "mexican": 3
+    },
+    "spinach pasta": {
+        "tally": 2,
+        "italian": 1,
+        "healthy": 1
+    },
+    "cauliflower florets": {
+        "tally": 5,
+        "italian": 1,
+        "vegetarian": 4
+    },
+    "buttermilk": {
+        "tally": 7,
+        "italian": 1,
+        "seafood": 1,
+        "meat": 4,
+        "mexican": 1
+    },
+    "gravy": {
+        "tally": 1,
+        "italian": 1
+    },
+    "wheat bread flour": {
+        "tally": 1,
+        "italian": 1
+    },
+    "pancetta": {
+        "tally": 2,
+        "italian": 1,
+        "meat": 1
+    },
+    "beef chuck roast": {
+        "tally": 4,
+        "italian": 1,
+        "meat": 1,
+        "mexican": 2
+    },
+    "salad dressing mix": {
+        "tally": 1,
+        "italian": 1
+    },
+    "pepperoncini peppers": {
+        "tally": 1,
+        "italian": 1
+    },
+    "hamburger buns": {
+        "tally": 2,
+        "italian": 1,
+        "meat": 1
+    },
+    "bread dough": {
+        "tally": 1,
+        "italian": 1
+    },
+    "ounces water": {
+        "tally": 2,
+        "italian": 1,
+        "mexican": 1
+    },
+    "fat milk": {
+        "tally": 4,
+        "italian": 1,
+        "healthy": 3
+    },
+    "boil lasagna noodles": {
+        "tally": 1,
+        "italian": 1
+    },
+    "Sauvignon Blanc wine": {
+        "tally": 1,
+        "italian": 1
+    },
+    "pinches": {
+        "tally": 1,
+        "italian": 1
+    },
+    "part skim mozzarella cheese": {
+        "tally": 1,
+        "italian": 1
+    },
+    "fat ricotta cheese": {
+        "tally": 2,
+        "italian": 1,
+        "meat": 1
+    },
+    "grahamcracker ": {
+        "tally": 1,
+        "italian": 1
+    },
+    "potato flakes": {
+        "tally": 3,
+        "italian": 1,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "cutlets": {
+        "tally": 1,
+        "italian": 1
+    },
+    "ground thyme": {
+        "tally": 7,
+        "italian": 1,
+        "seafood": 1,
+        "meat": 4,
+        "mexican": 1
+    },
+    "halved": {
+        "tally": 11,
+        "italian": 1,
+        "vegetarian": 2,
+        "seafood": 3,
+        "meat": 2,
+        "healthy": 1,
+        "mexican": 2
+    },
+    "ground turkey": {
+        "tally": 8,
+        "italian": 1,
+        "meat": 5,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "almond flour": {
+        "tally": 1,
+        "italian": 1
+    },
+    "pork sausage": {
+        "tally": 3,
+        "italian": 1,
+        "vegetarian": 1,
+        "meat": 1
+    },
+    "anise seed": {
+        "tally": 1,
+        "italian": 1
+    },
+    "farfalle pasta": {
+        "tally": 1,
+        "italian": 1
+    },
+    "turkey sausage": {
+        "tally": 1,
+        "italian": 1
+    },
+    "chicken bouillon granules": {
+        "tally": 5,
+        "italian": 1,
+        "seafood": 1,
+        "meat": 2,
+        "mexican": 1
+    },
+    "leek soup mix": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "sourdough bread": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "maple syrup": {
+        "tally": 4,
+        "vegetarian": 1,
+        "meat": 1,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "head cauliflower": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "feta cheese": {
+        "tally": 5,
+        "vegetarian": 4,
+        "seafood": 1
+    },
+    "cavatelli pasta": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "sodium": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "taco seasoning mix": {
+        "tally": 24,
+        "vegetarian": 3,
+        "meat": 2,
+        "mexican": 19
+    },
+    "iceberglettuce ": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "hearts": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "popcorn kernels": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "crackers": {
+        "tally": 6,
+        "vegetarian": 1,
+        "seafood": 3,
+        "meat": 1,
+        "healthy": 1
+    },
+    "style horseradish sauce": {
+        "tally": 2,
+        "vegetarian": 2
+    },
+    "dish pie crust": {
+        "tally": 2,
+        "vegetarian": 2
+    },
+    "graham cracker crust": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "topping": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "peanut butter cups": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "avocados": {
+        "tally": 6,
+        "vegetarian": 2,
+        "seafood": 1,
+        "mexican": 3
+    },
+    "style cheese blend": {
+        "tally": 4,
+        "vegetarian": 1,
+        "mexican": 3
+    },
+    "cumin": {
+        "tally": 10,
+        "vegetarian": 1,
+        "healthy": 3,
+        "mexican": 6
+    },
+    "Thai chili sauce": {
+        "tally": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "kernel corn": {
+        "tally": 12,
+        "vegetarian": 2,
+        "meat": 2,
+        "healthy": 2,
+        "mexican": 6
+    },
+    "cup cornmeal": {
+        "tally": 3,
+        "vegetarian": 1,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "pie crust": {
+        "tally": 2,
+        "vegetarian": 2
+    },
+    "corn": {
+        "tally": 22,
+        "vegetarian": 2,
+        "seafood": 5,
+        "meat": 1,
+        "healthy": 3,
+        "mexican": 11
+    },
+    "pecans": {
+        "tally": 2,
+        "vegetarian": 1,
+        "seafood": 1
+    },
+    "vegetable bouillon": {
+        "tally": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "beetgreens ": {
+        "tally": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "pepper sauce": {
+        "tally": 33,
+        "vegetarian": 3,
+        "seafood": 8,
+        "meat": 7,
+        "healthy": 6,
+        "mexican": 9
+    },
+    "Monterey Jack cheese": {
+        "tally": 33,
+        "vegetarian": 4,
+        "seafood": 3,
+        "meat": 2,
+        "healthy": 1,
+        "mexican": 23
+    },
+    "beets": {
+        "tally": 3,
+        "vegetarian": 1,
+        "healthy": 2
+    },
+    "crescent rolls": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "weed": {
+        "tally": 11,
+        "vegetarian": 2,
+        "seafood": 6,
+        "healthy": 3
+    },
+    "ranch dressing mix": {
+        "tally": 3,
+        "vegetarian": 1,
+        "mexican": 2
+    },
+    "radishes": {
+        "tally": 4,
+        "vegetarian": 2,
+        "meat": 1,
+        "healthy": 1
+    },
+    "medium tomato": {
+        "tally": 3,
+        "vegetarian": 1,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "basil oil": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "pepperjack cheese": {
+        "tally": 5,
+        "vegetarian": 1,
+        "meat": 1,
+        "mexican": 3
+    },
+    "chicken bouillon powder": {
+        "tally": 2,
+        "vegetarian": 1,
+        "meat": 1
+    },
+    "masa harina": {
+        "tally": 4,
+        "vegetarian": 1,
+        "healthy": 1,
+        "mexican": 2
+    },
+    "soy milk": {
+        "tally": 3,
+        "vegetarian": 1,
+        "healthy": 2
+    },
+    "spinach leaves": {
+        "tally": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "banana": {
+        "tally": 7,
+        "vegetarian": 1,
+        "healthy": 6
+    },
+    "tops": {
+        "tally": 2,
+        "vegetarian": 1,
+        "mexican": 1
+    },
+    "Sargento \u00aeMexican Authentic ": {
+        "tally": 2,
+        "vegetarian": 1,
+        "mexican": 1
+    },
+    "plantain": {
+        "tally": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "bean soup": {
+        "tally": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "barley": {
+        "tally": 6,
+        "vegetarian": 2,
+        "healthy": 4
+    },
+    "corn tortilla chips": {
+        "tally": 3,
+        "vegetarian": 1,
+        "mexican": 2
+    },
+    "chili": {
+        "tally": 2,
+        "vegetarian": 1,
+        "mexican": 1
+    },
+    "cauliflower": {
+        "tally": 6,
+        "vegetarian": 2,
+        "seafood": 1,
+        "healthy": 2,
+        "mexican": 1
+    },
+    "light mayonnaise": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "fat Cheddar cheese": {
+        "tally": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "apples": {
+        "tally": 4,
+        "vegetarian": 2,
+        "healthy": 2
+    },
+    "jicama": {
+        "tally": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "romaine lettuce leaves": {
+        "tally": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "pomegranate juice": {
+        "tally": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "dill": {
+        "tally": 9,
+        "vegetarian": 2,
+        "seafood": 5,
+        "healthy": 2
+    },
+    "quinoa": {
+        "tally": 6,
+        "vegetarian": 3,
+        "healthy": 2,
+        "mexican": 1
+    },
+    "limes": {
+        "tally": 12,
+        "vegetarian": 1,
+        "meat": 1,
+        "healthy": 3,
+        "mexican": 7
+    },
+    "Thousand Island dressing": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "wax beans": {
+        "tally": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "celery seed": {
+        "tally": 5,
+        "vegetarian": 3,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "bananas": {
+        "tally": 3,
+        "vegetarian": 1,
+        "healthy": 2
+    },
+    "pastry": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "Aleppo chili flakes": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "tahini": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "piefilling ": {
+        "tally": 3,
+        "vegetarian": 2,
+        "mexican": 1
+    },
+    "cup panko bread crumbs": {
+        "tally": 2,
+        "vegetarian": 1,
+        "seafood": 1
+    },
+    "seafood seasoning": {
+        "tally": 16,
+        "vegetarian": 2,
+        "seafood": 10,
+        "healthy": 2,
+        "mexican": 2
+    },
+    "nonstick cooking spray": {
+        "tally": 2,
+        "vegetarian": 1,
+        "mexican": 1
+    },
+    "package": {
+        "tally": 3,
+        "vegetarian": 1,
+        "meat": 1,
+        "mexican": 1
+    },
+    "tortillas": {
+        "tally": 48,
+        "vegetarian": 3,
+        "seafood": 1,
+        "meat": 3,
+        "healthy": 2,
+        "mexican": 39
+    },
+    "enchilada sauce": {
+        "tally": 13,
+        "vegetarian": 1,
+        "mexican": 12
+    },
+    "tomato juice": {
+        "tally": 2,
+        "vegetarian": 1,
+        "mexican": 1
+    },
+    "coconut oil": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "baby carrots": {
+        "tally": 5,
+        "vegetarian": 2,
+        "meat": 1,
+        "healthy": 2
+    },
+    "chia seeds": {
+        "tally": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "nectar": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "heads escarole": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "split peas": {
+        "tally": 3,
+        "vegetarian": 1,
+        "meat": 1,
+        "healthy": 1
+    },
+    "chunky salsa": {
+        "tally": 6,
+        "vegetarian": 1,
+        "healthy": 1,
+        "mexican": 4
+    },
+    "cherrytomatoes ": {
+        "tally": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "Yukon Gold potatoes": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "packed": {
+        "tally": 2,
+        "vegetarian": 1,
+        "mexican": 1
+    },
+    "chiles": {
+        "tally": 19,
+        "vegetarian": 2,
+        "meat": 2,
+        "healthy": 2,
+        "mexican": 13
+    },
+    "tomato salsa": {
+        "tally": 2,
+        "vegetarian": 1,
+        "mexican": 1
+    },
+    "flour tortillas": {
+        "tally": 5,
+        "vegetarian": 1,
+        "mexican": 4
+    },
+    "turnips": {
+        "tally": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "liquid egg whites": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "fat cottage cheese": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "Burgundy wine": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "wheat": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "amino acid": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "tamari": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "medium banana": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "almondmilk": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "pineapple": {
+        "tally": 4,
+        "vegetarian": 1,
+        "meat": 1,
+        "healthy": 2
+    },
+    "flax seeds": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "leeks": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "greens": {
+        "tally": 2,
+        "vegetarian": 2
+    },
+    "Lacinato kale": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "chard": {
+        "tally": 2,
+        "vegetarian": 1,
+        "meat": 1
+    },
+    "sodium vegetable broth": {
+        "tally": 2,
+        "vegetarian": 2
+    },
+    "file powder": {
+        "tally": 2,
+        "vegetarian": 1,
+        "meat": 1
+    },
+    "lentil": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "kiwis": {
+        "tally": 3,
+        "vegetarian": 1,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "Golden Deliciousapples ": {
+        "tally": 3,
+        "vegetarian": 1,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "raspberries": {
+        "tally": 4,
+        "vegetarian": 1,
+        "healthy": 2,
+        "mexican": 1
+    },
+    "fruit preserves": {
+        "tally": 3,
+        "vegetarian": 1,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "button mushrooms": {
+        "tally": 4,
+        "vegetarian": 1,
+        "seafood": 2,
+        "meat": 1
+    },
+    "Cajun seasoning": {
+        "tally": 11,
+        "vegetarian": 1,
+        "seafood": 6,
+        "meat": 2,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "baby potatoes": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "avocado oil": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "Parmesan": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "Asiago cheese": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "wheat bread": {
+        "tally": 4,
+        "vegetarian": 1,
+        "seafood": 1,
+        "healthy": 2
+    },
+    "cranberries": {
+        "tally": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "Gruyere cheese": {
+        "tally": 2,
+        "vegetarian": 1,
+        "seafood": 1
+    },
+    "Emmentaler cheese": {
+        "tally": 1,
+        "vegetarian": 1
+    },
+    "mango": {
+        "tally": 4,
+        "vegetarian": 1,
+        "seafood": 1,
+        "healthy": 2
+    },
+    "jalapeno chile pepper": {
+        "tally": 2,
+        "vegetarian": 1,
+        "healthy": 1
+    },
+    "pods": {
+        "tally": 3,
+        "vegetarian": 1,
+        "mexican": 2
+    },
+    "fillets": {
+        "tally": 17,
+        "seafood": 16,
+        "healthy": 1
+    },
+    "tilapia": {
+        "tally": 3,
+        "seafood": 2,
+        "healthy": 1
+    },
+    "sea scallops": {
+        "tally": 5,
+        "seafood": 5
+    },
+    "tails": {
+        "tally": 7,
+        "seafood": 6,
+        "mexican": 1
+    },
+    "tuna steaks": {
+        "tally": 2,
+        "seafood": 2
+    },
+    "macadamia nuts": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "salmon": {
+        "tally": 16,
+        "seafood": 16
+    },
+    "scallops": {
+        "tally": 4,
+        "seafood": 3,
+        "healthy": 1
+    },
+    "tarragon": {
+        "tally": 5,
+        "seafood": 5
+    },
+    "breadcrumbs": {
+        "tally": 2,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "andouille sausage": {
+        "tally": 4,
+        "seafood": 2,
+        "meat": 2
+    },
+    "ground savory": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "lobster": {
+        "tally": 2,
+        "seafood": 2
+    },
+    "fish stock": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "beer": {
+        "tally": 6,
+        "seafood": 1,
+        "meat": 4,
+        "healthy": 1
+    },
+    "codfillets ": {
+        "tally": 2,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "corn tortillas": {
+        "tally": 13,
+        "seafood": 1,
+        "meat": 1,
+        "healthy": 1,
+        "mexican": 10
+    },
+    "bones removed": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "chile": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "catfish fillets": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "linguini pasta": {
+        "tally": 4,
+        "seafood": 3,
+        "healthy": 1
+    },
+    "jumbo shrimp": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "cupsCrumbs Bread Panko Kikkoman ": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "Vegetable oil": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "teaspoonsCajun ": {
+        "tally": 3,
+        "seafood": 2,
+        "meat": 1
+    },
+    "bay scallops": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "seasoned": {
+        "tally": 2,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "lemon pepper": {
+        "tally": 10,
+        "seafood": 6,
+        "meat": 1,
+        "healthy": 3
+    },
+    "cloves garlic": {
+        "tally": 3,
+        "seafood": 2,
+        "meat": 1
+    },
+    "Old Bay Seasoning TM": {
+        "tally": 6,
+        "seafood": 5,
+        "healthy": 1
+    },
+    "troutfillets ": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "za'atar": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "salmon fillets": {
+        "tally": 4,
+        "seafood": 3,
+        "healthy": 1
+    },
+    "medium lemon": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "couscous": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "sausages": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "cup seafood seasoning": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "crabs": {
+        "tally": 2,
+        "seafood": 2
+    },
+    "mignon steaks": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "steak": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "fluid ounce": {
+        "tally": 5,
+        "seafood": 1,
+        "meat": 2,
+        "mexican": 2
+    },
+    "lump lobster meat": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "kielbasa sausage": {
+        "tally": 2,
+        "seafood": 2
+    },
+    "crab": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "tilapia fillets": {
+        "tally": 6,
+        "seafood": 3,
+        "healthy": 1,
+        "mexican": 2
+    },
+    "flounder fillets": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "cupcrabmeat ": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "saltine crackers": {
+        "tally": 5,
+        "seafood": 5
+    },
+    "cedar planks": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "macaroni": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "dill weed": {
+        "tally": 2,
+        "seafood": 2
+    },
+    "heads": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "slices lemon": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "style mustard": {
+        "tally": 2,
+        "seafood": 2
+    },
+    "sherry vinegar": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "cut boneless": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "dash pepper": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "romaine lettuce": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "crab boil": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "crab boil seasoning": {
+        "tally": 3,
+        "seafood": 3
+    },
+    "oranges": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "artichokes": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "baby corn": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "crawfish": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "king crab legs": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "juice": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "mustard powder": {
+        "tally": 3,
+        "seafood": 1,
+        "meat": 1,
+        "healthy": 1
+    },
+    "egg product": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "lump crab meat": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "boneless salmon fillet": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "lemon pepper seasoning": {
+        "tally": 2,
+        "seafood": 1,
+        "meat": 1
+    },
+    "rings": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "pumpkin seeds": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "cubed beef stew meat": {
+        "tally": 4,
+        "seafood": 1,
+        "meat": 2,
+        "mexican": 1
+    },
+    "egg noodles": {
+        "tally": 7,
+        "seafood": 2,
+        "meat": 4,
+        "healthy": 1
+    },
+    "pickle relish": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "onion flakes": {
+        "tally": 2,
+        "seafood": 1,
+        "mexican": 1
+    },
+    "cup chili sauce": {
+        "tally": 2,
+        "seafood": 2
+    },
+    "tablespoonsmustard Creole ": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "wheat spaghetti": {
+        "tally": 2,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "half cream": {
+        "tally": 3,
+        "seafood": 3
+    },
+    "crab meat": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "walleye": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "mackerel": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "lobster tails": {
+        "tally": 3,
+        "seafood": 3
+    },
+    "lump crabmeat": {
+        "tally": 3,
+        "seafood": 3
+    },
+    "parsley leaves": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "trout": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "cod": {
+        "tally": 4,
+        "seafood": 2,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "clam juice": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "medium russet potatoes": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "gratedParmigiano ": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "fillet": {
+        "tally": 4,
+        "seafood": 3,
+        "healthy": 1
+    },
+    "toasted": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "grouper fillets": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "nutmeg": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "salmon fillet": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "sherry wine": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "cognac": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "creme fraiche": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "Cayenne pepper": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "octopus": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "linguini": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "fettuccine noodles": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "lima beans": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "crab crabmeat": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "crab claws": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "saltine cracker crumbs": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "whitefish": {
+        "tally": 2,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "Old Bay": {
+        "tally": 2,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "smoke flavoring": {
+        "tally": 4,
+        "seafood": 1,
+        "healthy": 2,
+        "mexican": 1
+    },
+    "Reynolds \u00ae Slow Cooker Liner": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "cod fish": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "littleneck clams": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "Snow Crab legs": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "hollandaise sauce mix": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "cooking sherry": {
+        "tally": 3,
+        "seafood": 1,
+        "meat": 2
+    },
+    "lemon peel": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "molasses": {
+        "tally": 4,
+        "seafood": 1,
+        "healthy": 3
+    },
+    "snapper": {
+        "tally": 2,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "buttery crackers": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "aluminum foil": {
+        "tally": 2,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "lemon zest": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "style bread": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "leaf lettuce leaves": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "rockfish": {
+        "tally": 2,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "lemon slices": {
+        "tally": 2,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "onion slices": {
+        "tally": 2,
+        "seafood": 1,
+        "healthy": 1
+    },
+    "escargots": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "cup cream": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "horseradish": {
+        "tally": 2,
+        "seafood": 1,
+        "mexican": 1
+    },
+    "shell": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "cup parsley": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "salad shrimp": {
+        "tally": 1,
+        "seafood": 1
+    },
+    "medium carrot": {
+        "tally": 1,
+        "meat": 1
+    },
+    "rib roast": {
+        "tally": 1,
+        "meat": 1
+    },
+    "beef bouillon cubes": {
+        "tally": 2,
+        "meat": 1,
+        "mexican": 1
+    },
+    "chipotle pepper sauce": {
+        "tally": 1,
+        "meat": 1
+    },
+    "onion soup": {
+        "tally": 1,
+        "meat": 1
+    },
+    "ancho": {
+        "tally": 2,
+        "meat": 2
+    },
+    "chipotle pepper": {
+        "tally": 3,
+        "meat": 1,
+        "mexican": 2
+    },
+    "pork ribs": {
+        "tally": 2,
+        "meat": 2
+    },
+    "barbeque sauce": {
+        "tally": 7,
+        "meat": 6,
+        "healthy": 1
+    },
+    "rye bread": {
+        "tally": 1,
+        "meat": 1
+    },
+    "sauerkraut": {
+        "tally": 1,
+        "meat": 1
+    },
+    "cupIsland Thousand ": {
+        "tally": 1,
+        "meat": 1
+    },
+    "ground pepper": {
+        "tally": 1,
+        "meat": 1
+    },
+    "beef brisket": {
+        "tally": 3,
+        "meat": 3
+    },
+    "wheat elbow macaroni": {
+        "tally": 1,
+        "meat": 1
+    },
+    "biscuit dough": {
+        "tally": 1,
+        "meat": 1
+    },
+    "Jack cheese": {
+        "tally": 2,
+        "meat": 1,
+        "mexican": 1
+    },
+    "rack": {
+        "tally": 1,
+        "meat": 1
+    },
+    "hominy": {
+        "tally": 3,
+        "meat": 1,
+        "mexican": 2
+    },
+    "tortilla chips": {
+        "tally": 10,
+        "meat": 2,
+        "mexican": 8
+    },
+    "chunk chicken": {
+        "tally": 2,
+        "meat": 1,
+        "healthy": 1
+    },
+    "cheese food": {
+        "tally": 3,
+        "meat": 1,
+        "mexican": 2
+    },
+    "roast": {
+        "tally": 2,
+        "meat": 2
+    },
+    "onion soup mix": {
+        "tally": 5,
+        "meat": 3,
+        "healthy": 2
+    },
+    "beef liver": {
+        "tally": 1,
+        "meat": 1
+    },
+    "cups milk": {
+        "tally": 1,
+        "meat": 1
+    },
+    "Vidalia onions": {
+        "tally": 1,
+        "meat": 1
+    },
+    "style chorizo": {
+        "tally": 1,
+        "meat": 1
+    },
+    "bacon grease": {
+        "tally": 1,
+        "meat": 1
+    },
+    "serrano pepper": {
+        "tally": 1,
+        "meat": 1
+    },
+    "dash garlic powder": {
+        "tally": 1,
+        "meat": 1
+    },
+    "skin": {
+        "tally": 1,
+        "meat": 1
+    },
+    "ground veal": {
+        "tally": 1,
+        "meat": 1
+    },
+    "coleslaw": {
+        "tally": 1,
+        "meat": 1
+    },
+    "waffle mix": {
+        "tally": 1,
+        "meat": 1
+    },
+    "groundbeef ": {
+        "tally": 1,
+        "meat": 1
+    },
+    "chilibeans ": {
+        "tally": 2,
+        "meat": 1,
+        "mexican": 1
+    },
+    "bacon bits": {
+        "tally": 2,
+        "meat": 2
+    },
+    "beef bouillon": {
+        "tally": 3,
+        "meat": 3
+    },
+    "cup chili powder": {
+        "tally": 1,
+        "meat": 1
+    },
+    "corn chips": {
+        "tally": 1,
+        "meat": 1
+    },
+    "saffron threads": {
+        "tally": 1,
+        "meat": 1
+    },
+    "chorizosausage ": {
+        "tally": 1,
+        "meat": 1
+    },
+    "butter lettuce leaves": {
+        "tally": 1,
+        "meat": 1
+    },
+    "chile pepper sauce": {
+        "tally": 1,
+        "meat": 1
+    },
+    "tomato soup": {
+        "tally": 3,
+        "meat": 1,
+        "mexican": 2
+    },
+    "turkey bacon": {
+        "tally": 1,
+        "meat": 1
+    },
+    "VELVEETA \u00ae": {
+        "tally": 1,
+        "meat": 1
+    },
+    "breakfast pork sausage": {
+        "tally": 1,
+        "meat": 1
+    },
+    "RO*TELTomatoes Diced ": {
+        "tally": 1,
+        "meat": 1
+    },
+    "collard greens": {
+        "tally": 1,
+        "meat": 1
+    },
+    "grape": {
+        "tally": 1,
+        "meat": 1
+    },
+    "orange zest": {
+        "tally": 1,
+        "meat": 1
+    },
+    "inch thickness": {
+        "tally": 1,
+        "meat": 1
+    },
+    "Buffalo wing sauce": {
+        "tally": 1,
+        "meat": 1
+    },
+    "beef shank": {
+        "tally": 1,
+        "meat": 1
+    },
+    "chayotes": {
+        "tally": 1,
+        "meat": 1
+    },
+    "jalapenos": {
+        "tally": 2,
+        "meat": 1,
+        "mexican": 1
+    },
+    "celery ribs": {
+        "tally": 2,
+        "meat": 2
+    },
+    "style biscuits": {
+        "tally": 1,
+        "meat": 1
+    },
+    "ground sirloin": {
+        "tally": 2,
+        "meat": 2
+    },
+    "beef eye": {
+        "tally": 1,
+        "meat": 1
+    },
+    "cube steaks": {
+        "tally": 1,
+        "meat": 1
+    },
+    "vegetable shortening": {
+        "tally": 2,
+        "meat": 1,
+        "mexican": 1
+    },
+    "beef roast": {
+        "tally": 1,
+        "meat": 1
+    },
+    "taste": {
+        "tally": 3,
+        "meat": 1,
+        "healthy": 2
+    },
+    "cube beef bouillon": {
+        "tally": 1,
+        "meat": 1
+    },
+    "flour tortilla": {
+        "tally": 1,
+        "meat": 1
+    },
+    "chicken drumsticks": {
+        "tally": 1,
+        "meat": 1
+    },
+    "Creole seasoning": {
+        "tally": 1,
+        "meat": 1
+    },
+    "beef stew meat": {
+        "tally": 1,
+        "meat": 1
+    },
+    "meatless spaghetti sauce": {
+        "tally": 1,
+        "meat": 1
+    },
+    "onion salt": {
+        "tally": 2,
+        "meat": 2
+    },
+    "ground pork sausage": {
+        "tally": 1,
+        "meat": 1
+    },
+    "mix": {
+        "tally": 3,
+        "meat": 2,
+        "mexican": 1
+    },
+    "breast": {
+        "tally": 1,
+        "meat": 1
+    },
+    "drippings": {
+        "tally": 1,
+        "meat": 1
+    },
+    "poultry seasoning": {
+        "tally": 2,
+        "meat": 1,
+        "healthy": 1
+    },
+    "cups beer": {
+        "tally": 1,
+        "meat": 1
+    },
+    "lumpia wrappers": {
+        "tally": 1,
+        "meat": 1
+    },
+    "escarole": {
+        "tally": 1,
+        "meat": 1
+    },
+    "pork tenderloins": {
+        "tally": 1,
+        "meat": 1
+    },
+    "chili seasoning": {
+        "tally": 1,
+        "meat": 1
+    },
+    "style curry powder": {
+        "tally": 1,
+        "meat": 1
+    },
+    "habanero pepper": {
+        "tally": 1,
+        "meat": 1
+    },
+    "chipotle chile pepper": {
+        "tally": 1,
+        "meat": 1
+    },
+    "cups water": {
+        "tally": 1,
+        "meat": 1
+    },
+    "plumtomatoes ": {
+        "tally": 1,
+        "meat": 1
+    },
+    "cranberry beans": {
+        "tally": 1,
+        "meat": 1
+    },
+    "beef round steak": {
+        "tally": 2,
+        "meat": 2
+    },
+    "smoke": {
+        "tally": 1,
+        "meat": 1
+    },
+    "meat tenderizer": {
+        "tally": 1,
+        "meat": 1
+    },
+    "boneless pork chops": {
+        "tally": 1,
+        "meat": 1
+    },
+    "beef chuck": {
+        "tally": 1,
+        "meat": 1
+    },
+    "chestnuts": {
+        "tally": 1,
+        "meat": 1
+    },
+    "pork butt steaks": {
+        "tally": 1,
+        "meat": 1
+    },
+    "slices bacon": {
+        "tally": 1,
+        "meat": 1
+    },
+    "Brussels sprouts": {
+        "tally": 2,
+        "meat": 1,
+        "healthy": 1
+    },
+    "syrup": {
+        "tally": 1,
+        "meat": 1
+    },
+    "vegetables": {
+        "tally": 2,
+        "meat": 1,
+        "healthy": 1
+    },
+    "cut bacon": {
+        "tally": 2,
+        "meat": 1,
+        "healthy": 1
+    },
+    "Romano cheese blend": {
+        "tally": 1,
+        "meat": 1
+    },
+    "Colby Jack cheese blend": {
+        "tally": 1,
+        "meat": 1
+    },
+    "taco shells": {
+        "tally": 1,
+        "meat": 1
+    },
+    "cup water": {
+        "tally": 1,
+        "meat": 1
+    },
+    "gravy mix": {
+        "tally": 2,
+        "meat": 1,
+        "healthy": 1
+    },
+    "beef pot roast": {
+        "tally": 1,
+        "meat": 1
+    },
+    "chicken leg quarters": {
+        "tally": 1,
+        "meat": 1
+    },
+    "chayote": {
+        "tally": 1,
+        "meat": 1
+    },
+    "slice": {
+        "tally": 1,
+        "meat": 1
+    },
+    "celery stalks": {
+        "tally": 1,
+        "meat": 1
+    },
+    "andouille": {
+        "tally": 1,
+        "meat": 1
+    },
+    "Creole": {
+        "tally": 1,
+        "meat": 1
+    },
+    "rotisserie chicken": {
+        "tally": 2,
+        "meat": 1,
+        "mexican": 1
+    },
+    "barbecue sauce": {
+        "tally": 3,
+        "meat": 1,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "vegetable cooking spray": {
+        "tally": 1,
+        "meat": 1
+    },
+    "country style pork ribs": {
+        "tally": 2,
+        "meat": 2
+    },
+    "sodium tomato soup": {
+        "tally": 1,
+        "meat": 1
+    },
+    "popcorn": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "salad greens": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "chicken deli meat": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "vinaigrette salad": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "navy beans": {
+        "tally": 3,
+        "healthy": 3
+    },
+    "rye flour": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "caraway": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "demerara sugar": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "pickle juice": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "vanilla sugar": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "tomatillos": {
+        "tally": 5,
+        "healthy": 1,
+        "mexican": 4
+    },
+    "ground coriander seed": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "thyme sprigs": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "peaches": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "mango juice": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "ice": {
+        "tally": 2,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "ice cubes": {
+        "tally": 5,
+        "healthy": 3,
+        "mexican": 2
+    },
+    "0.25": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "headRomanesco ": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "breast milk": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "cherries": {
+        "tally": 2,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "bourbon": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "0.50cucumber ": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "segments": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "coconut water": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "beef bones": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "turkey carcass": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "poultry": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "almond milk": {
+        "tally": 2,
+        "healthy": 2
+    },
+    "coconut sugar": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "Granny Smith apple": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "Neufchatel cheese": {
+        "tally": 3,
+        "healthy": 1,
+        "mexican": 2
+    },
+    "lightranch ": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "bunch celery": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "pinto beans": {
+        "tally": 5,
+        "healthy": 2,
+        "mexican": 3
+    },
+    "bamboo skewers": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "berries": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "ground mustard": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "wheat germ": {
+        "tally": 2,
+        "healthy": 2
+    },
+    "cup raisins": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "ouncespasta hair angel ": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "arborio rice": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "bellpepper ": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "wheat bran": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "oat bran": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "sunflower seeds": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "steel cut oats": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "heads garlic": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "yuca": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "adobo sauce": {
+        "tally": 2,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "protein powder": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "yam": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "parsnip": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "nonfat yogurt": {
+        "tally": 2,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "wheat berries": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "millet": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "leaves removed": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "salad oil": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "cup vinegar": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "baking": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "provence": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "dates": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "leaf kale": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "roughy": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "arugula": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "figs": {
+        "tally": 1,
+        "healthy": 1
+    },
+    "beeftripe ": {
+        "tally": 2,
+        "healthy": 1,
+        "mexican": 1
+    },
+    "lard": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "corn husks": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "taco": {
+        "tally": 4,
+        "mexican": 4
+    },
+    "taco sauce": {
+        "tally": 3,
+        "mexican": 3
+    },
+    "stemmed": {
+        "tally": 4,
+        "mexican": 4
+    },
+    "spices": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "poblano peppers": {
+        "tally": 2,
+        "mexican": 2
+    },
+    "corn muffin mix": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "cup milk": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "corn oil": {
+        "tally": 2,
+        "mexican": 2
+    },
+    "cans": {
+        "tally": 3,
+        "mexican": 3
+    },
+    "pork shoulder": {
+        "tally": 3,
+        "mexican": 3
+    },
+    "cups salsa": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "pork shoulder roast": {
+        "tally": 2,
+        "mexican": 2
+    },
+    "beef bouillon granules": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "tater tots": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "blend cheese": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "cremaMexicana ": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "cotija cheese": {
+        "tally": 4,
+        "mexican": 4
+    },
+    "country bulk sausage": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "tostada shells": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "Mexican oregano": {
+        "tally": 3,
+        "mexican": 3
+    },
+    "meat removed": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "head iceberg lettuce": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "crema": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "enchilada sauce mix": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "cup rice": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "shredded": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "Monterey Jack cheese blend": {
+        "tally": 2,
+        "mexican": 2
+    },
+    "pico": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "sausage link": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "chipotle peppers": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "bottle": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "iceberg lettuce": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "chuck roast": {
+        "tally": 2,
+        "mexican": 2
+    },
+    "pepper Jack cheese": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "guacamole": {
+        "tally": 2,
+        "mexican": 2
+    },
+    "beef tongue": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "fajita seasoning": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "poblano pepper": {
+        "tally": 2,
+        "mexican": 2
+    },
+    "chuck": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "guajillo chilies": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "tortilla strips": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "dash ground cumin": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "limeade concentrate": {
+        "tally": 2,
+        "mexican": 2
+    },
+    "ounces tequila": {
+        "tally": 3,
+        "mexican": 3
+    },
+    "ounces beer": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "orange peel": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "salad dressing": {
+        "tally": 2,
+        "mexican": 2
+    },
+    "wheat tortillas": {
+        "tally": 2,
+        "mexican": 2
+    },
+    "Colby cheese": {
+        "tally": 2,
+        "mexican": 2
+    },
+    "currants": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "tequila": {
+        "tally": 2,
+        "mexican": 2
+    },
+    "sec": {
+        "tally": 2,
+        "mexican": 2
+    },
+    "lime wedges": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "grenadine syrup": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "slice orange": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "maraschino cherry": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "skinless chicken breast halves": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "article": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "chili peppers": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "clove": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "beefroast chuck ": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "cup onion": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "New Mexico chili powder": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "chorizo sausage": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "caper juice": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "picante sauce": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "cilantroleaves ": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "head iceberglettuce ": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "ouncescheese Colby ": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "medium": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "ounce lime juice": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "ounce prickly pear syrup": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "chili pepper flakes": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "cornbread mix": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "Aleppo peppers": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "New York strip steaks": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "sodium taco seasoning mix": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "gold tequila": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "granules": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "fat Monterey Jack cheese": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "jalapeno pepper slices": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "jackfruit": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "blank)s bay": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "cups beef broth": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "pumpkin": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "% agave": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "sangrita": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "soda": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "style chili powder": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "lime seasoning": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "arbol peppers": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "queso fresco": {
+        "tally": 1,
+        "mexican": 1
+    },
+    "pureed chipotle peppers": {
+        "tally": 1,
+        "mexican": 1
+    }
+}

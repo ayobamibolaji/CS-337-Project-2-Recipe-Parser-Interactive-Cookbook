@@ -12,7 +12,25 @@ the_replacements = {
 
 measures = [
     'tablespoon',
-    'pinch'
+    'teaspoon',
+    'pinch',
+    'quart',
+    'liter',
+    'cup',
+    'gallon',
+    'clove',
+    'pound',
+    'loaf',
+    'package',
+    'strips',
+    'oz',
+    'clove',
+    'pound',
+    'lbs',
+    'ounce',
+    'serving',
+    'slice',
+    'can'
 ]
 
 fats = [
@@ -22,6 +40,134 @@ fats = [
     "oil",
     "lard"
 ]
+
+common_ingredients = [
+    "salt",
+    "sugar",
+    "water",
+    "all-purpose flour"
+]
+
+colors = [
+    "white",
+    "brown",
+    "green",
+    "red",
+    "blue"
+]
+
+MEAT_SUBSTITUTES = {
+    'beef broth': 'mushroom broth',
+    'chicken broth': 'vegetable broth',
+    'ground beef': 'tempeh',
+    'beef': 'jackfruit',
+    'chicken': 'seitan',
+    'pork': 'seitan',
+    'bacon': 'tempeh',
+    'sirloin': 'jackfruit',
+    'liver': 'tofu',
+    'veal': 'jackfruit',
+    'lamb': 'jackfruit',
+    'duck': 'seitan',
+    'poultry': 'seitan',
+    'steak': 'jackfruit',
+    'loin': 'jackfruit',
+    'oyster': 'mushrooms',
+    'salmon': 'mushrooms',
+    'fillet': 'tofu',
+    'shrimp': 'mushrooms',
+    'crab': 'tofu',
+    'tuna': 'tofu',
+    'scallop': 'mushrooms',
+    'lobster': 'tofu',
+    'fish': 'tofu',
+    'cod': 'tofu',
+    'escargot': 'tofu',
+    'goat': 'seitan',
+    'mutton': 'seitan',
+    'sausage': 'beyond sausage',
+    'frog': 'tofu',
+    'toad': 'tofu',
+    'meat': 'tofu',
+    'hamburger': 'veggie burger',
+    'french fries': 'salad'
+}
+
+VEGGIE_SUBSTITUTES = {
+    'tofu': 'pork',
+    'mushroom broth': 'beef broth',
+    'vegetable broth': 'chicken broth',
+    'seitan': 'chicken',
+    'mushroom': 'salmon',
+    'jackfruit': 'beef',
+    'tempeh': 'ground beef',
+    'butter': 'lard',
+    'veggie burger': 'hamburger'
+}
+
+UNHEALTHY_SUBSTITUTES = {
+    #'sugar': ('Splenda', .5),
+    #'chicken': ('skinless chicken', 1),
+    #'butter': ('avocado', .8),
+    #'rice': ('quinoa', .9),
+    'noodles': ('zoodles', 1),
+    'sour cream': ('Greek yogurt', 1),
+    'all-purpose flour': ('whole wheat flour', 1),
+    'flour tortilla': ('corn tortilla', 1)
+}
+
+HEALTHY_SUBSTITUTES = {
+    'Splenda': ('sugar', 1.5),
+    'skinless chicken': ('chicken', 1),
+    'artificial sweetener': ('sugar', 1.5),
+    'quinoa': ('white rice', 1.1),
+    'zoodles': ('noodles', 1),
+    'whole wheat flour': ('all-purpose flour', 1),
+    'corn tortilla': ('flour tortilla', 1)
+
+}
+
+MAIN_METHODS = [
+    'bake', 
+    'boil', 
+    'cook',
+    'broil', 
+    'fry', 
+    'grill',
+    'steam',
+    'stew',
+    'braise',
+    'roast', 
+    'mix', 
+    'heat',
+    'simmer',
+    'deep fry',
+    'sear',
+    'poach', 
+    'whip', 
+    'saute',
+    'air fry'
+
+]
+
+NON_SECONDARY_METHODS = [
+    'bring',
+    'place',
+    'use',
+    'remove',
+    'add',
+    'combine',
+    'continue',
+    'slip',
+    'set',
+    'return',
+    'serve',
+    'transfer',
+    'take',
+    'save',
+
+]
+
 
 def cleanIngredientText(txt):
     txt = ' '.join(txt.split())
@@ -93,6 +239,7 @@ def proceedingWords(token, pos=['NOUN', 'PROPN'], restrictions=[]):
     return words
 
 def tokenHasProperties(token, pos="", tag="", dep="", parent="", child=[]):
+    if not token: return False
     if pos and token.pos_ != pos: return False
     if tag and token.tag_ != tag: return False
     if dep and token.dep_ != dep: return False
@@ -108,7 +255,8 @@ def containsAnyOf(str, lst):
     return False
 
 
-lst_of_urls = ["https://www.allrecipes.com/recipe/279984/air-fryer-sweet-and-spicy-roasted-carrots/",
+lst_of_urls = ["https://www.allrecipes.com/recipe/184255/quick-savory-cranberry-glazed-pork-loin-roast/",
+               "https://www.allrecipes.com/recipe/279984/air-fryer-sweet-and-spicy-roasted-carrots/",
                "https://www.allrecipes.com/recipe/18344/cheese-and-bacon-potato-rounds/",
                "https://www.allrecipes.com/recipe/230695/cheddar-bacon-ranch-pulls/",
                "https://www.allrecipes.com/recipe/21061/bacon-and-cheddar-stuffed-mushrooms/",
