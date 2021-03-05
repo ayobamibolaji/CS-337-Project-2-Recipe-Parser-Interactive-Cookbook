@@ -53,6 +53,7 @@ class Method():
         # where the first two tokens have the same head and one of them
         # is the root of the sentence
         def rule_three(decomposed_step):
+            if len(decomposed_step) < 2: return False
             token_0 = decomposed_step[0]
             token_1 = decomposed_step[1]
 
@@ -67,19 +68,18 @@ class Method():
             return False
 
         decomposed_step = nlp(self.step)  # decompose the step with spacy
-
-
+        
         if rule_three(decomposed_step):
-            self.methods.append(rule_three(decomposed_step))
+            self.methods.append(rule_three(decomposed_step).lower())
         else:
             for index, token in enumerate(decomposed_step):  # looping through each token in the step
 
                 if index == 0:  # do this check since rule_two operates on the 0th token
                     if rule_one(token) or rule_two(token, 0):
-                        self.methods.append(token.text)
+                        self.methods.append(token.text.lower())
                 else:
                     if rule_one(token):
-                        self.methods.append(token.text)
+                        self.methods.append(token.text.lower())
 
 
 
@@ -87,3 +87,6 @@ class Method():
                 # for testing
                 #info_list = [token.text, (token.dep_), (spacy.explain(token.tag_), token.tag_), (token.head)]
                 #self.methods.append(info_list)
+
+    def __repr__(self):
+        return self.methods[0]

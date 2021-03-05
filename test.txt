@@ -33,3 +33,74 @@ Cuisine transformations:
 - Get first result from OpenFoodFacts and use that item's country
 - 
 
+
+
+Main Methods
+Dry Heat Cooking:
+    Bake
+    Grill
+    Roast
+    Sauté
+    Air Fry
+
+Mosit Heat Cooking:
+    Poach
+    Simmer
+    Boil
+    Steam
+    Fry
+    Stir Fry
+
+
+Combination Cooking:
+    Braise
+    Stew
+
+
+Ingredient properties (for transformations)
+    plant-based
+    animal-based
+    fiber
+    binder
+    lipid
+    carbohydrate
+    protein
+    mineral
+    vitamin
+
+Transformations:
+    To Vegetarian
+        - Replace meats with suitable veggies (hard coded)
+    From Vegetarian
+        - Just add bacon
+
+    To/From healthy
+        - Quantity Change
+        - Remove/Add certain ingredients
+        - Lower/higher calorie foods!
+
+    Style of Cuisine
+        - To Asian!
+        - Add soy sauce
+        - Replace fake meats to real meats?
+        - Change cooking method to stir fry if possible
+        - Wok 
+        - Sides to white rice
+        - Asian herbs and spices
+
+    Additional Style of Cuisine
+        - Same as above
+
+    Double/Half the amount
+        - Self-explanatory.
+
+    Cooking Method
+        - Pick another cooking method from the list ^^^
+
+
+
+Spices:
+?item wdt:P279 wd:Q42527 .
+
+
+
