@@ -88,7 +88,7 @@ VEGGIE_SUBSTITUTES = {
     'veggie burger': 'hamburger'
 }
 
-UNHEALTHY_SUBTITUTES = {
+UNHEALTHY_SUBSTITUTES = {
     'sugar': ('Splenda', .5),
     'chicken': ('skinless chicken', 1),
     'butter': ('avocado', .8),
@@ -99,7 +99,7 @@ UNHEALTHY_SUBTITUTES = {
     'flour tortilla': ('corn tortilla', 1)
 }
 
-HEALTHY_SUBTITUTES = {
+HEALTHY_SUBSTITUTES = {
     'Splenda': ('sugar', 1.5),
     'skinless chicken': ('chicken', 1),
     'artificial sweetener': ('sugar', 1.5),
