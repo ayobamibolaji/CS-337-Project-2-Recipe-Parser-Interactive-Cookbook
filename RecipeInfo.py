@@ -87,14 +87,14 @@ class RecipeInfo():
 
     def extractMethods(self, step):
         # the Method class in Method.py does all of the extraction
-        pass#self.Methods.append(Method(step))
+        if Method(step).methods: self.Methods.append(Method(step))
 
     def extractTools(self, step):
         pass
 
     def transformQuantities(self, factor):
         for ing in self.Ingredients:
-            ing.quantity *= factor
+            if ing.quantity != None: ing.quantity *= factor
 
     def transformIngredient(self, old: str, new, oldToNewRatio, condition):
         # see if the ingredient is in the recipe
@@ -123,14 +123,21 @@ class RecipeInfo():
         self.name = "Healthy " + self.name
         for unhealthy_ing, healthy_alt in UNHEALTHY_SUBSTITUTES.items():
             self.transformIngredient(unhealthy_ing, healthy_alt[0], healthy_alt[1], (lambda ing: unhealthy_ing in ing.name))
+        
+        self.transformQuantities(.8)
 
     def unHealthify(self):
-        for unhealthy_ing, healthy_alt in UNHEALTHY_SUBSTITUTES.items():
-            self.transformIngredient(unhealthy_ing, healthy_alt[0], healthy_alt[1], (lambda ing: unhealthy_ing in ing.name))
-    
+        # Mark the title as unhealthy
+        self.name = "Unhealthy " + self.name
+        for healthy_ing, unhealthy_alt in HEALTHY_SUBSTITUTES.items():
+            self.transformIngredient(healthy_ing, unhealthy_alt[0], unhealthy_alt[1], (lambda ing: healthy_ing in ing.name))
+
+        self.transformQuantities(1.3)
+
         # Maybe add a conditional for this next step lol
-        self.Ingredients.append(Ingredient("1 can Coca Cola"))
-        self.Steps.append("Enjoy the meal alongside an ice cold Coca Cola.")
+        if 'Coca Cola' not in [ing.name for ing in self.Ingredients]: 
+            self.Ingredients.append(Ingredient("1 can Coca Cola"))
+            self.Steps.append("Enjoy the meal alongside an ice cold Coca Cola.")
 
     def makeVegetarian(self):
         # Mark the title as vegetarian
@@ -144,8 +151,9 @@ class RecipeInfo():
             self.transformIngredient(veggie_ing, veggie_alt, 1, (lambda ing: veggie_ing in ing.name))
         
         # Maybe add a conditional for this next step lol
-        self.Ingredients.append(Ingredient(".5 cups bacon strips"))
-        self.Steps.append("Sprinkle bacon strips on top of final dish.")
+        if 'bacon' not in [ing.name for ing in self.Ingredients]:
+            self.Ingredients.append(Ingredient(".5 cups bacon strips"))
+            self.Steps.append("Sprinkle bacon strips on top of final dish.")
         
     def __repr__(self):
         return f"{self.name}"

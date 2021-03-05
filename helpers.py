@@ -19,9 +19,18 @@ measures = [
     'cup',
     'gallon',
     'clove',
+    'pound',
+    'loaf',
+    'package',
+    'strips',
+    'oz',
+    'clove',
+    'pound',
+    'lbs',
     'ounce',
     'serving',
     'slice',
+    'can'
 ]
 
 common_ingredients = [
@@ -42,10 +51,10 @@ colors = [
 MEAT_SUBSTITUTES = {
     'beef broth': 'mushroom broth',
     'chicken broth': 'vegetable broth',
+    'ground beef': 'tempeh',
     'beef': 'jackfruit',
     'chicken': 'seitan',
     'pork': 'seitan',
-    'ground beef': 'tempeh',
     'bacon': 'tempeh',
     'sirloin': 'jackfruit',
     'liver': 'tofu',
@@ -109,6 +118,47 @@ HEALTHY_SUBSTITUTES = {
     'corn tortilla': ('flour tortilla', 1)
 
 }
+
+MAIN_METHODS = [
+    'bake', 
+    'boil', 
+    'cook',
+    'broil', 
+    'fry', 
+    'grill',
+    'steam',
+    'stew',
+    'braise',
+    'roast', 
+    'mix', 
+    'heat',
+    'simmer',
+    'deep fry',
+    'sear',
+    'poach', 
+    'whip', 
+    'saute',
+    'air fry'
+
+]
+
+NON_SECONDARY_METHODS = [
+    'bring',
+    'place',
+    'use',
+    'remove',
+    'add',
+    'combine',
+    'continue',
+    'slip',
+    'set',
+    'return',
+    'serve',
+    'transfer',
+    'take',
+    'save',
+
+]
 
 
 def cleanIngredientText(txt):

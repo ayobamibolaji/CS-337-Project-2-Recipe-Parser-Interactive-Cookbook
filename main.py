@@ -4,7 +4,7 @@ from RecipeInfo import RecipeInfo
 import sys
 
 recipes = []
-test_ingredients = []
+test_methods = []
 
 
 def main():
@@ -13,8 +13,9 @@ def main():
         print("Checked {}/{} URLs".format(i+1, len(lst_of_urls)), end='\r')
         rcp = RecipeInfo(url)
         recipes.append(rcp)
-        for ing in rcp.Ingredients:
-            test_ingredients.append(ing)
+        for ing in rcp.Methods:
+            test_methods.append(ing.methods)
+        print(str(rcp))
 
     # copy & pasted the loop for testing
     # for i, url in enumerate(lst_of_urls[:10]):
@@ -61,8 +62,9 @@ def askForTransformation():
 
 if __name__ == "__main__":
     if len(sys.argv) <= 1:
-        print("hey")
         main()
+        print("hey")
+
     elif sys.argv[1].startswith("https://www.allrecipes.com"):
         url = sys.argv[1]
         rcp = RecipeInfo(url)

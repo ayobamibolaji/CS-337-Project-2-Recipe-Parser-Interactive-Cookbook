@@ -31,10 +31,10 @@ class Ingredient():
         self.quantity = float(self.doc.text[0]) if self.doc.pos[0] == 'NUM' else None
 
         # Extract measurement
-        self.measurement = self.doc.text[1] if self.doc.text[1] == self.doc.parent[0].text else None
-        self.measurement = self.doc.text[1] if self.doc.doc[1].ent_type_ == 'QUANTITY' and self.doc.doc[1].pos_ == 'NOUN' else self.measurement
+        # self.measurement = self.doc.text[1] if self.doc.text[1] == self.doc.parent[0].text else None
+        # self.measurement = self.doc.text[1] if self.doc.doc[1].ent_type_ == 'QUANTITY' and self.doc.doc[1].pos_ == 'NOUN' else self.measurement
         self.measurement = self.doc.text[1] if containsAnyOf(self.doc.text[1], measures) else self.measurement
-        self.measurement = nextToken(self.doc.getToken(")")).text if self.doc.doc[1].tag_ == '-LRB-' else self.measurement
+        self.measurement = nextToken(self.doc.getToken(")")).text if self.doc.doc[1].tag_ == '-LRB-' and containsAnyOf(nextToken(self.doc.getToken(")")).text, measures) else self.measurement
             
 
         root = self.doc.getRoot()
@@ -49,13 +49,13 @@ class Ingredient():
         # Get all neighboring nouns to build up ingredient name
         if root.pos_ != 'NOUN' and self.measurement != None:
             if not nextToken(self.doc.getToken(self.measurement)): pass
-            elif nextToken(self.doc.getToken(self.measurement)).pos_ == 'NOUN':
+            elif nextToken(self.doc.getToken(self.measurement)).pos_ in ['NOUN', 'PROPN']:
                 root = nextToken(self.doc.getToken(self.measurement))
-            elif nextToken(self.doc.getToken(self.measurement)).head.pos_ == 'NOUN':
+            elif nextToken(self.doc.getToken(self.measurement)).head.pos_ in ['NOUN', 'PROPN']:
                 root = nextToken(self.doc.getToken(self.measurement)).head
 
         # Check if ingredient name has a color in its name
-        possible_color = previousToken(root).text if previousToken(root) and previousToken(root).text in colors else ""
+        possible_color = previousToken(root).text + " " if previousToken(root) and previousToken(root).text in colors else ""
 
 
         self.name = precedingWords(root, restrictions=[self.measurement]) + possible_color + root.text + proceedingWords(root)
@@ -78,7 +78,7 @@ class Ingredient():
                 nextToken(token).tag_ == "HYPH" and nextToken(nextToken(token)).pos_ == "NOUN":
                 descriptors.append(self.doc.getTextFromNouns(nextToken(nextToken(token)).text))
 
-        self.descriptors = ', '.join(descriptors)
+        self.descriptors = ', '.join([desc for desc in descriptors if desc not in self.name])
 
         # Extract preparation
         preparations = []
@@ -97,8 +97,6 @@ class Ingredient():
                 preparations.append(prep)
 
         self.preparation = ', '.join(preparations)
-
-    # Try to fix
 
     def __repr__(self):
         return f"{self.name}"

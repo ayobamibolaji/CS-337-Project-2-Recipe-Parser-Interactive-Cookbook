@@ -69,8 +69,10 @@ Ingredient properties (for transformations)
     vitamin
 
 Transformations:
-    To/From Vegetarian
-        - Hard code
+    To Vegetarian
+        - Replace meats with suitable veggies (hard coded)
+    From Vegetarian
+        - Just add bacon
 
     To/From healthy
         - Quantity Change
