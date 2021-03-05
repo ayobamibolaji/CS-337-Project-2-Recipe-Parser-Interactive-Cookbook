@@ -33,6 +33,14 @@ measures = [
     'can'
 ]
 
+fats = [
+    "butter",
+    "margarine",
+    "shortening",
+    "oil",
+    "lard"
+]
+
 common_ingredients = [
     "salt",
     "sugar",
@@ -98,10 +106,10 @@ VEGGIE_SUBSTITUTES = {
 }
 
 UNHEALTHY_SUBSTITUTES = {
-    'sugar': ('Splenda', .5),
-    'chicken': ('skinless chicken', 1),
-    'butter': ('avocado', .8),
-    'rice': ('quinoa', .9),
+    #'sugar': ('Splenda', .5),
+    #'chicken': ('skinless chicken', 1),
+    #'butter': ('avocado', .8),
+    #'rice': ('quinoa', .9),
     'noodles': ('zoodles', 1),
     'sour cream': ('Greek yogurt', 1),
     'all-purpose flour': ('whole wheat flour', 1),
@@ -297,4 +305,5 @@ lst_of_urls = ["https://www.allrecipes.com/recipe/184255/quick-savory-cranberry-
                "https://www.allrecipes.com/recipe/261394/instant-pot-mashed-potatoes/",
                "https://www.allrecipes.com/recipe/269144/instant-pot-sweet-potato-casserole/",
                "https://www.allrecipes.com/recipe/279426/instant-pot-bangers-and-mash/",
-               "https://www.allrecipes.com/recipe/280718/instant-pot-broccolini-and-potato-salad/"]
+               "https://www.allrecipes.com/recipe/280718/instant-pot-broccolini-and-potato-salad/",
+               "https://www.allrecipes.com/recipe/16354/easy-meatloaf/"]

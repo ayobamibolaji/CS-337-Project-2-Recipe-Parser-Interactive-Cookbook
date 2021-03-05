@@ -4,6 +4,7 @@ from Method import Method
 from helpers import MEAT_SUBSTITUTES, VEGGIE_SUBSTITUTES, HEALTHY_SUBSTITUTES, UNHEALTHY_SUBSTITUTES
 import re
 from tabulate import tabulate
+from helpers import fats
 
 '''
 Helpful documentation:
@@ -105,22 +106,46 @@ class RecipeInfo():
                     ing.quantity = ing.quantity * oldToNewRatio
                 else:
                     ing.name = new.name
-                    ing.doc = new.doc
-                    ing.measurement = new.measurement
-                    ing.quantity = ing.quantity * oldToNewRatio
+                    ing.measurement = new.measurement if new.measurement else ing.measurement
+                    if ing.quantity is not None:
+                        ing.quantity = ing.quantity * oldToNewRatio
                     ing.descriptors = new.descriptors
                     ing.preparation = new.preparation
-        # regex replace the ingredient name in the steps.
-        for idx, step in enumerate(self.Steps):
-            pattern = re.compile(old, re.IGNORECASE)
-            if isinstance(new, str):
-                self.Steps[idx] = pattern.sub(new, step)
-            else:
-                self.Steps[idx] = pattern.sub(new.name, step)
+                # regex replace the ingredient name in the steps.
+                for idx, step in enumerate(self.Steps):
+                    pattern = re.compile(old, re.IGNORECASE)
+                    if isinstance(new, str):
+                        self.Steps[idx] = pattern.sub(new, step)
+                    else:
+                        self.Steps[idx] = pattern.sub(new.name, step)
 
     def healthify(self):
         # Mark the title as healthy
         self.name = "Healthy " + self.name
+        self.transformIngredient("sugar", "Splenda", 0.5,
+                                 (lambda ing: "sugar" in ing.name and "brown" not in ing.descriptors))
+
+        self.transformIngredient("sugar",  Ingredient(name="Splenda Blend", descriptors="Brown Sugar"), 0.5,
+                                 (lambda ing: "sugar" in ing.name and "brown" in ing.descriptors))
+        for fat in fats:
+            self.transformIngredient(fat, Ingredient(name="oil", descriptors="olive"), 0.5,
+                                     (lambda ing: fat in ing.name and "foil" not in ing.name))
+        self.transformIngredient("chicken", Ingredient(name="chicken", descriptors="skinless"), 1,
+                                 (lambda ing: "chicken" in ing.name))
+        self.transformIngredient("rice", Ingredient(name="cauliflower", preparation="riced"), 1,
+                                 (lambda ing: "rice" in ing.name and "white" in ing.descriptors))
+        self.transformIngredient("beef", Ingredient(name="ground turkey"), 1, (lambda ing: "ground beef" in ing.name))
+        self.transformIngredient("potato", Ingredient(name="sweet potato"), 1,
+                                 (lambda ing: "potato" in ing.name and "sweet" not in ing.name))
+        self.transformIngredient("yogurt", Ingredient(name="Greek yogurt"), 1,
+                                 (lambda ing: "yogurt" in ing.name and "Greek" not in ing.name))
+        self.transformIngredient("bacon", Ingredient(name="turkey bacon"), 1,
+                                 (lambda ing: "bacon" in ing.name and "turkey" not in ing.name))
+        self.transformIngredient("milk chocolate", Ingredient(name="dark chocolate"), 1,
+                                 (lambda ing: "milk chocolate" in ing.name))
+        self.transformIngredient("milk", Ingredient(name="milk", descriptors="skim"), 1,
+                                 (lambda ing: "milk" in ing.name and "milk chocolate" not in ing.name))
+
         for unhealthy_ing, healthy_alt in UNHEALTHY_SUBSTITUTES.items():
             self.transformIngredient(unhealthy_ing, healthy_alt[0], healthy_alt[1], (lambda ing: unhealthy_ing in ing.name))
         
