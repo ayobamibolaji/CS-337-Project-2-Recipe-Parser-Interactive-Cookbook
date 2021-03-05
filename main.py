@@ -29,11 +29,12 @@ def askForTransformation():
           "\n2) Double the quantity"
           "\n3) Halve the quantity"
           "\n4) Make it healthier"
-          "\n5) Make it vegetarian"
-          "\n6) Make it un-vegetarian")
+          "\n5) Make it less healthy"
+          "\n6) Make it vegetarian"
+          "\n7) Make it un-vegetarian")
     transformation = input()
     if transformation == "1":
-        print(str(rcp))
+        pass
     elif transformation == "2":
         rcp.transformQuantities(2)
         print(str(rcp))
@@ -44,9 +45,12 @@ def askForTransformation():
         rcp.healthify()
         print(str(rcp))
     elif transformation == "5":
-        rcp.makeVegetarian()
+        rcp.unHealthify()
         print(str(rcp))
     elif transformation == "6":
+        rcp.makeVegetarian()
+        print(str(rcp))
+    elif transformation == "7":
         rcp.makeUnVegetarian()
         print(str(rcp))
     else:

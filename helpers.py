@@ -100,13 +100,13 @@ UNHEALTHY_SUBTITUTES = {
 }
 
 HEALTHY_SUBTITUTES = {
-    'Splenda': 'sugar',
-    'skinless chicken': 'chicken',
-    'artificial sweetener': 'sugar',
-    'quinoa': 'white rice',
-    'zoodles': 'noodles',
-    'whole wheat flour': 'all-purpose flour'
-    'corn tortilla': 'flour tortilla'
+    'Splenda': ('sugar', 1.5),
+    'skinless chicken': ('chicken', 1),
+    'artificial sweetener': ('sugar', 1.5),
+    'quinoa': ('white rice', 1.1),
+    'zoodles': ('noodles', 1),
+    'whole wheat flour': ('all-purpose flour', 1),
+    'corn tortilla': ('flour tortilla', 1)
 
 }
 

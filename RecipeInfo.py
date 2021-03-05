@@ -1,7 +1,7 @@
 from fetch_recipe import GetRecipe
 from Ingredient import Ingredient
 from Method import Method
-from helpers import MEAT_SUBSTITUTES, VEGGIE_SUBSTITUTES
+from helpers import MEAT_SUBSTITUTES, VEGGIE_SUBSTITUTES, HEALTHY_SUBSTITUTES, UNHEALTHY_SUBSTITUTES
 import re
 from tabulate import tabulate
 
@@ -121,7 +121,16 @@ class RecipeInfo():
     def healthify(self):
         # Mark the title as healthy
         self.name = "Healthy " + self.name
-        self.transformIngredient("sugar", "Splenda", 0.5, (lambda ing: "sugar" in ing.name))
+        for unhealthy_ing, healthy_alt in UNHEALTHY_SUBSTITUTES.items():
+            self.transformIngredient(unhealthy_ing, healthy_alt[0], healthy_alt[1], (lambda ing: unhealthy_ing in ing.name))
+
+    def unHealthify(self):
+        for unhealthy_ing, healthy_alt in UNHEALTHY_SUBSTITUTES.items():
+            self.transformIngredient(unhealthy_ing, healthy_alt[0], healthy_alt[1], (lambda ing: unhealthy_ing in ing.name))
+    
+        # Maybe add a conditional for this next step lol
+        self.Ingredients.append(Ingredient("1 can Coca Cola"))
+        self.Steps.append("Enjoy the meal alongside an ice cold Coca Cola.")
 
     def makeVegetarian(self):
         # Mark the title as vegetarian
