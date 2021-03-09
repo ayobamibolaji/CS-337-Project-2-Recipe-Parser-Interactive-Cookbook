@@ -90,7 +90,9 @@ MEAT_SUBSTITUTES = {
     'toad': 'tofu',
     'meat': 'tofu',
     'hamburger': 'veggie burger',
-    'french fries': 'salad'
+    'french fries': 'salad',
+    'ham':'tofu',
+    'Worcestershire sauce': 'balsamic vinegar'
 }
 
 
