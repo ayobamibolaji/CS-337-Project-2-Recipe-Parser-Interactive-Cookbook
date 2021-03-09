@@ -2,7 +2,7 @@ from fetch_recipe import GetRecipe
 from Ingredient import Ingredient
 from Tool import Tool
 from Method import Method
-from helpers import MEAT_SUBSTITUTES, VEGGIE_SUBSTITUTES, HEALTHY_SUBSTITUTES, UNHEALTHY_SUBSTITUTES, COMMON_SIDES
+from helpers import MEAT_SUBSTITUTES, VEGGIE_SUBSTITUTES, HEALTHY_SUBSTITUTES, UNHEALTHY_SUBSTITUTES, COMMON_SIDES, COMMON_SPICES
 import re
 from tabulate import tabulate
 from helpers import fats
@@ -222,7 +222,7 @@ class RecipeInfo():
             self.transformIngredient(side_ing, jasmine, 1, (lambda ing: side_ing in ing.name))
 
         # switch out common spices and herbs
-        for spice_ing, spice_alt in COMMON_SIDES.items():
+        for spice_ing, spice_alt in COMMON_SPICES.items():
             self.transformIngredient(spice_ing, spice_alt, 1, (lambda ing: spice_ing in ing.name))
 
         # catch all herb that goes with almost everything in case no common spice is found

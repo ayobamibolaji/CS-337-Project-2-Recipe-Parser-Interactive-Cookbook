@@ -129,6 +129,7 @@ COMMON_SPICES = {
     'garlic': 'chinese garlic chives',
     'cloves': 'baharat',
     'ginger': 'galangal',
+    'onion': 'scallion',
     'cilantro': 'golden needles',
     'asparagus': 'golden needles',
     'oregano': 'golden needles',
