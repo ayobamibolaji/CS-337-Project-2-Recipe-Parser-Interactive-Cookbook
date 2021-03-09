@@ -131,7 +131,8 @@ class RecipeInfo():
             if condition(ing):
                 if isinstance(new, str):
                     ing.name = new
-                    ing.quantity = ing.quantity * oldToNewRatio
+                    if ing.quantity is not None:
+                        ing.quantity = ing.quantity * oldToNewRatio
                 else:
                     ing.name = new.name
                     ing.measurement = new.measurement if new.measurement else ing.measurement
