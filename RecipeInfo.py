@@ -186,6 +186,9 @@ class RecipeInfo():
         for healthy_ing, unhealthy_alt in HEALTHY_SUBSTITUTES.items():
             self.transformIngredient(healthy_ing, unhealthy_alt[0], unhealthy_alt[1],
                                      (lambda ing: healthy_ing in ing.name))
+        self.transformIngredient("milk", "cream", 1, (lambda ing: "milk" in ing.name and "milk chocolate" not in ing.name))
+        self.transformIngredient("olive oil", Ingredient(name="butter"), 1,
+                                 (lambda ing: "oil" in ing.name and "olive" in ing.descriptors))
 
         self.transformQuantities(1.3)
 

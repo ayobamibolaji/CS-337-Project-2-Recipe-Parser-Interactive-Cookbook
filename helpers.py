@@ -160,7 +160,10 @@ HEALTHY_SUBSTITUTES = {
     'skinless chicken': ('chicken', 1),
     'artificial sweetener': ('sugar', 1.5),
     'quinoa': ('white rice', 1.1),
+    'brown rice': ('white rice', 1.1),
     'zoodles': ('noodles', 1),
+    'turkey bacon': ('bacon', 1.1),
+    'dark chocolate': ('milk chocolate', 1.1),
     'whole wheat flour': ('all-purpose flour', 1),
     'corn tortilla': ('flour tortilla', 1)
 
