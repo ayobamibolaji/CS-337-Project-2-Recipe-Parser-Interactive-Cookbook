@@ -215,7 +215,7 @@ class RecipeInfo():
 
     def makeAsian(self):
         # change name
-        self.name = "Asian" + self.name
+        self.name = "Asian " + self.name
 
         # switch out side for jasmine rice
         for side_ing, jasmine in COMMON_SIDES.items():
