@@ -196,11 +196,11 @@ class RecipeInfo():
             self.transformIngredient(spice_ing, spice_alt, 1, (lambda ing: spice_ing in ing.name))
 
         # catch all herb that goes with almost everything in case no common spice is found
-        self.Ingredients.append(Ingredient("1 tablespoon Anise seeds"))
+        self.Ingredients.append(Ingredient("1 tablespoon anise seeds"))
         self.Steps.append("When serving, sprinkle Anise seeds generously over the dish")
 
         # change to stir frying
-        if 'fry' in [step.name for step in self.Steps]:
+        if 'fry' in self.Steps:
             self.Ingredients.append(Ingredient("half cup stir fry sauce"))
             self.Steps.append("While frying finishes, whisk stir fry sauce into dish")
             self.name = self.name+'stir fry'

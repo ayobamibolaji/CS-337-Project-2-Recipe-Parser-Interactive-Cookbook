@@ -124,6 +124,8 @@ COMMON_SIDES = {
 
 COMMON_SPICES = {
     'chives': 'chinese garlic chives',
+    'garlic': 'chinese garlic chives',
+    'cloves': 'baharat',
     'ginger': 'galangal',
     'cilantro': 'golden needles',
     'asparagus': 'golden needles',
