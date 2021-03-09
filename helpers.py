@@ -93,6 +93,7 @@ MEAT_SUBSTITUTES = {
     'french fries': 'salad'
 }
 
+
 VEGGIE_SUBSTITUTES = {
     'tofu': 'pork',
     'mushroom broth': 'beef broth',
@@ -103,6 +104,44 @@ VEGGIE_SUBSTITUTES = {
     'tempeh': 'ground beef',
     'butter': 'lard',
     'veggie burger': 'hamburger'
+}
+
+COMMON_SIDES = {
+    'rice': 'jasmine rice',
+    'white rice': 'jasmine rice',
+    'potatoes': 'jasmine rice',
+    'potato': 'jasmine rice',
+    'pasta': 'jasmine rice',
+    'noodle': 'jasmine rice',
+    'noodles': 'jasmine rice',
+    'spaghetti': 'jasmine rice',
+    'fettuccine': 'jasmine rice',
+    'penne': 'jasmine rice',
+    'rigatoni': 'jasmine rice',
+    'macaroni': 'jasmine rice',
+    'corn': 'jasmine rice',
+}
+
+COMMON_SPICES = {
+    'chives': 'chinese garlic chives',
+    'ginger': 'galangal',
+    'cilantro': 'golden needles',
+    'asparagus': 'golden needles',
+    'oregano': 'golden needles',
+    'shredded cabbage': 'golden needles',
+    'lemon': 'kaffir lime leaves',
+    'thyme': 'kaffir lime leaves',
+    'lime': 'kaffir lime leaves',
+    'nutmeg': 'kaffir lime leaves',
+    'rosemary': 'kaffir lime leaves',
+    'basil': 'thai basil',
+    'saffron': 'turmeric',
+    'mustard': 'turmeric',
+    'paprika': 'turmeric',
+    'cinnamon': 'zeylanicum',
+    'vanilla': 'pandan',
+    'seed': 'coriander seeds',
+    'seeds': 'coriander seeds'
 }
 
 UNHEALTHY_SUBSTITUTES = {
