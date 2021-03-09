@@ -108,7 +108,7 @@ VEGGIE_SUBSTITUTES = {
     'veggie burger': 'hamburger'
 }
 
-COMMON_SIDES = {
+ASIAN_SIDES = {
     'rice': 'jasmine rice',
     'white rice': 'jasmine rice',
     'potatoes': 'jasmine rice',
@@ -124,7 +124,46 @@ COMMON_SIDES = {
     'corn': 'jasmine rice',
 }
 
-COMMON_SPICES = {
+TURKISH_SIDES = {
+    'rice': 'bulgur pilaf',
+    'white rice': 'bulgur pilaf',
+    'potatoes': 'bulgur pilaf',
+    'potato': 'bulgur pilaf',
+    'pasta': 'bulgur pilaf',
+    'noodle': 'bulgur pilaf',
+    'noodles': 'bulgur pilaf',
+    'spaghetti': 'bulgur pilaf',
+    'fettuccine': 'bulgur pilaf',
+    'penne': 'bulgur pilaf',
+    'rigatoni': 'bulgur pilaf',
+    'macaroni': 'bulgur pilaf',
+    'corn': 'bulgur pilaf',
+}
+
+TURKISH_SPICES = {
+    'chives': 'dried allium',
+    'cloves': 'mint',
+    'ginger': 'galangal',
+    'onion': 'turkish sumac onion',
+    'cilantro': 'cumin',
+    'asparagus': 'dried allium',
+    'oregano': 'cumin',
+    'shredded cabbage': 'cumin',
+    'lemon': 'sumac',
+    'lime': 'sumac',
+    'nutmeg': 'thyme',
+    'rosemary': 'thyme',
+    'basil': 'cumin',
+    'saffron': 'turmeric',
+    'mustard': 'turmeric',
+    'paprika': 'red pepper flakes',
+    'cinnamon': 'cumin',
+    'vanilla': 'bay leaf',
+    'seed': 'red pepper flakes',
+    'seeds': 'red pepper flakes'
+}
+
+ASIAN_SPICES = {
     'chives': 'chinese garlic chives',
     'garlic': 'chinese garlic chives',
     'cloves': 'baharat',

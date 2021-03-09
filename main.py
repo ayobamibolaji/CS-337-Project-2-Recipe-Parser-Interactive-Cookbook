@@ -28,7 +28,8 @@ def askForTransformation():
           "\n6) Make it vegetarian"+
           "\n7) Make it un-vegetarian"+
           "\n8) Convert to Asian cuisine"+
-          "\n9) Quit")
+          "\n9) Convert to Turkish cuisine"+
+          "\n10) Quit")
     transformation = input()
     if transformation == "1":
         print(str(rcp))
@@ -54,6 +55,9 @@ def askForTransformation():
         rcp.makeAsian()
         print("We made the recipe Asian style. Here you go!")
     elif transformation == "9":
+        rcp.makeTurkish()
+        print("We made the recipe Turkish style. Here you go!")
+    elif transformation == "10":
         print("Goodbye.")
         quit()
     else:
