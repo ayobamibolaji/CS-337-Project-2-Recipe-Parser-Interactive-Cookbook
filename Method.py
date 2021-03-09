@@ -41,7 +41,7 @@ class Method():
                            'stew', 'broil', 'fold', 'fillet', 'baste', 'cure',
                            'season', 'heat', 'preheat', 'stir', 'mix', 'whisking',
                           'stirring', 'broiling', 'boiling', 'simmering',
-                          'frying', 'mixing']
+                          'frying', 'mixing', 'rub']
 
         def in_methods(token_text):
             lowercase_text = token_text.lower()
