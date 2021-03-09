@@ -1,5 +1,6 @@
 from fetch_recipe import GetRecipe
 from Ingredient import Ingredient
+from Tool import Tool
 from Method import Method
 from helpers import MEAT_SUBSTITUTES, VEGGIE_SUBSTITUTES, HEALTHY_SUBSTITUTES, UNHEALTHY_SUBSTITUTES, COMMON_SIDES
 import re
@@ -50,6 +51,7 @@ class RecipeInfo():
                 ", ".join([str(method) for method in self.Methods])
                 + "\n\nTools:\n" +
                 ", ".join([str(tool) for tool in self.Tools])
+                + "\n"
         )
 
     def extractInfo(self):
@@ -81,6 +83,24 @@ class RecipeInfo():
             self.extractMethods(step)
             self.extractTools(step)
 
+        # these for loops catches some edge cases with
+        # the methods and tools
+        for method in self.Methods:
+            if method == "boil":
+                if "pot" not in self.Tools:
+                    self.Tools.append('pot')
+            if method == "bake":
+                if "oven" not in self.Tools:
+                    self.Tools.append('oven')
+
+        for tool in self.Tools:
+            if tool == "slow cooker":
+                if "cook with slow cooker" not in self.Methods:
+                    self.Methods.append("cook with slow cooker")
+            if tool == "pressure cooker":
+                if "cook with pressure cooker" not in self.Methods:
+                    self.Methods.append("cook with pressure cooker")
+
     def extractSteps(self, step_text):
         sub_steps = step_text.split('.')
         for stp in sub_steps:
@@ -88,11 +108,18 @@ class RecipeInfo():
             if stp: self.Steps.append(stp)
 
     def extractMethods(self, step):
-        # the Method class in Method.py does all of the extraction
-        if Method(step).methods: self.Methods.append(Method(step))
+        methods = Method(step).methods
+
+        for method in methods:
+            if method not in self.Methods:
+                self.Methods.append(method)
 
     def extractTools(self, step):
-        pass
+        tools = Tool(step).tools
+
+        for tool in tools:
+            if tool not in self.Tools:
+                self.Tools.append(tool)
 
     def transformQuantities(self, factor):
         for ing in self.Ingredients:
@@ -159,6 +186,9 @@ class RecipeInfo():
         for healthy_ing, unhealthy_alt in HEALTHY_SUBSTITUTES.items():
             self.transformIngredient(healthy_ing, unhealthy_alt[0], unhealthy_alt[1],
                                      (lambda ing: healthy_ing in ing.name))
+        self.transformIngredient("milk", "cream", 1, (lambda ing: "milk" in ing.name and "milk chocolate" not in ing.name))
+        self.transformIngredient("olive oil", Ingredient(name="butter"), 1,
+                                 (lambda ing: "oil" in ing.name and "olive" in ing.descriptors))
 
         self.transformQuantities(1.3)
 

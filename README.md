@@ -14,78 +14,208 @@ This allows you to input a recipe url and a transformation.
 An example is below:
 ```
 python main.py custom
-https://www.allrecipes.com/recipe/268026/instant-pot-corned-beef/
 Welcome. Please enter an AllRecipes url for us to parse.
-Got it! Please enter the integer from the list below corresponding to a transformation to apply to the recipe.
-1) Identity transformation (no transformation)
-1
-Name: Instant Pot® Corned Beef
+https://www.allrecipes.com/recipe/21061/bacon-and-cheddar-stuffed-mushrooms/
+Got it!
+Name: Bacon and Cheddar Stuffed Mushrooms
 
 Ingredients:
-Name: water	Quantity: 2.0	Measurement: cups
-Name: fluid ounce	Quantity: 1.0	Measurement: can
-Name: garlic	Quantity: 4.0	Measurement: cloves	Preparation:minced
-Name: beef brisket	Quantity: 1.0	Measurement: corned
+
+  Quantity  Measurement    Name               Descriptors    Preparation
+----------  -------------  -----------------  -------------  -------------
+      3     slices         bacon
+      8                    crimini mushrooms
+      1     tablespoon     butter
+      1     tablespoon     onion                             chopped
+      0.75  cup            Cheddar cheese                    shredded
 
 Steps:
-Combine water, beer, and garlic in a multi-functional pressure cooker (such as Instant Pot&reg;)
-Place trivet inside
-Place brisket on the trivet and sprinkle spice packet on top
-Close and lock the lid
-Select high pressure according to manufacturer's instructions; set timer for 90 minutes
-Allow 10 to 15 minutes for pressure to build
-Release pressure carefully using the quick-release method according to manufacturer's instructions, about 5 minutes
-Unlock and remove the lid
-Transfer brisket to a baking sheet, cover with aluminum foil, and let rest for 15 minutes
+Place bacon in a large, deep skillet
+Cook over medium high heat until evenly brown
+Drain, dice and set aside
+Preheat oven to 400 degrees F (200 degrees C)
+Remove mushroom stems
+Set aside caps
+Chop the stems
+In a large saucepan over medium heat, melt the butter
+Slowly cook and stir the chopped stems and onion until the onion is soft
+Remove from heat
+In a medium bowl, stir together the mushroom stem mixture, bacon and 1/2 cup Cheddar
+Mix well and scoop the mixture into the mushroom caps
+Bake in the preheated oven 15 minutes, or until the cheese has melted
+Remove the mushrooms from the oven, and sprinkle with the remaining cheese
 
 Methods:
-Combine, Place trivet, Place brisket, Close, Select, Allow, Release, Unlock, Transfer
+heat, preheat, stir, mix, bake
 
 Tools:
-```
-You can also run main without an argument to run 50 sample recipes.
-You can also run main with the url as the argument. An example is below:
-```
-python main.py https://www.allrecipes.com/recipe/261472/easy-maple-bacon-monkey-bread/
-We received your recipe!
+skillet, oven, saucepan, bowl, cup, scooper
+
 Please enter the integer from the list below corresponding to a transformation to apply to the recipe.
 1) Identity transformation (no transformation)
 2) Double the quantity
 3) Halve the quantity
 4) Make it healthier
+5) Make it less healthy
+6) Make it vegetarian
+7) Make it un-vegetarian
+8) Convert to Asian cuisine
+9) Quit
 4
-Name: Modified Easy Maple Bacon Monkey Bread
+We made the recipe healthier. Here you go!
+Name: Healthy Bacon and Cheddar Stuffed Mushrooms
 
 Ingredients:
-Name: cooking spray	Quantity: None	Measurement: spray
-Name: Splenda	Quantity: 0.375	Measurement: cup	Descriptors: white
-Name: pudding mix	Quantity: 2.0	Measurement: tablespoons	Descriptors: caramel, instant	Preparation:uncooked
-Name: ground cinnamon	Quantity: 2.0	Measurement: teaspoons
-Name: biscuit dough	Quantity: 2.0	Measurement: cans	Preparation:refrigerated, separated
-Name: bacon strips	Quantity: 12.0	Measurement: slices	Preparation:cooked
-Name: butter	Quantity: 0.5	Measurement: cup
-Name: Splenda	Quantity: 0.375	Measurement: cup	Descriptors: brown	Preparation:packed
-Name: maple syrup	Quantity: 0.5	Measurement: cup
-Name: salt	Quantity: 1.0	Measurement: pinch
+
+  Quantity  Measurement    Name               Descriptors    Preparation
+----------  -------------  -----------------  -------------  -------------
+       2.4  slices         turkey bacon
+       6.4                 crimini mushrooms
+       0.2  tablespoon     oil                olive
+       0.8  tablespoon     onion                             chopped
+       0.6  cup            Cheddar cheese                    shredded
 
 Steps:
-Preheat the oven to 350 degrees F (175 degrees C)
-Coat the inside of a 9-inch fluted tube pan with cooking spray
-Mix white Splenda, pudding mix, and cinnamon together in a 1-gallon resealable plastic bag
-Add the quartered biscuits and shake until well coated
-Toss in the bacon and shake well to distribute
-Transfer biscuits to the prepared tube pan
-Save the Splenda-cinnamon mixture left in the bottom of the bag
-Melt butter in a small saucepan over medium heat
-Stir in dark brown Splenda, maple syrup, and salt
-Bring mixture to a boil and carefully stir until it begins to foam, about 1 minute
-Pour the saved Splenda-cinnamon mixture into the saucepan and stir until dissolved, 2 to 3 minutes
-Pour the melted Splenda mixture over the biscuits in the tube pan
-Bake in the preheated oven until the biscuits are puffed up and cooked through, 50 to 55 minutes
-Cool in the pan for 10 minutes before inverting onto a serving plate
+Place turkey bacon in a large, deep skillet
+Cook over medium high heat until evenly brown
+Drain, dice and set aside
+Preheat oven to 400 degrees F (200 degrees C)
+Remove mushroom stems
+Set aside caps
+Chop the stems
+In a large saucepan over medium heat, melt the oil
+Slowly cook and stir the chopped stems and onion until the onion is soft
+Remove from heat
+In a medium bowl, stir together the mushroom stem mixture, turkey bacon and 1/2 cup Cheddar
+Mix well and scoop the mixture into the mushroom caps
+Bake in the preheated oven 15 minutes, or until the cheese has melted
+Remove the mushrooms from the oven, and sprinkle with the remaining cheese
 
 Methods:
-Preheat, Coat, Mix, Add, Toss, Transfer, Save, Melt, Stir, Bring, Pour, Pour, Bake, Cool
+heat, preheat, stir, mix, bake
 
 Tools:
+skillet, oven, saucepan, bowl, cup, scooper
+
+Would you like to apply another transformation? If so...
+Please enter the integer from the list below corresponding to a transformation to apply to the recipe.
+1) Identity transformation (no transformation)
+2) Double the quantity
+3) Halve the quantity
+4) Make it healthier
+5) Make it less healthy
+6) Make it vegetarian
+7) Make it un-vegetarian
+8) Convert to Asian cuisine
+9) Quit
+9
+Goodbye.
+```
+You can also run main without an argument to run 50 sample recipes.
+
+You can also run main with the url as the argument. An example is below:
+```
+python main.py https://www.allrecipes.com/recipe/92462/slow-cooker-texas-pulled-pork/
+We received your recipe!
+Name: Slow Cooker Texas Pulled Pork
+
+Ingredients:
+
+  Quantity  Measurement    Name                  Descriptors    Preparation
+----------  -------------  --------------------  -------------  -------------
+      1     teaspoon       vegetable oil
+      1                    pork shoulder roast
+      1     cup            barbeque sauce
+      0.5   cup            apple cider vinegar
+      0.5   cup            chicken broth
+      0.25  cup            brown sugar           light
+      1     tablespoon     mustard               yellow         prepared
+      1     tablespoon     Worcestershire sauce
+      1     tablespoon     chili powder
+      1                    onion                 extra, large   chopped
+      2                    cloves garlic         large          crushed
+      1.5   teaspoons      thyme
+      8                    hamburger buns
+      2     tablespoons    butter
+
+Steps:
+Pour the vegetable oil into the bottom of a slow cooker
+Place the pork roast into the slow cooker; pour in the barbecue sauce, apple cider vinegar, and chicken broth
+Stir in the brown sugar, yellow mustard, Worcestershire sauce, chili powder, onion, garlic, and thyme
+Cover and cook on High until the roast shreds easily with a fork, 5 to 6 hours
+Remove the roast from the slow cooker, and shred the meat using two forks
+Return the shredded pork to the slow cooker, and stir the meat into the juices
+Spread the inside of both halves of hamburger buns with butter
+Toast the buns, butter side down, in a skillet over medium heat until golden brown
+Spoon pork into the toasted buns
+
+Methods:
+roast, stir, heat, cook with slow cooker
+
+Tools:
+slow cooker, skillet, spoon
+
+Please enter the integer from the list below corresponding to a transformation to apply to the recipe.
+1) Identity transformation (no transformation)
+2) Double the quantity
+3) Halve the quantity
+4) Make it healthier
+5) Make it less healthy
+6) Make it vegetarian
+7) Make it un-vegetarian
+8) Convert to Asian cuisine
+9) Quit
+6
+We made the recipe vegetarian. Here you go!
+Name: Vegetarian Slow Cooker Texas Pulled Pork
+
+Ingredients:
+
+  Quantity  Measurement    Name                 Descriptors    Preparation
+----------  -------------  -------------------  -------------  -------------
+      1     teaspoon       vegetable oil
+      1                    seitan
+      1     cup            barbeque sauce
+      0.5   cup            apple cider vinegar
+      0.5   cup            vegetable broth
+      0.25  cup            brown sugar          light
+      1     tablespoon     mustard              yellow         prepared
+      1     tablespoon     balsamic vinegar
+      1     tablespoon     chili powder
+      1                    onion                extra, large   chopped
+      2                    cloves garlic        large          crushed
+      1.5   teaspoons      thyme
+      8                    veggie burger
+      2     tablespoons    butter
+
+Steps:
+Pour the vegetable oil into the bottom of a slow cooker
+Place the seitan roast into the slow cooker; pour in the barbecue sauce, apple cider vinegar, and vegetable broth
+Stir in the brown sugar, yellow mustard, balsamic vinegar, chili powder, onion, garlic, and thyme
+Cover and cook on High until the roast shreds easily with a fork, 5 to 6 hours
+Remove the roast from the slow cooker, and shred the meat using two forks
+Return the shredded seitan to the slow cooker, and stir the meat into the juices
+Spread the inside of both halves of veggie burger buns with butter
+Toast the buns, butter side down, in a skillet over medium heat until golden brown
+Spoon seitan into the toasted buns
+
+Methods:
+roast, stir, heat, cook with slow cooker
+
+Tools:
+slow cooker, skillet, spoon
+
+Would you like to apply another transformation? If so...
+Please enter the integer from the list below corresponding to a transformation to apply to the recipe.
+1) Identity transformation (no transformation)
+2) Double the quantity
+3) Halve the quantity
+4) Make it healthier
+5) Make it less healthy
+6) Make it vegetarian
+7) Make it un-vegetarian
+8) Convert to Asian cuisine
+9) Quit
+9
+Goodbye.
 ```
