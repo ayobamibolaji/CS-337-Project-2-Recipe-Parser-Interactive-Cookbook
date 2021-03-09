@@ -256,7 +256,6 @@ class RecipeInfo():
         ing_set = set([ing.name for ing in self.Ingredients])
         meats_set = set(MEAT_SUBSTITUTES)
 
-
         # try to skewer if meat is involved
         if ing_set.intersection(meats_set):
             self.Steps.append("When meats are nearly done, thread them onto skewers. Leave 1.5 inches open for handling")
@@ -267,6 +266,9 @@ class RecipeInfo():
         if 'baharat' not in [ing.name for ing in self.Ingredients]:
             self.Ingredients.append(Ingredient("1 teaspoon baharat seasoning"))
             self.Steps.append("Gently add baharat seasoning evenly across final dish.")
+
+        if 'skewers' not in self.Tools:
+            self.Tools.append("1-5 Metal or Bamboo skewers")
 
 
 
