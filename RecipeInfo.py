@@ -2,7 +2,7 @@ from fetch_recipe import GetRecipe
 from Ingredient import Ingredient
 from Tool import Tool
 from Method import Method
-from helpers import MEAT_SUBSTITUTES, VEGGIE_SUBSTITUTES, HEALTHY_SUBSTITUTES, UNHEALTHY_SUBSTITUTES, FATS, COMMON_SIDES
+from helpers import MEAT_SUBSTITUTES, VEGGIE_SUBSTITUTES, HEALTHY_SUBSTITUTES, UNHEALTHY_SUBSTITUTES, FATS, COMMON_SIDES, COMMON_SPICES
 import re
 from tabulate import tabulate
 
@@ -130,7 +130,8 @@ class RecipeInfo():
             if condition(ing):
                 if isinstance(new, str):
                     ing.name = new
-                    ing.quantity = ing.quantity * oldToNewRatio
+                    if ing.quantity is not None:
+                        ing.quantity = ing.quantity * oldToNewRatio
                 else:
                     ing.name = new.name
                     ing.measurement = new.measurement if new.measurement else ing.measurement
@@ -167,6 +168,9 @@ class RecipeInfo():
         for healthy_ing, unhealthy_alt in HEALTHY_SUBSTITUTES.items():
             self.transformIngredient(healthy_ing, unhealthy_alt[0], unhealthy_alt[1],
                                      (lambda ing: healthy_ing in ing.name))
+        self.transformIngredient("milk", "cream", 1, (lambda ing: "milk" in ing.name and "milk chocolate" not in ing.name))
+        self.transformIngredient("olive oil", Ingredient(name="butter"), 1,
+                                 (lambda ing: "oil" in ing.name and "olive" in ing.descriptors))
 
         self.transformQuantities(1.3)
 
@@ -193,7 +197,7 @@ class RecipeInfo():
 
     def makeAsian(self):
         # change name
-        self.name = "Asian" + self.name
+        self.name = "Asian " + self.name
 
         # switch out side for jasmine rice
         for side_ing, jasmine in COMMON_SIDES.items():
@@ -202,9 +206,11 @@ class RecipeInfo():
         # switch out common spices and herbs
         for spice_ing, spice_alt in COMMON_SIDES.items():
             self.transformIngredient(spice_ing, Ingredient(spice_alt), 1, (lambda ing: spice_ing in ing.name))
+        for spice_ing, spice_alt in COMMON_SPICES.items():
+            self.transformIngredient(spice_ing, spice_alt, 1, (lambda ing: spice_ing in ing.name))
 
         # catch all herb that goes with almost everything in case no common spice is found
-        self.Ingredients.append(Ingredient("1 tablespoon Anise seeds"))
+        self.Ingredients.append(Ingredient("1 tablespoon anise seeds"))
         self.Steps.append("When serving, sprinkle Anise seeds generously over the dish")
 
         # change to stir frying
