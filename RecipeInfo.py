@@ -1,5 +1,6 @@
 from fetch_recipe import GetRecipe
 from Ingredient import Ingredient
+from Tool import Tool
 from Method import Method
 from helpers import MEAT_SUBSTITUTES, VEGGIE_SUBSTITUTES, HEALTHY_SUBSTITUTES, UNHEALTHY_SUBSTITUTES, COMMON_SIDES
 import re
@@ -88,11 +89,18 @@ class RecipeInfo():
             if stp: self.Steps.append(stp)
 
     def extractMethods(self, step):
-        # the Method class in Method.py does all of the extraction
-        if Method(step).methods: self.Methods.append(Method(step))
+        methods = Method(step).methods
+
+        for method in methods:
+            if method not in self.Methods:
+                self.Methods.append(method)
 
     def extractTools(self, step):
-        pass
+        tools = Tool(step).tools
+
+        for tool in tools:
+            if tool not in self.Tools:
+                self.Tools.append(tool)
 
     def transformQuantities(self, factor):
         for ing in self.Ingredients:

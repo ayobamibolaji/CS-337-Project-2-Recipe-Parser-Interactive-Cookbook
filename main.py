@@ -13,15 +13,9 @@ def main():
         print("Checked {}/{} URLs".format(i+1, len(lst_of_urls)), end='\r')
         rcp = RecipeInfo(url)
         recipes.append(rcp)
-        for ing in rcp.Methods:
-            test_methods.append(ing.methods)
+        #for ing in rcp.Methods: Methods field is a list of methods at the moment
+        #    test_methods.append(ing.methods)
         print(str(rcp))
-
-    # copy & pasted the loop for testing
-    # for i, url in enumerate(lst_of_urls[:10]):
-    #     print("Checked {}/{} URLs".format(i + 1, len(lst_of_urls)), end='\r')
-    #     rcp = RecipeInfo(url)
-    #     recipes.append(rcp)
 
 def askForTransformation():
     print("Please enter the integer from the list below " +
