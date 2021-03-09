@@ -1,10 +1,9 @@
 from fetch_recipe import GetRecipe
 from Ingredient import Ingredient
 from Method import Method
-from helpers import MEAT_SUBSTITUTES, VEGGIE_SUBSTITUTES, HEALTHY_SUBSTITUTES, UNHEALTHY_SUBSTITUTES
+from helpers import MEAT_SUBSTITUTES, VEGGIE_SUBSTITUTES, HEALTHY_SUBSTITUTES, UNHEALTHY_SUBSTITUTES, FATS
 import re
 from tabulate import tabulate
-from helpers import fats
 
 '''
 Helpful documentation:
@@ -67,7 +66,7 @@ class RecipeInfo():
             try:
                 self.Ingredients.append(Ingredient(full_ingredient))
             except:
-                print("Ingredient could not be extracted. Skipping...")
+                print(f"Ingredient \"{full_ingredient}\" could not be extracted. Skipping...")
                 continue
         
         for step_text in self.rcp['instructions']:
@@ -122,32 +121,15 @@ class RecipeInfo():
     def healthify(self):
         # Mark the title as healthy
         self.name = "Healthy " + self.name
-        self.transformIngredient("sugar", "Splenda", 0.5,
-                                 (lambda ing: "sugar" in ing.name and "brown" not in ing.descriptors))
-
-        self.transformIngredient("sugar",  Ingredient(name="Splenda Blend", descriptors="Brown Sugar"), 0.5,
-                                 (lambda ing: "sugar" in ing.name and "brown" in ing.descriptors))
-        for fat in fats:
+        
+        # Replace fats
+        for fat in FATS:
             self.transformIngredient(fat, Ingredient(name="oil", descriptors="olive"), 0.5,
                                      (lambda ing: fat in ing.name and "foil" not in ing.name))
-        self.transformIngredient("chicken", Ingredient(name="chicken", descriptors="skinless"), 1,
-                                 (lambda ing: "chicken" in ing.name))
-        self.transformIngredient("rice", Ingredient(name="cauliflower", preparation="riced"), 1,
-                                 (lambda ing: "rice" in ing.name and "white" in ing.descriptors))
-        self.transformIngredient("beef", Ingredient(name="ground turkey"), 1, (lambda ing: "ground beef" in ing.name))
-        self.transformIngredient("potato", Ingredient(name="sweet potato"), 1,
-                                 (lambda ing: "potato" in ing.name and "sweet" not in ing.name))
-        self.transformIngredient("yogurt", Ingredient(name="Greek yogurt"), 1,
-                                 (lambda ing: "yogurt" in ing.name and "Greek" not in ing.name))
-        self.transformIngredient("bacon", Ingredient(name="turkey bacon"), 1,
-                                 (lambda ing: "bacon" in ing.name and "turkey" not in ing.name))
-        self.transformIngredient("milk chocolate", Ingredient(name="dark chocolate"), 1,
-                                 (lambda ing: "milk chocolate" in ing.name))
-        self.transformIngredient("milk", Ingredient(name="milk", descriptors="skim"), 1,
-                                 (lambda ing: "milk" in ing.name and "milk chocolate" not in ing.name))
-
+        
+        # Replace unhealthy ingredients
         for unhealthy_ing, healthy_alt in UNHEALTHY_SUBSTITUTES.items():
-            self.transformIngredient(unhealthy_ing, healthy_alt[0], healthy_alt[1], (lambda ing: unhealthy_ing in ing.name))
+            self.transformIngredient(unhealthy_ing, Ingredient(healthy_alt[0]), healthy_alt[1], healthy_alt[2])
         
         self.transformQuantities(.8)
 

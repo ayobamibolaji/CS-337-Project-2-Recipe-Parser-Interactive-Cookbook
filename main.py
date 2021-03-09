@@ -68,7 +68,11 @@ def askForTransformation():
 
 if __name__ == "__main__":
     if len(sys.argv) <= 1:
-        main()
+        # rcp = RecipeInfo("https://www.allrecipes.com/recipe/45856/avocado-steak/")
+        # rcp.makeVegetarian()
+        print(str(rcp))
+
+        # main()
         print("hey")
     elif sys.argv[1].startswith("https://www.allrecipes.com"):
         url = sys.argv[1]

@@ -1,4 +1,4 @@
-the_replacements = {
+QUANTITIES = {
     "½": "0.5",
     "¼": "0.25",
     "¾": "0.75",
@@ -10,7 +10,7 @@ the_replacements = {
     "⅞": "0.875"
 }
 
-measures = [
+MEASURES = [
     'tablespoon',
     'teaspoon',
     'pinch',
@@ -19,6 +19,8 @@ measures = [
     'cup',
     'gallon',
     'clove',
+    'dash',
+    'cubes',
     'pound',
     'loaf',
     'package',
@@ -30,10 +32,11 @@ measures = [
     'ounce',
     'serving',
     'slice',
-    'can'
+    'can',
+    'drops'
 ]
 
-fats = [
+FATS = [
     "butter",
     "margarine",
     "shortening",
@@ -41,19 +44,29 @@ fats = [
     "lard"
 ]
 
-common_ingredients = [
-    "salt",
-    "sugar",
-    "water",
-    "all-purpose flour"
+COMMON_INGREDIENTS = [
+    "all-purpose flour",
+    "food coloring",
+    "milk chocolate",
+    "dark chocolate",
+    "sweet potato",
+    "turkey bacon",
+    "asparagus"
 ]
 
-colors = [
-    "white",
-    "brown",
-    "green",
-    "red",
-    "blue"
+COMMON_DESCRIPTORS = [
+    "skinless",
+    "skim",
+    "Brown Sugar"
+]
+
+COMMON_PREPARATIONS = [
+    "riced",
+    "ground",
+    "cut"
+]
+
+COLORS = [
 ]
 
 MEAT_SUBSTITUTES = {
@@ -61,6 +74,7 @@ MEAT_SUBSTITUTES = {
     'chicken broth': 'vegetable broth',
     'ground beef': 'tempeh',
     'beef': 'jackfruit',
+    'steak': 'jackfruit',
     'chicken': 'seitan',
     'pork': 'seitan',
     'bacon': 'tempeh',
@@ -70,7 +84,6 @@ MEAT_SUBSTITUTES = {
     'lamb': 'jackfruit',
     'duck': 'seitan',
     'poultry': 'seitan',
-    'steak': 'jackfruit',
     'loin': 'jackfruit',
     'oyster': 'mushrooms',
     'salmon': 'mushrooms',
@@ -106,15 +119,23 @@ VEGGIE_SUBSTITUTES = {
 }
 
 UNHEALTHY_SUBSTITUTES = {
-    #'sugar': ('Splenda', .5),
-    #'chicken': ('skinless chicken', 1),
-    #'butter': ('avocado', .8),
-    #'rice': ('quinoa', .9),
-    'noodles': ('zoodles', 1),
-    'sour cream': ('Greek yogurt', 1),
-    'all-purpose flour': ('whole wheat flour', 1),
-    'flour tortilla': ('corn tortilla', 1)
+    # unhealthyIng: (new Ingredient(), quantMultiplier, lambda function)
+    'sugar': ("Splenda", 0.5, (lambda ing: "sugar" in ing.name and "brown" not in ing.descriptors)),
+    'chicken': ("skinless chicken", 1, (lambda ing: "chicken" in ing.name)),
+    'butter': ('avocado', .8, (lambda ing: "avocado" in ing.name)),
+    'beef': ("ground turkey", 1, (lambda ing: "ground beef" in ing.name)),
+    'rice': ("riced cauliflower", 1, (lambda ing: "rice" in ing.name and "white" in ing.descriptors)),
+    "potato": ("sweet potato", 1, (lambda ing: "potato" in ing.name and "sweet" not in ing.name)),
+    "yogurt": ("Greek yogurt", 1, (lambda ing: "yogurt" in ing.name and "Greek" not in ing.name)),
+    "bacon": ("turkey bacon", 1, (lambda ing: "bacon" in ing.name and "turkey" not in ing.name)),
+    "milk chocolate": ("dark chocolate", 1, (lambda ing: "milk chocolate" in ing.name)),
+    "milk": ("skim milk", 1, (lambda ing: "milk" in ing.name and "milk chocolate" not in ing.name)),
+    "sugar": ("Brown Sugar Splenda Blend", 0.5, (lambda ing: "sugar" in ing.name and "brown" in ing.descriptors)),
+    'cream': ('Greek yogurt', 1, (lambda ing: "cream" in ing.name and "sour" in ing.descriptors)),
+    'flour': ('whole wheat flour', 1, (lambda ing: "flour" in ing.name and "all-purpose" in ing.descriptors)),
+    'flour tortilla': ('corn tortilla', 1, (lambda ing: "flour tortilla" in ing.name))
 }
+
 
 HEALTHY_SUBSTITUTES = {
     'Splenda': ('sugar', 1.5),
@@ -171,7 +192,7 @@ NON_SECONDARY_METHODS = [
 
 def cleanIngredientText(txt):
     txt = ' '.join(txt.split())
-    for str, rep in the_replacements.items():
+    for str, rep in QUANTITIES.items():
         txt = txt.replace(str, rep)
     
     txt = combineQuantity(txt)
