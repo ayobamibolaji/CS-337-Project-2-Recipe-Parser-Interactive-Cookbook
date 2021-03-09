@@ -1,7 +1,8 @@
 from fetch_recipe import GetRecipe
 from Ingredient import Ingredient
+from Tool import Tool
 from Method import Method
-from helpers import MEAT_SUBSTITUTES, VEGGIE_SUBSTITUTES, HEALTHY_SUBSTITUTES, UNHEALTHY_SUBSTITUTES, FATS
+from helpers import MEAT_SUBSTITUTES, VEGGIE_SUBSTITUTES, HEALTHY_SUBSTITUTES, UNHEALTHY_SUBSTITUTES, FATS, COMMON_SIDES
 import re
 from tabulate import tabulate
 
@@ -13,6 +14,7 @@ https://spacy.io/models/en - lists the different labels that are used with spacy
 https://spacy.io/api/top-level#spacy.explain - a spacy function that's helpful for defining labels
 
 '''
+
 
 class RecipeInfo():
     def __init__(self, url):
@@ -32,22 +34,23 @@ class RecipeInfo():
 
     def __str__(self):
         return (
-            "Name: " +
-            self.name
-            + "\n\nIngredients:\n" +
-            "\n"+
-            tabulate([[ing.quantity,
-                       ing.measurement,
-                       ing.name,
-                       ing.descriptors,
-                       ing.preparation] for ing in self.Ingredients],
-                     headers=['Quantity', "Measurement", 'Name', "Descriptors", "Preparation"])
-            + "\n\nSteps:\n" +
-            "\n".join([str(step) for step in self.Steps])
-            + "\n\nMethods:\n" +
-            ", ".join([str(method) for method in self.Methods])
-            + "\n\nTools:\n" +
-            ", ".join([str(tool) for tool in self.Tools])
+                "Name: " +
+                self.name
+                + "\n\nIngredients:\n" +
+                "\n" +
+                tabulate([[ing.quantity,
+                           ing.measurement,
+                           ing.name,
+                           ing.descriptors,
+                           ing.preparation] for ing in self.Ingredients],
+                         headers=['Quantity', "Measurement", 'Name', "Descriptors", "Preparation"])
+                + "\n\nSteps:\n" +
+                "\n".join([str(step) for step in self.Steps])
+                + "\n\nMethods:\n" +
+                ", ".join([str(method) for method in self.Methods])
+                + "\n\nTools:\n" +
+                ", ".join([str(tool) for tool in self.Tools])
+                + "\n"
         )
 
     def extractInfo(self):
@@ -68,7 +71,7 @@ class RecipeInfo():
             except:
                 print(f"Ingredient \"{full_ingredient}\" could not be extracted. Skipping...")
                 continue
-        
+
         for step_text in self.rcp['instructions']:
             # formatting each instruction then updating the
             # class field
@@ -79,6 +82,24 @@ class RecipeInfo():
             self.extractMethods(step)
             self.extractTools(step)
 
+        # these for loops catches some edge cases with
+        # the methods and tools
+        for method in self.Methods:
+            if method == "boil":
+                if "pot" not in self.Tools:
+                    self.Tools.append('pot')
+            if method == "bake":
+                if "oven" not in self.Tools:
+                    self.Tools.append('oven')
+
+        for tool in self.Tools:
+            if tool == "slow cooker":
+                if "cook with slow cooker" not in self.Methods:
+                    self.Methods.append("cook with slow cooker")
+            if tool == "pressure cooker":
+                if "cook with pressure cooker" not in self.Methods:
+                    self.Methods.append("cook with pressure cooker")
+
     def extractSteps(self, step_text):
         sub_steps = step_text.split('.')
         for stp in sub_steps:
@@ -86,11 +107,18 @@ class RecipeInfo():
             if stp: self.Steps.append(stp)
 
     def extractMethods(self, step):
-        # the Method class in Method.py does all of the extraction
-        if Method(step).methods: self.Methods.append(Method(step))
+        methods = Method(step).methods
+
+        for method in methods:
+            if method not in self.Methods:
+                self.Methods.append(method)
 
     def extractTools(self, step):
-        pass
+        tools = Tool(step).tools
+
+        for tool in tools:
+            if tool not in self.Tools:
+                self.Tools.append(tool)
 
     def transformQuantities(self, factor):
         for ing in self.Ingredients:
@@ -137,12 +165,13 @@ class RecipeInfo():
         # Mark the title as unhealthy
         self.name = "Unhealthy " + self.name
         for healthy_ing, unhealthy_alt in HEALTHY_SUBSTITUTES.items():
-            self.transformIngredient(healthy_ing, unhealthy_alt[0], unhealthy_alt[1], (lambda ing: healthy_ing in ing.name))
+            self.transformIngredient(healthy_ing, unhealthy_alt[0], unhealthy_alt[1],
+                                     (lambda ing: healthy_ing in ing.name))
 
         self.transformQuantities(1.3)
 
         # Maybe add a conditional for this next step lol
-        if 'Coca Cola' not in [ing.name for ing in self.Ingredients]: 
+        if 'Coca Cola' not in [ing.name for ing in self.Ingredients]:
             self.Ingredients.append(Ingredient("1 can Coca Cola"))
             self.Steps.append("Enjoy the meal alongside an ice cold Coca Cola.")
 
@@ -156,11 +185,38 @@ class RecipeInfo():
         self.name = "Un-Vegetarian " + self.name
         for veggie_ing, veggie_alt in VEGGIE_SUBSTITUTES.items():
             self.transformIngredient(veggie_ing, veggie_alt, 1, (lambda ing: veggie_ing in ing.name))
-        
+
         # Maybe add a conditional for this next step lol
         if 'bacon' not in [ing.name for ing in self.Ingredients]:
             self.Ingredients.append(Ingredient(".5 cups bacon strips"))
             self.Steps.append("Sprinkle bacon strips on top of final dish.")
-        
+
+    def makeAsian(self):
+        # change name
+        self.name = "Asian" + self.name
+
+        # switch out side for jasmine rice
+        for side_ing, jasmine in COMMON_SIDES.items():
+            self.transformIngredient(side_ing, Ingredient(jasmine), 1, (lambda ing: side_ing in ing.name))
+
+        # switch out common spices and herbs
+        for spice_ing, spice_alt in COMMON_SIDES.items():
+            self.transformIngredient(spice_ing, Ingredient(spice_alt), 1, (lambda ing: spice_ing in ing.name))
+
+        # catch all herb that goes with almost everything in case no common spice is found
+        self.Ingredients.append(Ingredient("1 tablespoon Anise seeds"))
+        self.Steps.append("When serving, sprinkle Anise seeds generously over the dish")
+
+        # change to stir frying
+        # if 'fry' in self.Steps:
+        #     self.Ingredients.append(Ingredient("half cup stir fry sauce"))
+        #     self.Steps.append("While frying finishes, whisk stir fry sauce into dish")
+        #     self.name = self.name + 'stir fry'
+
+        # add soy sauce
+        if 'soy sauce' not in [ing.name for ing in self.Ingredients]:
+            self.Ingredients.append(Ingredient("2 teaspoons soy sauce"))
+            self.Steps.append("Gently add soy sauce spread evenly across final dish.")
+
     def __repr__(self):
         return f"{self.name}"

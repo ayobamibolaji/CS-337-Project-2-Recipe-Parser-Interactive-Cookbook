@@ -13,15 +13,9 @@ def main():
         print("Checked {}/{} URLs".format(i+1, len(lst_of_urls)), end='\r')
         rcp = RecipeInfo(url)
         recipes.append(rcp)
-        for ing in rcp.Methods:
-            test_methods.append(ing.methods)
+        #for ing in rcp.Methods: Methods field is a list of methods at the moment
+        #    test_methods.append(ing.methods)
         print(str(rcp))
-
-    # copy & pasted the loop for testing
-    # for i, url in enumerate(lst_of_urls[:10]):
-    #     print("Checked {}/{} URLs".format(i + 1, len(lst_of_urls)), end='\r')
-    #     rcp = RecipeInfo(url)
-    #     recipes.append(rcp)
 
 def askForTransformation():
     print("Please enter the integer from the list below " +
@@ -33,7 +27,8 @@ def askForTransformation():
           "\n5) Make it less healthy"+
           "\n6) Make it vegetarian"+
           "\n7) Make it un-vegetarian"+
-          "\n8) Quit")
+          "\n8) Convert to Asian cuisine"+
+          "\n9) Quit")
     transformation = input()
     if transformation == "1":
         print(str(rcp))
@@ -56,6 +51,9 @@ def askForTransformation():
         rcp.makeUnVegetarian()
         print("We made the recipe un-vegetarian. Here you go!")
     elif transformation == "8":
+        rcp.makeAsian()
+        print("We made the recipe Asian style. Here you go!")
+    elif transformation == "9":
         print("Goodbye.")
         quit()
     else:
@@ -68,8 +66,8 @@ def askForTransformation():
 
 if __name__ == "__main__":
     if len(sys.argv) <= 1:
-        # rcp = RecipeInfo("https://www.allrecipes.com/recipe/45856/avocado-steak/")
-        # rcp.makeVegetarian()
+        rcp = RecipeInfo("https://www.allrecipes.com/recipe/45856/avocado-steak/")
+        rcp.makeAsian()
         print(str(rcp))
 
         # main()

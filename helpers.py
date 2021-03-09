@@ -63,7 +63,8 @@ COMMON_DESCRIPTORS = [
 COMMON_PREPARATIONS = [
     "riced",
     "ground",
-    "cut"
+    "cut",
+    "refried"
 ]
 
 COLORS = [
@@ -106,6 +107,7 @@ MEAT_SUBSTITUTES = {
     'french fries': 'salad'
 }
 
+
 VEGGIE_SUBSTITUTES = {
     'tofu': 'pork',
     'mushroom broth': 'beef broth',
@@ -116,6 +118,44 @@ VEGGIE_SUBSTITUTES = {
     'tempeh': 'ground beef',
     'butter': 'lard',
     'veggie burger': 'hamburger'
+}
+
+COMMON_SIDES = {
+    'rice': 'jasmine rice',
+    'white rice': 'jasmine rice',
+    'potatoes': 'jasmine rice',
+    'potato': 'jasmine rice',
+    'pasta': 'jasmine rice',
+    'noodle': 'jasmine rice',
+    'noodles': 'jasmine rice',
+    'spaghetti': 'jasmine rice',
+    'fettuccine': 'jasmine rice',
+    'penne': 'jasmine rice',
+    'rigatoni': 'jasmine rice',
+    'macaroni': 'jasmine rice',
+    'corn': 'jasmine rice',
+}
+
+COMMON_SPICES = {
+    'chives': 'chinese garlic chives',
+    'ginger': 'galangal',
+    'cilantro': 'golden needles',
+    'asparagus': 'golden needles',
+    'oregano': 'golden needles',
+    'shredded cabbage': 'golden needles',
+    'lemon': 'kaffir lime leaves',
+    'thyme': 'kaffir lime leaves',
+    'lime': 'kaffir lime leaves',
+    'nutmeg': 'kaffir lime leaves',
+    'rosemary': 'kaffir lime leaves',
+    'basil': 'thai basil',
+    'saffron': 'turmeric',
+    'mustard': 'turmeric',
+    'paprika': 'turmeric',
+    'cinnamon': 'zeylanicum',
+    'vanilla': 'pandan',
+    'seed': 'coriander seeds',
+    'seeds': 'coriander seeds'
 }
 
 UNHEALTHY_SUBSTITUTES = {
@@ -186,8 +226,20 @@ NON_SECONDARY_METHODS = [
     'transfer',
     'take',
     'save',
-
 ]
+
+TOOLS = ['corer', 'cutter', 'spoon', 'knife', 'pan', 'whisk',
+ 'beanpot', 'pot', 'skillet', 'cup', 'mug', 'colander',
+ 'bowl', 'tray', 'slicer', 'pitter', 'cleaver', 'corkscrew',
+ 'board', 'poacher', 'separator', 'timer', 'scale',
+ 'sifter', 'funnel', 'grater', 'strainer', 'chopper',
+ 'dipper', 'ladle', 'squeezer', 'juicer', 'mandoline',
+ 'grinder', 'tenderiser', 'thermometer', 'baller',
+ 'pestle', 'nutcracker', 'glove', 'blender', 'brush',
+ 'peeler', 'masher', 'ricer', 'pin', 'shaker', 'sieve',
+ 'scoop', 'spatula', 'tamis', 'tongs', 'zester',
+ 'scooper', 'processor', 'process', 'blend', 'saute',
+ 'oven', 'cooker', 'saucepan', 'pressure', 'fryer']
 
 
 def cleanIngredientText(txt):
