@@ -132,7 +132,7 @@ class Ingredient():
         
         # Store the final definitions 
         self.preparation = ', '.join(preparations)
-        self.descriptors = ', '.join([desc for desc in descriptors if desc not in self.name and desc not in preparations])
+        self.descriptors = ', '.join([desc for desc in descriptors if desc not in preparations])
 
         # Remove descriptors and preparations from name
         for desc in COMMON_DESCRIPTORS:

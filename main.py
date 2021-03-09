@@ -9,6 +9,7 @@ test_methods = []
 
 def main():
 
+
     for i, url in enumerate(lst_of_urls[:]):
         print("Checked {}/{} URLs".format(i+1, len(lst_of_urls)), end='\r')
         rcp = RecipeInfo(url)
@@ -66,8 +67,8 @@ def askForTransformation():
 
 if __name__ == "__main__":
     if len(sys.argv) <= 1:
-        rcp = RecipeInfo("https://www.allrecipes.com/recipe/45856/avocado-steak/")
-        rcp.makeAsian()
+        rcp = RecipeInfo("https://www.allrecipes.com/recipe/16354/easy-meatloaf/")
+        rcp.healthify()
         print(str(rcp))
 
         # main()
