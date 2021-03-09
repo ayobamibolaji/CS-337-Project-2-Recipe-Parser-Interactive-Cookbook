@@ -27,7 +27,8 @@ class Tool():
                         'pestle', 'nutcracker', 'glove', 'blender', 'brush',
                         'peeler', 'masher', 'ricer', 'pin', 'shaker', 'sieve',
                         'scoop', 'spatula', 'tamis', 'tongs', 'zester',
-                        'scooper']
+                        'scooper', 'processor', 'process', 'blend', 'saute',
+                        'oven', 'cooker', 'saucepan', 'pressure', 'fryer']
 
         decomposed_step = nlp(self.step)  # decompose the step with spacy
 
@@ -44,6 +45,16 @@ class Tool():
                     return "rolling " + lowercase_text
                 if lowercase_text == 'scoop':
                     return "scooper"
+                if lowercase_text == 'process' or lowercase_text == 'processor':
+                    return "food processor"
+                if lowercase_text == 'blend':
+                    return "blender"
+                if lowercase_text == 'saute':
+                    return "frying pan"
+                if lowercase_text == "cooker" and "pressure cooker" not in self.tools:
+                    return "slow cooker"
+                if lowercase_text == 'pressure' or lowercase_text == "cooker" and "slow cooker" not in self.tools:
+                    return "pressure cooker"
                 else:
                     return lowercase_text
 

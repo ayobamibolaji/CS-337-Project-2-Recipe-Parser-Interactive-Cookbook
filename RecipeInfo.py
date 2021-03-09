@@ -51,6 +51,7 @@ class RecipeInfo():
                 ", ".join([str(method) for method in self.Methods])
                 + "\n\nTools:\n" +
                 ", ".join([str(tool) for tool in self.Tools])
+                + "\n"
         )
 
     def extractInfo(self):
@@ -81,6 +82,24 @@ class RecipeInfo():
         for step in self.Steps:
             self.extractMethods(step)
             self.extractTools(step)
+
+        # these for loops catches some edge cases with
+        # the methods and tools
+        for method in self.Methods:
+            if method == "boil":
+                if "pot" not in self.Tools:
+                    self.Tools.append('pot')
+            if method == "bake":
+                if "oven" not in self.Tools:
+                    self.Tools.append('oven')
+
+        for tool in self.Tools:
+            if tool == "slow cooker":
+                if "cook with slow cooker" not in self.Methods:
+                    self.Methods.append("cook with slow cooker")
+            if tool == "pressure cooker":
+                if "cook with pressure cooker" not in self.Methods:
+                    self.Methods.append("cook with pressure cooker")
 
     def extractSteps(self, step_text):
         sub_steps = step_text.split('.')

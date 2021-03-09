@@ -39,10 +39,28 @@ class Method():
         lst_of_methods = ['bake', 'fry', 'roast', 'grill', 'steam',
                            'poach', 'simmer', 'boil', 'blanch', 'braise',
                            'stew', 'broil', 'fold', 'fillet', 'baste', 'cure',
-                           'season', 'heat', 'preheat']
+                           'season', 'heat', 'preheat', 'stir', 'mix', 'whisking',
+                          'stirring', 'broiling', 'boiling', 'simmering',
+                          'frying', 'mixing']
 
         def in_methods(token_text):
-            return token_text.lower() in lst_of_methods
+            lowercase_text = token_text.lower()
+            if lowercase_text == "whisking":
+                return "whisk"
+            if lowercase_text == "boiling":
+                return "boil"
+            if lowercase_text == "simmering":
+                return "simmer"
+            if lowercase_text == "stirring":
+                return "stir"
+            if lowercase_text == "mixing":
+                return "mix"
+            if lowercase_text == "frying":
+                return "fry"
+            else:
+                if lowercase_text in lst_of_methods:
+                    return lowercase_text
+            return None
 
         # common way to search for a method in a recipe instruction/step:
         # check if the token is the root of the sentence or
@@ -58,8 +76,9 @@ class Method():
 
         for token in decomposed_step:  # looping through each token in the step
             # if we find one of the primary cooking methods
-            if in_methods(token.text):
-                self.methods.append(token.text)
+            found_method = in_methods(token.text)
+            if found_method:
+                self.methods.append(found_method)
 
     def __repr__(self):
         return self.methods[0]
