@@ -261,7 +261,7 @@ class RecipeInfo():
         if ing_set.intersection(meats_set):
             self.Steps.append("When meats are nearly done, thread them onto skewers. Leave 1.5 inches open for handling")
             self.Steps.append("Give a final grilling for no more than 2 minutes to lightly crisp the meats")
-            self.name = self.name + 'kebab'
+            self.name = self.name + ' Kebab'
 
         # add baharat seasoning
         if 'baharat' not in [ing.name for ing in self.Ingredients]:
