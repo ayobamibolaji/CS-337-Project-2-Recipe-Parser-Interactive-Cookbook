@@ -25,7 +25,8 @@ class RecipeInfo():
 
         self.Ingredients = []
         self.Steps = []
-        self.Methods = []
+        self.primaryMethods = []
+        self.secondaryMethods = []
         self.Tools = []
 
         # call function that extracts all important
@@ -46,8 +47,10 @@ class RecipeInfo():
                          headers=['Quantity', "Measurement", 'Name', "Descriptors", "Preparation"])
                 + "\n\nSteps:\n" +
                 "\n".join([str(step) for step in self.Steps])
-                + "\n\nMethods:\n" +
-                ", ".join([str(method) for method in self.Methods])
+                + "\n\nPrimary Methods:\n" +
+                ", ".join([str(method) for method in self.primaryMethods])
+                + "\n\nSecondary Methods:\n" +
+                ", ".join([str(method) for method in self.secondaryMethods])
                 + "\n\nTools:\n" +
                 ", ".join([str(tool) for tool in self.Tools])
                 + "\n"
@@ -84,7 +87,7 @@ class RecipeInfo():
 
         # these for loops catches some edge cases with
         # the methods and tools
-        for method in self.Methods:
+        for method in self.primaryMethods:
             if method == "boil":
                 if "pot" not in self.Tools:
                     self.Tools.append('pot')
@@ -94,11 +97,15 @@ class RecipeInfo():
 
         for tool in self.Tools:
             if tool == "slow cooker":
-                if "cook with slow cooker" not in self.Methods:
-                    self.Methods.append("cook with slow cooker")
+                if "cook with slow cooker" not in self.primaryMethods:
+                    self.primaryMethods.append("cook with slow cooker")
             if tool == "pressure cooker":
-                if "cook with pressure cooker" not in self.Methods:
-                    self.Methods.append("cook with pressure cooker")
+                if "cook with pressure cooker" not in self.primaryMethods:
+                    self.primaryMethods.append("cook with pressure cooker")
+
+        if 'fry' in self.primaryMethods and "air fry" in self.primaryMethods or "deep fry" in self.primaryMethods:
+            # removing duplicate instances of fry like "air fry" and "fry"
+            self.primaryMethods[:] = [method for method in self.primaryMethods if method != "fry"]
 
     def extractSteps(self, step_text):
         sub_steps = step_text.split('.')
@@ -107,11 +114,17 @@ class RecipeInfo():
             if stp: self.Steps.append(stp)
 
     def extractMethods(self, step):
-        methods = Method(step).methods
+        extracted_methods = Method(step)
+        primary_methods = extracted_methods.primary_methods
+        secondary_methods = extracted_methods.secondary_methods
 
-        for method in methods:
-            if method not in self.Methods:
-                self.Methods.append(method)
+        for method in primary_methods:
+            if method not in self.primaryMethods:
+                self.primaryMethods.append(method)
+
+        for method in secondary_methods:
+            if method not in self.secondaryMethods:
+                self.secondaryMethods.append(method)
 
     def extractTools(self, step):
         tools = Tool(step).tools
