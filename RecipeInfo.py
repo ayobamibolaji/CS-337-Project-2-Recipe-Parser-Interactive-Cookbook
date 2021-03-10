@@ -214,11 +214,12 @@ class RecipeInfo():
             self.Ingredients.append(Ingredient("1 tablespoon anise seeds"))
             self.Steps.append("When serving, sprinkle Anise seeds generously over the dish")
 
-        # change to stir frying
-        # if 'fry' in self.Steps:
-        #     self.Ingredients.append(Ingredient("half cup stir fry sauce"))
-        #     self.Steps.append("While frying finishes, whisk stir fry sauce into dish")
-        #     self.name = self.name + 'stir fry'
+        # try to stir fry
+        if 'fry' in [step for step in self.Steps]:
+            self.Ingredients.append(Ingredient("half cup stir fry sauce"))
+            self.Steps.append("While frying finishes, whisk stir fry sauce into dish")
+            self.name = self.name+'stir fry'
+
 
         # add soy sauce
         if 'soy sauce' not in [ing.name for ing in self.Ingredients]:
@@ -245,7 +246,7 @@ class RecipeInfo():
             self.Steps.append("Give a final grilling for no more than 2 minutes to lightly crisp the meats")
             self.name = self.name + ' Kebab'
 
-        # add baharat seasoning
+        # add baharat seasoning as a catch all
         if 'baharat' not in [ing.name for ing in self.Ingredients]:
             self.Ingredients.append(Ingredient("1 teaspoon baharat seasoning"))
             self.Steps.append("Gently add baharat seasoning evenly across final dish.")
