@@ -45,8 +45,11 @@ Mix well and scoop the mixture into the mushroom caps
 Bake in the preheated oven 15 minutes, or until the cheese has melted
 Remove the mushrooms from the oven, and sprinkle with the remaining cheese
 
-Methods:
-heat, preheat, stir, mix, bake
+Primary Methods:
+bake
+
+Secondary Methods:
+place, heat, set, preheat, remove, stir, mix
 
 Tools:
 skillet, oven, saucepan, bowl, cup, scooper
@@ -60,7 +63,8 @@ Please enter the integer from the list below corresponding to a transformation t
 6) Make it vegetarian
 7) Make it un-vegetarian
 8) Convert to Asian cuisine
-9) Quit
+9) Convert to Turkish cuisine
+10) Quit
 4
 We made the recipe healthier. Here you go!
 Name: Healthy Bacon and Cheddar Stuffed Mushrooms
@@ -71,7 +75,7 @@ Ingredients:
 ----------  -------------  -----------------  -------------  -------------
        2.4  slices         turkey bacon
        6.4                 crimini mushrooms
-       0.2  tablespoon     oil                olive
+       0.2  tablespoon     oil                olive          []
        0.8  tablespoon     onion                             chopped
        0.6  cup            Cheddar cheese                    shredded
 
@@ -91,8 +95,11 @@ Mix well and scoop the mixture into the mushroom caps
 Bake in the preheated oven 15 minutes, or until the cheese has melted
 Remove the mushrooms from the oven, and sprinkle with the remaining cheese
 
-Methods:
-heat, preheat, stir, mix, bake
+Primary Methods:
+bake
+
+Secondary Methods:
+place, heat, set, preheat, remove, stir, mix
 
 Tools:
 skillet, oven, saucepan, bowl, cup, scooper
@@ -107,8 +114,9 @@ Please enter the integer from the list below corresponding to a transformation t
 6) Make it vegetarian
 7) Make it un-vegetarian
 8) Convert to Asian cuisine
-9) Quit
-9
+9) Convert to Turkish cuisine
+10) Quit
+10
 Goodbye.
 ```
 You can also run main without an argument to run 50 sample recipes.
@@ -128,7 +136,7 @@ Ingredients:
       1     cup            barbeque sauce
       0.5   cup            apple cider vinegar
       0.5   cup            chicken broth
-      0.25  cup            brown sugar           light
+      0.25  cup            sugar                 light, brown
       1     tablespoon     mustard               yellow         prepared
       1     tablespoon     Worcestershire sauce
       1     tablespoon     chili powder
@@ -149,8 +157,11 @@ Spread the inside of both halves of hamburger buns with butter
 Toast the buns, butter side down, in a skillet over medium heat until golden brown
 Spoon pork into the toasted buns
 
-Methods:
-roast, stir, heat, cook with slow cooker
+Primary Methods:
+roast, cook with slow cooker
+
+Secondary Methods:
+place, stir, remove, return, heat
 
 Tools:
 slow cooker, skillet, spoon
@@ -164,7 +175,8 @@ Please enter the integer from the list below corresponding to a transformation t
 6) Make it vegetarian
 7) Make it un-vegetarian
 8) Convert to Asian cuisine
-9) Quit
+9) Convert to Turkish cuisine
+10) Quit
 6
 We made the recipe vegetarian. Here you go!
 Name: Vegetarian Slow Cooker Texas Pulled Pork
@@ -178,7 +190,7 @@ Ingredients:
       1     cup            barbeque sauce
       0.5   cup            apple cider vinegar
       0.5   cup            vegetable broth
-      0.25  cup            brown sugar          light
+      0.25  cup            sugar                light, brown
       1     tablespoon     mustard              yellow         prepared
       1     tablespoon     balsamic vinegar
       1     tablespoon     chili powder
@@ -190,17 +202,20 @@ Ingredients:
 
 Steps:
 Pour the vegetable oil into the bottom of a slow cooker
-Place the seitan roast into the slow cooker; pour in the barbecue sauce, apple cider vinegar, and vegetable broth
-Stir in the brown sugar, yellow mustard, balsamic vinegar, chili powder, onion, garlic, and thyme
-Cover and cook on High until the roast shreds easily with a fork, 5 to 6 hours
-Remove the roast from the slow cooker, and shred the meat using two forks
-Return the shredded seitan to the slow cooker, and stir the meat into the juices
-Spread the inside of both halves of veggie burger buns with butter
-Toast the buns, butter side down, in a skillet over medium heat until golden brown
-Spoon seitan into the toasted buns
+Place the pork seitan into the slow cooker; pour in the barbecue balsamic vinegar, apple cider vinegar, and chicken vegetable broth
+Stir in the brown sugar, yellow mustard, Worcestershire balsamic vinegar, chili powder, onion, garlic, and thyme
+Cover and cook on High until the seitan shreds easily with a fork, 5 to 6 hours
+Remove the seitan from the slow cooker, and shred the meat using two forks
+Return the shredded pork to the slow cooker, and stir the meat into the juices
+Spread the inside of both halves of hamburger veggie burger with butter
+Toast the veggie burger, butter side down, in a skillet over medium heat until golden brown
+Spoon pork into the toasted veggie burger
 
-Methods:
-roast, stir, heat, cook with slow cooker
+Primary Methods:
+roast, cook with slow cooker
+
+Secondary Methods:
+place, stir, remove, return, heat
 
 Tools:
 slow cooker, skillet, spoon
@@ -215,7 +230,8 @@ Please enter the integer from the list below corresponding to a transformation t
 6) Make it vegetarian
 7) Make it un-vegetarian
 8) Convert to Asian cuisine
-9) Quit
-9
+9) Convert to Turkish cuisine
+10) Quit
+10
 Goodbye.
 ```
