@@ -5,15 +5,15 @@ import re
 
 
 class Ingredient():
-    def __init__(self, str="", name="", measurement=None, quantity=None, descriptors=None, preparation=None):
+    def __init__(self, str="", name="", measurement=None, quantity=None, descriptors=[], preparation=[]):
         if str != "":
             self.str = cleanIngredientText(str)
             self.name = ""
             self.doc = DecomposedText(self.str)
             self.measurement = None
             self.quantity = None
-            self.descriptors = None
-            self.preparation = None
+            self.descriptors = []
+            self.preparation = []
             self.extractProperties(self.str)
         else:
             self.name = name

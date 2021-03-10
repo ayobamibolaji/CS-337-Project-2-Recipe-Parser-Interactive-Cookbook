@@ -190,7 +190,7 @@ class RecipeInfo():
         self.transformQuantities(1.3)
 
         # Maybe add a conditional for this next step lol
-        if 'Coca Cola' not in [ing.name for ing in self.Ingredients]:
+        if 'CocaCola' not in [ing.name for ing in self.Ingredients]:
             self.Ingredients.append(Ingredient("1 can Coca Cola"))
             self.Steps.append("Enjoy the meal alongside an ice cold Coca Cola.")
 
@@ -206,7 +206,7 @@ class RecipeInfo():
             self.transformIngredient(veggie_ing, veggie_alt, 1, (lambda ing: veggie_ing in ing.name))
 
         # Maybe add a conditional for this next step lol
-        if 'bacon' not in [ing.name for ing in self.Ingredients]:
+        if 'bacon strips' not in [ing.name for ing in self.Ingredients]:
             self.Ingredients.append(Ingredient(".5 cups bacon strips"))
             self.Steps.append("Sprinkle bacon strips on top of final dish.")
 
@@ -220,7 +220,7 @@ class RecipeInfo():
 
         # switch out common spices and herbs
         for spice_ing, spice_alt in ASIAN_SPICES.items():
-            self.transformIngredient(spice_ing, spice_alt, 1, (lambda ing: spice_ing in ing.name))
+            self.transformIngredient(spice_ing, spice_alt[0], spice_alt[1],spice_alt[2])
 
         # catch all herb that goes with almost everything in case no common spice is found
         if 'anise seeds' not in [ing.name for ing in self.Ingredients]:
@@ -254,27 +254,18 @@ class RecipeInfo():
         meats_set = set(MEAT_SUBSTITUTES)
 
         # try to skewer if meat is involved
-        if ing_set.intersection(meats_set):
+        if ing_set.intersection(meats_set) and "Give a final grilling for no more than 2 minutes to lightly crisp the meats" not in self.Steps:
             self.Steps.append("When meats are nearly done, thread them onto skewers. Leave 1.5 inches open for handling")
             self.Steps.append("Give a final grilling for no more than 2 minutes to lightly crisp the meats")
             self.name = self.name + ' Kebab'
 
         # add baharat seasoning as a catch all
-        if 'baharat' not in [ing.name for ing in self.Ingredients]:
+        if 'baharat seasoning' not in [ing.name for ing in self.Ingredients]:
             self.Ingredients.append(Ingredient("1 teaspoon baharat seasoning"))
             self.Steps.append("Gently add baharat seasoning evenly across final dish.")
 
-        if 'skewers' not in self.Tools:
+        if '1-5 Metal or Bamboo skewers' not in self.Tools:
             self.Tools.append("1-5 Metal or Bamboo skewers")
-
-
-
-
-
-
-
-
-
 
     def __repr__(self):
         return f"{self.name}"
