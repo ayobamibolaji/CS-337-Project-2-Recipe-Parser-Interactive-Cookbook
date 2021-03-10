@@ -2,7 +2,7 @@ from fetch_recipe import GetRecipe
 from Ingredient import Ingredient
 from Tool import Tool
 from Method import Method
-from helpers import MEAT_SUBSTITUTES, VEGGIE_SUBSTITUTES, HEALTHY_SUBSTITUTES, UNHEALTHY_SUBSTITUTES, FATS, COMMON_SIDES, COMMON_SPICES
+from helpers import MEAT_SUBSTITUTES, VEGGIE_SUBSTITUTES, HEALTHY_SUBSTITUTES, UNHEALTHY_SUBSTITUTES, FATS, ASIAN_SIDES, ASIAN_SPICES, TURKISH_SIDES, TURKISH_SPICES
 import re
 from tabulate import tabulate
 
@@ -200,18 +200,17 @@ class RecipeInfo():
         self.name = "Asian " + self.name
 
         # switch out side for jasmine rice
-        for side_ing, jasmine in COMMON_SIDES.items():
-            self.transformIngredient(side_ing, Ingredient(jasmine), 1, (lambda ing: side_ing in ing.name))
+        for side_ing, jasmine in ASIAN_SIDES.items():
+            self.transformIngredient(side_ing, jasmine, 1, (lambda ing: side_ing in ing.name))
 
         # switch out common spices and herbs
-        for spice_ing, spice_alt in COMMON_SIDES.items():
-            self.transformIngredient(spice_ing, Ingredient(spice_alt), 1, (lambda ing: spice_ing in ing.name))
-        for spice_ing, spice_alt in COMMON_SPICES.items():
+        for spice_ing, spice_alt in ASIAN_SPICES.items():
             self.transformIngredient(spice_ing, spice_alt, 1, (lambda ing: spice_ing in ing.name))
 
         # catch all herb that goes with almost everything in case no common spice is found
-        self.Ingredients.append(Ingredient("1 tablespoon anise seeds"))
-        self.Steps.append("When serving, sprinkle Anise seeds generously over the dish")
+        if 'anise seeds' not in [ing.name for ing in self.Ingredients]:
+            self.Ingredients.append(Ingredient("1 tablespoon anise seeds"))
+            self.Steps.append("When serving, sprinkle Anise seeds generously over the dish")
 
         # change to stir frying
         # if 'fry' in self.Steps:
@@ -223,6 +222,43 @@ class RecipeInfo():
         if 'soy sauce' not in [ing.name for ing in self.Ingredients]:
             self.Ingredients.append(Ingredient("2 teaspoons soy sauce"))
             self.Steps.append("Gently add soy sauce spread evenly across final dish.")
+
+    def makeTurkish(self):
+        self.name = "Turkish " + self.name
+
+        # switch out side for bulgur pilaf
+        for side_ing, bulgur in TURKISH_SIDES.items():
+            self.transformIngredient(side_ing, bulgur, 1, (lambda ing: side_ing in ing.name))
+
+        # switch out common spices and herbs
+        for spice_ing, spice_alt in TURKISH_SPICES.items():
+            self.transformIngredient(spice_ing, spice_alt, 1, (lambda ing: spice_ing in ing.name))
+
+        ing_set = set([ing.name for ing in self.Ingredients])
+        meats_set = set(MEAT_SUBSTITUTES)
+
+        # try to skewer if meat is involved
+        if ing_set.intersection(meats_set):
+            self.Steps.append("When meats are nearly done, thread them onto skewers. Leave 1.5 inches open for handling")
+            self.Steps.append("Give a final grilling for no more than 2 minutes to lightly crisp the meats")
+            self.name = self.name + ' Kebab'
+
+        # add baharat seasoning
+        if 'baharat' not in [ing.name for ing in self.Ingredients]:
+            self.Ingredients.append(Ingredient("1 teaspoon baharat seasoning"))
+            self.Steps.append("Gently add baharat seasoning evenly across final dish.")
+
+        if 'skewers' not in self.Tools:
+            self.Tools.append("1-5 Metal or Bamboo skewers")
+
+
+
+
+
+
+
+
+
 
     def __repr__(self):
         return f"{self.name}"
