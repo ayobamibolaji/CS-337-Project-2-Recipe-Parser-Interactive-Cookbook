@@ -9,6 +9,7 @@ test_methods = []
 
 def main():
 
+
     for i, url in enumerate(lst_of_urls[:]):
         print("Checked {}/{} URLs".format(i+1, len(lst_of_urls)), end='\r')
         rcp = RecipeInfo(url)
@@ -28,7 +29,8 @@ def askForTransformation():
           "\n6) Make it vegetarian"+
           "\n7) Make it un-vegetarian"+
           "\n8) Convert to Asian cuisine"+
-          "\n9) Quit")
+          "\n9) Convert to Turkish cuisine"+
+          "\n10) Quit")
     transformation = input()
     if transformation == "1":
         print(str(rcp))
@@ -54,6 +56,9 @@ def askForTransformation():
         rcp.makeAsian()
         print("We made the recipe Asian style. Here you go!")
     elif transformation == "9":
+        rcp.makeTurkish()
+        print("We made the recipe Turkish style. Here you go!")
+    elif transformation == "10":
         print("Goodbye.")
         quit()
     else:
@@ -66,7 +71,11 @@ def askForTransformation():
 
 if __name__ == "__main__":
     if len(sys.argv) <= 1:
-        main()
+        rcp = RecipeInfo("https://www.allrecipes.com/recipe/16354/easy-meatloaf/")
+        rcp.healthify()
+        print(str(rcp))
+
+        # main()
         print("hey")
     elif sys.argv[1].startswith("https://www.allrecipes.com"):
         url = sys.argv[1]
