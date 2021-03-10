@@ -128,6 +128,7 @@ class RecipeInfo():
         # see if the ingredient is in the recipe
         for ing in self.Ingredients:
             if condition(ing):
+                old_name = ing.name.split(" ")
                 if isinstance(new, str):
                     ing.name = new
                     if ing.quantity is not None:
@@ -141,11 +142,12 @@ class RecipeInfo():
                     ing.preparation = new.preparation
                 # regex replace the ingredient name in the steps.
                 for idx, step in enumerate(self.Steps):
-                    pattern = re.compile(old, re.IGNORECASE)
-                    if isinstance(new, str):
-                        self.Steps[idx] = pattern.sub(new, step)
-                    else:
-                        self.Steps[idx] = pattern.sub(new.name, step)
+                    for old_part in old_name:
+                        pattern = re.compile(old_part, re.IGNORECASE)
+                        if isinstance(new, str):
+                            self.Steps[idx] = pattern.sub(new, step)
+                        else:
+                            self.Steps[idx] = pattern.sub(new.name, step)
 
     def healthify(self):
         # Mark the title as healthy
@@ -168,7 +170,7 @@ class RecipeInfo():
         for healthy_ing, unhealthy_alt in HEALTHY_SUBSTITUTES.items():
             self.transformIngredient(healthy_ing, unhealthy_alt[0], unhealthy_alt[1],
                                      (lambda ing: healthy_ing in ing.name))
-        self.transformIngredient("milk", "cream", 1, (lambda ing: "milk" in ing.name and "milk chocolate" not in ing.name))
+        self.transformIngredient("milk", Ingredient(name="cream"), 1, (lambda ing: "milk" in ing.name and "milk chocolate" not in ing.name))
         self.transformIngredient("olive oil", Ingredient(name="butter"), 1,
                                  (lambda ing: "oil" in ing.name and "olive" in ing.descriptors))
 
