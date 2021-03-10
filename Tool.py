@@ -17,24 +17,11 @@ class Tool():
         # pestle: likely combined with "mortar and"
         # pin: likely with rolling
         # substitute scoop with scooper
-        lst_of_tools = ['corer', 'cutter', 'spoon', 'knife', 'pan', 'whisk',
-                        'beanpot', 'pot', 'skillet', 'cup', 'mug', 'colander',
-                        'bowl', 'tray', 'slicer', 'pitter', 'cleaver', 'corkscrew',
-                        'board', 'poacher', 'separator', 'timer', 'scale',
-                        'sifter', 'funnel', 'grater', 'strainer', 'chopper',
-                        'dipper', 'ladle', 'squeezer', 'juicer', 'mandoline',
-                        'grinder', 'tenderiser', 'thermometer', 'baller',
-                        'pestle', 'nutcracker', 'glove', 'blender', 'brush',
-                        'peeler', 'masher', 'ricer', 'pin', 'shaker', 'sieve',
-                        'scoop', 'spatula', 'tamis', 'tongs', 'zester',
-                        'scooper', 'processor', 'process', 'blend', 'saute',
-                        'oven', 'cooker', 'saucepan', 'pressure', 'fryer']
-
         decomposed_step = nlp(self.step)  # decompose the step with spacy
 
         def in_tools(token_text):
             lowercase_text = token_text.lower()
-            if lowercase_text in lst_of_tools:
+            if lowercase_text in TOOLS:
                 if lowercase_text == 'board':
                     return "chopping or cutting board"
                 if lowercase_text == 'poacher' or lowercase_text == 'separator':
