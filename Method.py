@@ -22,7 +22,8 @@ class Method():
     # accepts a recipe instruction/step as input
     def __init__(self, step):
         self.step = step
-        self.methods = []
+        self.primary_methods = []
+        self.secondary_methods = []
 
         self.getMethods()
     def __str__(self):
@@ -35,13 +36,55 @@ class Method():
 
     def getMethods(self):
 
-        # list of primary cooking methods
-        lst_of_methods = ['bake', 'fry', 'roast', 'grill', 'steam',
-                           'poach', 'simmer', 'boil', 'blanch', 'braise',
-                           'stew', 'broil', 'fold', 'fillet', 'baste', 'cure',
-                           'season', 'heat', 'preheat', 'stir', 'mix', 'whisking',
-                          'stirring', 'broiling', 'boiling', 'simmering',
-                          'frying', 'mixing', 'rub']
+        # dict of primary cooking methods
+        # 1 - primary
+        # 2 - secondary
+        dict_of_methods = {
+            'bake': 1,
+            'whisk': 2,
+            'fry': 1,
+            'roast': 1,
+            'grill': 1,
+            'steam': 1,
+            'poach': 2,
+            'simmer': 2,
+            'boil': 1,
+            'blanch': 2,
+            'braise': 2,
+            'stew': 2,
+            'broil': 2,
+            'fold': 2,
+            'fillet': 2,
+            'baste': 2,
+            'cure': 2,
+            'season': 1,
+            'heat': 1,
+            'preheat': 1,
+            'stir': 1,
+            'mix': 1,
+            'whisking': 2,
+            'stirring': 1,
+            'broiling': 2,
+            'boiling': 1,
+            'simmering': 2,
+            'frying': 1,
+            'mixing': 1,
+            'rub': 2,
+            'bring': 2,
+            'place': 2,
+            'use': 2,
+            'remove': 2,
+            'add': 2,
+            'combine': 2,
+            'continue': 2,
+            'slip': 2,
+            'set': 2,
+            'return': 2,
+            'serve': 2,
+            'transfer': 2,
+            'take': 2,
+            'save': 2,
+        }
 
         def in_methods(token_text):
             lowercase_text = token_text.lower()
@@ -58,7 +101,7 @@ class Method():
             if lowercase_text == "frying":
                 return "fry"
             else:
-                if lowercase_text in lst_of_methods:
+                if lowercase_text in dict_of_methods:
                     return lowercase_text
             return None
 
@@ -74,11 +117,20 @@ class Method():
 
         decomposed_step = nlp(self.step)  # decompose the step with spacy
 
+        if "deep fry" in self.step:
+            self.primary_methods.append("deep fry")
+        if "air fry" in self.step:
+            self.primary_methods.append("air fry")
+
         for token in decomposed_step:  # looping through each token in the step
             # if we find one of the primary cooking methods
             found_method = in_methods(token.text)
             if found_method:
-                self.methods.append(found_method)
+                if dict_of_methods[found_method] == 1:
+                    self.primary_methods.append(found_method)
+                else:
+                    self.secondary_methods.append(found_method)
+
 
     def __repr__(self):
         return self.methods[0]
