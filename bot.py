@@ -1,9 +1,11 @@
 from bot_helpers import *
 from RecipeInfo import RecipeInfo
 from tabulate import tabulate
+import random
+from NLP import mostSimilar
 
 def initiate_bot():
-    print("Hello! I am RecipeBot3000.")
+    print(f"\nHello! I am {random.choice(bot_names)}.")
     default()
 
 def default():
@@ -15,7 +17,7 @@ def default():
 
 def process_command(command):
     parsed_cmd, num, query = parseCommand(command)
-    # parsed_cmd = mostSimilar(yadda yadda) <- NLP stuff
+    parsed_cmd = mostSimilar(parsed_cmd, [cmd for cmd in commands])[0]
     fun = commands[parsed_cmd] if parsed_cmd in commands else None
 
     if isinstance(fun, bool) or fun == None:
@@ -31,6 +33,7 @@ def initiate_recipe(N, Q):
     # Starting a new recipe
     else:
         p_q = input("You want to walk through a different recipe?\n")
+        p_q = mostSimilar(p_q, [cmd for cmd in commands])[0]
         ans = commands[p_q] if p_q in commands else None
         if isinstance(ans, bool):
             if ans:
@@ -49,14 +52,16 @@ def get_recipe():
     command = input("Sure thing. Please specify an AllRecipes.com URL:\n")
     if not command.startswith("https://www.allrecipes.com/recipe/"):
         print("Hmmm, that's not a valid AllRecipes.com URL...")
-        default()
+        command = input("What would you like to do?\n")
+        process_command(command)
     else:
         try:
             rcp = RecipeInfo(command)
             state["curr_recipe"] = rcp
         except:
             print("Hmm, that URL didn't quite work.")
-            default()
+            command = input("What would you like to do?\n")
+            process_command(command)
 
 def show_rcp_ingredients(N, Q):
     if state["curr_recipe"] is None:
@@ -101,12 +106,14 @@ def next_step(N, Q):
 
 def ask_next_step():
     p_q = input("Should I continue to the next step?\n")
+    p_q = mostSimilar(p_q, [cmd for cmd in commands])[0]
     ans = commands[p_q] if p_q in commands else None
     if isinstance(ans, bool):
         if ans:
             next_step(False, False)
         else:
-            default()
+            command = input("What would you like to do then?\n")
+            process_command(command)
     else:
         process_command(p_q)
 
@@ -130,16 +137,64 @@ def previous_step(N, Q):
             process_command(next_cmd)
 
 
+def jump_to_step(N, Q):
+    curr_step = state["curr_step"]
+    if state["curr_recipe"] is None:
+        print("We're not working with any recipe yet!")
+        default()
+    elif curr_step is None:
+        print("We're not going over the steps yet!")
+        default()
+    else:
+        rcp = state["curr_recipe"]
+        if N > len(rcp.Steps):
+            print(f"There are only {len(rcp.Steps)} steps in this recipe!")
+            default()
+        elif N == -1:
+            curr_step = len(rcp.Steps) -1
+            state["curr_step"] = curr_step
+            next_cmd = input(f"Step {curr_step + 1} is: " + rcp.Steps[curr_step] + '\n')
+            process_command(next_cmd)
+        elif N < 1:
+            print("There aren't any step numbers less than 1!")
+            default()
+        else:
+            curr_step = N - 1
+            state["curr_step"] = curr_step
+            next_cmd = input(f"Step {curr_step + 1} is: " + rcp.Steps[curr_step] + '\n')
+            process_command(next_cmd)
 
+def rewind_steps(N, Q):
+    curr_step = state["curr_step"]
+    if state["curr_recipe"] is None:
+        print("We're not working with any recipe yet!")
+        default()
+    elif curr_step is None:
+        print("We're not going over the steps yet!")
+        default()
+    else: 
+        jump_to_step(state["curr_step"] + 1 - N, Q)
 
+def forward_steps(N, Q):
+    curr_step = state["curr_step"]
+    if state["curr_recipe"] is None:
+        print("We're not working with any recipe yet!")
+        default()
+    elif curr_step is None:
+        print("We're not going over the steps yet!")
+        default()
+    else: 
+        jump_to_step(state["curr_step"] + 1 + N, Q)
 
+def quit_bot(N, Q):
+    print("Alrighty, goodbye!")
+    quit()
 
 
 
 state = {
     "curr_recipe": None,
-    "curr_step": None,
-    "polar_question": False
+    "curr_step": None
 }
 
 commands = {
@@ -155,12 +210,14 @@ commands = {
     "no": False,
     "go to the previous step": previous_step,
     "go to the next step": next_step,
-    # "go back N steps": rewind_steps,
-    # "go forward N steps": forward_steps,
-    # "take me to the N step": jump_to_step,
-    # "take me to step N": jump_to_step,
+    "go back NUMBER steps": rewind_steps,
+    "go forward NUMBER steps": forward_steps,
+    "take me to the NUMBER step": jump_to_step, 
+    "take me to step NUMBER": jump_to_step,
     # "how do i do that": vague_query,
-    # "how do i QUERY": specific_query
+    # "how do i QUERY": specific_query,
+    "that will be all": quit_bot,
+    "goodbye": quit_bot
 }
 
 initiate_bot()
