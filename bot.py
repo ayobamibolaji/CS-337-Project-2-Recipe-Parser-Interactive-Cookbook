@@ -147,6 +147,9 @@ def jump_to_step(N, Q):
         default()
     else:
         rcp = state["curr_recipe"]
+        if not N:
+            print("That is not a valid step number...")
+            default()
         if N > len(rcp.Steps):
             print(f"There are only {len(rcp.Steps)} steps in this recipe!")
             default()
