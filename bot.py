@@ -194,15 +194,22 @@ def specific_query(N, Q):
     Q.insert(1, "to")
     google_url = "https://www.google.com/search?q=" + "+".join(Q)
     youtube_url = "https://www.youtube.com/results?search_query=" + "+".join(Q)
-    print("I found these links for you:")
+    print("No worries. I found these links for you:")
     print(google_url)
     print(youtube_url)
     default()
 
 def vague_query(N, Q):
-    print()
-    print("Sorry, idk ¯\_(ツ)_/¯ ")
-    default()
+    if state["curr_recipe"] is None:
+        next_cmd = input("Can you rephrase that?")
+        process_command(next_cmd)
+    elif state["curr_step"] is None:
+        next_cmd = input("I'm not sure I understand. Would you like to go over the steps?")
+        process_command(next_cmd)
+    else:
+        print("Sorry, idk ¯\_(ツ)_/¯ ")
+        default()
+
 
 def quit_bot(N, Q):
     print("Alrighty, goodbye!")

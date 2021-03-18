@@ -43,9 +43,9 @@ def parseCommand(cmd):
 
     # Extract query if the command is the "how do I..." command
     # if split_text[0] == "how" and not text == "how do i do that"
-    if text.startswith("how do i do that"):
+    if "how do i do that" in text:
         return ("how do i do that", num, "how do i do that")
-    if text.startswith("how do i"):
+    if "how do i" in text:
         query = split_text[3:]
         main_cmd = "how do i QUERY"
         text = "how do i QUERY"
