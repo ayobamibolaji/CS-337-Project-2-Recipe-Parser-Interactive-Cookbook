@@ -86,6 +86,7 @@ def show_rcp_methods(N,Q):
         print(f"Alright, here is the methods list for \"{rcp.name}\":")
         print(tabulate([[method] for method in rcp.primaryMethods],
                        headers=["Primary Methods"]))
+        print("\n")
         print(tabulate([[method] for method in rcp.secondaryMethods],
                        headers=["Secondary Methods"]))
 
@@ -168,6 +169,104 @@ def previous_step(N, Q):
             next_cmd = input(f"Step {curr_step + 1} is: " + rcp.Steps[curr_step] + '\n')
             process_command(next_cmd)
 
+
+def show_step_ingredients(N, Q):
+    curr_step = state["curr_step"]
+    if state["curr_recipe"] is None:
+        print("We're not working with any recipe yet!")
+        default()
+    elif curr_step is None:
+        print("We're not going over the steps yet!")
+        default()
+    else:
+        ingredients = []
+        rcp = state["curr_recipe"]
+        text_of_step = rcp.Steps[curr_step]
+
+        for ingredient in rcp.Ingredients:
+            if ingredient.name in text_of_step:
+                ingredients.append(ingredient.name)
+
+        if ingredients:
+            print(tabulate([[ingredient] for ingredient in ingredients],
+                           headers=[f"Step {curr_step + 1}'s Ingredients"]))
+        else:
+            print("There aren't any ingredients in this step!")
+
+        default()
+
+def show_step_tools(N, Q):
+    curr_step = state["curr_step"]
+    if state["curr_recipe"] is None:
+        print("We're not working with any recipe yet!")
+        default()
+    elif curr_step is None:
+        print("We're not going over the steps yet!")
+        default()
+    else:
+        tools = []
+        rcp = state["curr_recipe"]
+        text_of_step = rcp.Steps[curr_step]
+
+        for tool in rcp.Tools:
+            if tool in text_of_step:
+                tools.append(tool)
+
+        # checking common tools in case they're inferred
+        # in step, like "bake at 350", tool should be oven
+        if "Bake" in text_of_step or "bake" in text_of_step and "oven" not in tools:
+            tools.append("oven")
+        if "Boil" in text_of_step or "boil" in text_of_step and "pot" not in tools:
+            tools.append("pot")
+        if "Fry" in text_of_step or "fry" in text_of_step and "pan" not in tools:
+            tools.append("pan")
+        if "Stir" in text_of_step or "stir" in text_of_step and "ladle" not in tools:
+            tools.append("ladle")
+
+        if tools:
+            print(tabulate([[tool] for tool in tools],
+                           headers=[f"Step {curr_step + 1}'s Tools"]))
+        else:
+            print("There aren't tools in this step!")
+
+        default()
+
+def show_step_methods(N, Q):
+    curr_step = state["curr_step"]
+    if state["curr_recipe"] is None:
+        print("We're not working with any recipe yet!")
+        default()
+    elif curr_step is None:
+        print("We're not going over the steps yet!")
+        default()
+    else:
+        pri_methods = []
+        sec_methods = []
+        rcp = state["curr_recipe"]
+        text_of_step = rcp.Steps[curr_step]
+
+        for method in rcp.primaryMethods:
+            if method in text_of_step:
+                pri_methods.append(method)
+
+        for method in rcp.secondaryMethods:
+            if method in text_of_step:
+                sec_methods.append(method)
+
+        if pri_methods:
+            print(tabulate([[method] for method in pri_methods],
+                           headers=[f"Step {curr_step + 1}'s Primary Methods"]))
+            print("\n")
+        else:
+            print("There aren't any primary methods in this step!")
+
+        if sec_methods:
+            print(tabulate([[method] for method in sec_methods],
+                           headers=[f"Step {curr_step + 1}'s Secondary Methods"]))
+        else:
+            print("There aren't any secondary methods in this step!")
+
+        default()
 
 def jump_to_step(N, Q):
     curr_step = state["curr_step"]
@@ -260,9 +359,9 @@ commands = {
     "go over steps": iterate_rcp_steps,
     "go over list of tools": show_rcp_tools,
     "go over list of methods": show_rcp_methods,
-    # "what ingredients are used in this step": show_step_ingredients,
-    # "what tools are used in this step": show_step_tools,
-    # "what methods are used in this step": show_step_methods,
+    "what ingredients are used in this step": show_step_ingredients,
+    "what tools are used in this step": show_step_tools,
+    "what methods are used in this step": show_step_methods,
     "yes": True,
     "no": False,
     "go to the previous step": previous_step,
