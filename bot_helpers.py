@@ -41,12 +41,21 @@ def parseCommand(cmd):
     text = cmd.lower()
     split_text = text.split()
 
+    # Extract query if the command is the "how do I..." command
+    # if split_text[0] == "how" and not text == "how do i do that"
+    if text.startswith("how do i do that"):
+        return ("how do i do that", num, "how do i do that")
+    if text.startswith("how do i"):
+        query = split_text[3:]
+        main_cmd = "how do i QUERY"
+        text = "how do i QUERY"
+
     # Extract any numbers in text (should only be one in the command)
     for word in split_text:
         if word.isdigit() or word in ordinals:
             num = word
     
-    # Replace the occurance of 'num' with 'N'
+    # Replace the occurrence of 'num' with 'N'
     main_cmd = text.replace(num, "NUMBER") if num else text
 
     if num:
@@ -54,10 +63,6 @@ def parseCommand(cmd):
             num = int(num)
         else:
             num = ordinals[num]
-
-    # Extract query if the command is the "how do I..." command
-    # if split_text[0] == "how" and not text == "how do i do that"
-
 
     return (main_cmd, num, query)
 

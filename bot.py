@@ -189,6 +189,20 @@ def forward_steps(N, Q):
     else: 
         jump_to_step(state["curr_step"] + 1 + N, Q)
 
+def specific_query(N, Q):
+    Q.insert(0, "how")
+    Q.insert(1, "to")
+    google_url = "https://www.google.com/search?q=" + "+".join(Q)
+    youtube_url = "https://www.youtube.com/results?search_query=" + "+".join(Q)
+    print("I found these links for you:")
+    print(google_url)
+    print(youtube_url)
+    default()
+
+def vague_query(N, Q):
+    print("Sorry, idk ¯\_(ツ)_/¯ ")
+    default()
+
 def quit_bot(N, Q):
     print("Alrighty, goodbye!")
     quit()
@@ -217,8 +231,8 @@ commands = {
     "go forward NUMBER steps": forward_steps,
     "take me to the NUMBER step": jump_to_step, 
     "take me to step NUMBER": jump_to_step,
-    # "how do i do that": vague_query,
-    # "how do i QUERY": specific_query,
+    "how do i do that": vague_query,
+    "how do i QUERY": specific_query,
     "that will be all": quit_bot,
     "goodbye": quit_bot
 }
