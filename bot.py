@@ -33,14 +33,16 @@ def initiate_recipe(N, Q):
     # Starting a new recipe
     else:
         p_q = input("You want to walk through a different recipe?\n")
-        p_q = mostSimilar(p_q, [cmd for cmd in commands])[0]
-        ans = commands[p_q] if p_q in commands else None
+        p_q_sim = mostSimilar(p_q_sim, [cmd for cmd in commands])[0]
+        ans = commands[p_q_sim] if p_q_sim in commands else None
         if isinstance(ans, bool):
             if ans:
                 get_recipe()
             else:
                 print("Alright, we'll stick with this one.")
                 default()
+        else:
+            process_command(p_q)
 
     # Next command
     state["curr_step"] = None
@@ -136,8 +138,8 @@ def next_step(N, Q):
 
 def ask_next_step():
     p_q = input("Should I continue to the next step?\n")
-    p_q = mostSimilar(p_q, [cmd for cmd in commands])[0]
-    ans = commands[p_q] if p_q in commands else None
+    p_q_sim = mostSimilar(p_q, [cmd for cmd in commands])[0]
+    ans = commands[p_q_sim] if p_q_sim in commands else None
     if isinstance(ans, bool):
         if ans:
             next_step(False, False)
@@ -219,6 +221,28 @@ def forward_steps(N, Q):
     else: 
         jump_to_step(state["curr_step"] + 1 + N, Q)
 
+def specific_query(N, Q):
+    Q.insert(0, "how")
+    Q.insert(1, "to")
+    google_url = "https://www.google.com/search?q=" + "+".join(Q)
+    youtube_url = "https://www.youtube.com/results?search_query=" + "+".join(Q)
+    print("No worries. I found these links for you:")
+    print(google_url)
+    print(youtube_url)
+    default()
+
+def vague_query(N, Q):
+    if state["curr_recipe"] is None:
+        next_cmd = input("Can you rephrase that?")
+        process_command(next_cmd)
+    elif state["curr_step"] is None:
+        next_cmd = input("I'm not sure I understand. Would you like to go over the steps?")
+        process_command(next_cmd)
+    else:
+        print("Sorry, idk ¯\_(ツ)_/¯ ")
+        default()
+
+
 def quit_bot(N, Q):
     print("Alrighty, goodbye!")
     quit()
@@ -247,8 +271,8 @@ commands = {
     "go forward NUMBER steps": forward_steps,
     "take me to the NUMBER step": jump_to_step, 
     "take me to step NUMBER": jump_to_step,
-    # "how do i do that": vague_query,
-    # "how do i QUERY": specific_query,
+    "how do i do that": vague_query,
+    "how do i QUERY": specific_query,
     "that will be all": quit_bot,
     "goodbye": quit_bot
 }
