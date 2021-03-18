@@ -344,14 +344,31 @@ def vague_query(N, Q):
         doc = DecomposedText(step)
         #doc.show()
         root = doc.getRoot()
-        topics = []
-        for token in doc.doc:
-            if token.dep_ == 'dobj':
-                topics.append(token.text.lower())
+        ingredients = []
+        for ingredient in rcp.Ingredients:
+            if ingredient.name in step:
+                ingredients.append(ingredient.name)
+        tools = []
+        for tool in rcp.Tools:
+            if tool in step:
+                tools.append(tool)
         #print(root)
-        if len(topics) == 0:
+        topics = []
+        if len(ingredients) + len(tools) == 0:
+            for token in doc.doc:
+                if token.dep_ == 'dobj':
+                    topics.append(token.text.lower())
+        if len(topics) + len(ingredients) + len(tools) == 0:
             topics = [child.text.lower() for child in list(root.children) if child.dep_ != "punct"]
         query = ["how", "to", root.text.lower()]
+        if len(ingredients) > 0:
+            query.append("with")
+            ingredients = ",+".join(ingredients)
+            query.append(ingredients)
+        if len(ingredients) == 0 and len(tools) > 0:
+            query.append("with")
+            tools = ",+".join(tools)
+            query.append(tools)
         query.extend(topics)
         google_url = "https://www.google.com/search?q=" + "+".join(query)
         youtube_url = "https://www.youtube.com/results?search_query=" + "+".join(query)
