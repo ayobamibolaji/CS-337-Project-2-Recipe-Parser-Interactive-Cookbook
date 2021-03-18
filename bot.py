@@ -1,4 +1,5 @@
 from bot_helpers import *
+from DecomposedText import DecomposedText
 from RecipeInfo import RecipeInfo
 from tabulate import tabulate
 import random
@@ -209,7 +210,17 @@ def vague_query(N, Q):
         next_cmd = input("I'm not sure I understand. Would you like to go over the steps?")
         process_command(next_cmd)
     else:
-        print("Sorry, idk ¯\_(ツ)_/¯ ")
+        rcp = state["curr_recipe"]
+        step = rcp.Steps[state["curr_step"]]
+        doc = DecomposedText(step)
+        doc.show()
+        root = doc.getRoot
+        topic = doc.getToken(root).children[0]
+        google_url = "https://www.google.com/search?q=" + "+" + root + "+" + topic
+        youtube_url = "https://www.youtube.com/results?search_query=" + "+" + root + "+" + topic
+        print("No worries. I found these links for you:")
+        print(google_url)
+        print(youtube_url)
         default()
 
 
@@ -244,7 +255,9 @@ commands = {
     "how do i do that": vague_query,
     "how do i QUERY": specific_query,
     "that will be all": quit_bot,
-    "goodbye": quit_bot
+    "goodbye": quit_bot,
+    "exit": quit_bot,
+    "quit": quit_bot
 }
 
 initiate_bot()
