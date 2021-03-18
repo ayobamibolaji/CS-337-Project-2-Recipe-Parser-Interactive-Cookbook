@@ -74,6 +74,36 @@ def show_rcp_ingredients(N, Q):
                        headers=['Quantity', "Measurement", 'Name', "Descriptors", "Preparation"]))
         default()
 
+
+def show_rcp_methods(N,Q):
+    if state["curr_recipe"] is None:
+        print("We're not working with any recipe yet!")
+        default()
+    else:
+        rcp = state["curr_recipe"]
+        print(f"Alright, here is the methods list for \"{rcp.name}\":")
+        print(tabulate([[method] for method in rcp.primaryMethods],
+                       headers=["Primary Methods"]))
+        print(tabulate([[method] for method in rcp.secondaryMethods],
+                       headers=["Secondary Methods"]))
+
+        default()
+
+
+def show_rcp_tools(N,Q):
+    if state["curr_recipe"] is None:
+        print("We're not working with any recipe yet!")
+        default()
+    else:
+        rcp = state["curr_recipe"]
+        print(f"Alright, here is the tools list for \"{rcp.name}\":")
+        print(tabulate([[tool] for tool in rcp.Tools],
+                       headers=["Tools"]))
+        
+        default()
+
+
+
 def iterate_rcp_steps(N, Q):
     if state["curr_recipe"] is None:
         print("We're not working with any recipe yet!")
@@ -204,8 +234,8 @@ commands = {
     "walk through a recipe": initiate_recipe,
     "go over ingredients list": show_rcp_ingredients,
     "go over steps": iterate_rcp_steps,
-    # "go over list of tools": show_rcp_tools,
-    # "go over list of methods": show_rcp_methods,
+    "go over list of tools": show_rcp_tools,
+    "go over list of methods": show_rcp_methods,
     # "what ingredients are used in this step": show_step_ingredients,
     # "what tools are used in this step": show_step_tools,
     # "what methods are used in this step": show_step_methods,
