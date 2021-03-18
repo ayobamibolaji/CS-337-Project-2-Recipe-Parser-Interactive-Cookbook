@@ -46,7 +46,7 @@ def parseCommand(cmd):
     if "how do i do that" in text:
         return ("how do i do that", num, "how do i do that")
     if "how do i" in text:
-        query = split_text[3:]
+        query = text[text.find("how do i") + len("how do i") :].split()
         main_cmd = "how do i QUERY"
         text = "how do i QUERY"
 
