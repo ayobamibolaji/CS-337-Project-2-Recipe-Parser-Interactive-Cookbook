@@ -200,6 +200,7 @@ def specific_query(N, Q):
     default()
 
 def vague_query(N, Q):
+    print()
     print("Sorry, idk ¯\_(ツ)_/¯ ")
     default()
 

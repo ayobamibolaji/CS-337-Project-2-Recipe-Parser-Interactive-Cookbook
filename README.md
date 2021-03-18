@@ -1,4 +1,4 @@
-# CS 337 Project 2: Recipe Parser and Transformer
+# CS 337 Project 2 and 3: Recipe Parser, Transformer, and Conversational Interface
 ## Installation:
 ```
 pip install -U pip setuptools wheel
@@ -6,7 +6,11 @@ pip install -U spacy
 python -m spacy download en_core_web_sm
 pip install -r requirements.txt
 ```
-## Run code:
+## Run code for conversational interface:
+```
+python bot.py
+```
+## Run code for parser and transformer:
 ```
 python main.py custom
 ```
