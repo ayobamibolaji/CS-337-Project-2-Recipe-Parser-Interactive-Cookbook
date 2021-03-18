@@ -342,11 +342,19 @@ def vague_query(N, Q):
         rcp = state["curr_recipe"]
         step = rcp.Steps[state["curr_step"]]
         doc = DecomposedText(step)
-        doc.show()
-        root = doc.getRoot
-        topic = doc.getToken(root).children[0]
-        google_url = "https://www.google.com/search?q=" + "+" + root + "+" + topic
-        youtube_url = "https://www.youtube.com/results?search_query=" + "+" + root + "+" + topic
+        #doc.show()
+        root = doc.getRoot()
+        topics = []
+        for token in doc.doc:
+            if token.dep_ == 'dobj':
+                topics.append(token.text.lower())
+        #print(root)
+        if len(topics) == 0:
+            topics = [child.text.lower() for child in list(root.children) if child.dep_ != "punct"]
+        query = ["how", "to", root.text.lower()]
+        query.extend(topics)
+        google_url = "https://www.google.com/search?q=" + "+".join(query)
+        youtube_url = "https://www.youtube.com/results?search_query=" + "+".join(query)
         print("No worries. I found these links for you:")
         print(google_url)
         print(youtube_url)
