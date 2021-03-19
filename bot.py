@@ -54,7 +54,7 @@ def initiate_recipe(N, Q):
     process_command(command)
     
 def get_recipe():
-    command = input("Sure thing. Please specify an AllRecipes.com URL:\n")
+    command = input("Sure thing. Please specify an AllRecipes.com URL:\n").strip()
     if not command.startswith("https://www.allrecipes.com/recipe/"):
         print("Hmmm, that's not a valid AllRecipes.com URL...")
         command = input("What would you like to do?\n")
@@ -370,7 +370,7 @@ def vague_query(N, Q):
         else:
             Text = DecomposedText(state["curr_recipe"].Steps[state["curr_step"]].lower())
             root = Text.getRoot()
-            Q = proceedingWords(root, pos=["NOUN", "VERB", "ADV", "DET", "CCONJ", "ADP", "PART", "ADJ"])
+            Q = root.text + " " + proceedingWords(root, pos=["NOUN", "VERB", "ADV", "DET", "CCONJ", "ADP", "PART", "ADJ"])
             Q = ("how to " + Q).split()
             google_url = "https://www.google.com/search?q=" + "+".join(Q)
             youtube_url = "https://www.youtube.com/results?search_query=" + "+".join(Q)

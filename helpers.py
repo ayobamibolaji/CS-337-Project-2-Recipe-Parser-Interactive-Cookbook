@@ -355,7 +355,7 @@ def proceedingWords(token, pos=['NOUN', 'PROPN'], restrictions=[]):
         else:
             break
 
-    return token.text + words
+    return words
 
 def tokenHasProperties(token, pos="", tag="", dep="", parent="", child=[]):
     if not token: return False
