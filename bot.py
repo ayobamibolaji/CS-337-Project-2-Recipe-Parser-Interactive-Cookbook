@@ -142,6 +142,8 @@ def next_step(N, Q):
 
 def ask_next_step():
     p_q = input("Should I continue to the next step?\n")
+    p_q = p_q.lower()
+    p_q = "".join(c for c in p_q if c not in ('!', '.', ':', "-", ";", "'", "?", ",", "(", ")", '"'))
     p_q_sim = mostSimilar(p_q, [cmd for cmd in commands])[0]
     ans = commands[p_q_sim] if p_q_sim in commands else None
     if isinstance(ans, bool):
@@ -415,7 +417,8 @@ commands = {
     "yes": True,
     "yes please": True,
     "no": False,
-    "no thank": False,
+    "no thank you": False,
+    "no thanks": False,
     "go to the previous step": previous_step,
     "go to the next step": next_step,
     "go back NUMBER steps": rewind_steps,
