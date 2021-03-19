@@ -39,7 +39,9 @@ def parseCommand(cmd):
     query = False
 
     text = cmd.lower()
+    text = "".join(c for c in text if c not in ('!', '.', ':', "-", ";", "'", "?", ",", "(", ")", '"'))
     split_text = text.split()
+
 
     # Extract query if the command is the "how do I..." command
     # if split_text[0] == "how" and not text == "how do i do that"

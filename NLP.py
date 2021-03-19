@@ -45,7 +45,6 @@ word_replacements = {
     "skip": "go forward",
     "that's all": "that will be all",
     "show me": "go over",
-    "please": ""
 }
 
 
