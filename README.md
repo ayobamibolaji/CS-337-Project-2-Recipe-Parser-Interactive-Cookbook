@@ -10,6 +10,31 @@ pip install -r requirements.txt
 ```
 python bot.py
 ```
+### Possible commands:
+"walk through a recipe"
+"go over ingredients list"
+"go over steps"
+"go over list of tools"
+"go over list of methods"
+"what ingredients are used in this step"
+"what tools are used in this step"
+"what methods are used in this step"
+"go to the previous step"
+"go to the next step"
+"go back NUMBER steps"
+"go forward NUMBER steps"
+"take me to the NUMBER step"
+"take me to step NUMBER"
+"repeat the step"
+"how do i do that"
+"how do i QUERY"
+"that will be all"
+"yes"
+"no"
+"goodbye"
+"exit"
+"quit"
+
 ## Run code for parser and transformer:
 ```
 python main.py custom
