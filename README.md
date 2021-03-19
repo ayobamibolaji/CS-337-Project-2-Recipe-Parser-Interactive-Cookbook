@@ -10,7 +10,7 @@ pip install -r requirements.txt
 ```
 python bot.py
 ```
-### Possible commands:
+### Possible commands (you are able to paraphrase these commands when chatting with the bot):
 "walk through a recipe"
 
 "go over ingredients list"
