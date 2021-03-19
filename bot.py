@@ -391,6 +391,10 @@ def quit_bot(N, Q):
     print("Alrighty, goodbye!")
     quit()
 
+def thanks(N, Q):
+    print("No problem!")
+    default()
+
 
 
 state = {
@@ -404,6 +408,7 @@ commands = {
     "go over steps": iterate_rcp_steps,
     "go over list of tools": show_rcp_tools,
     "go over list of methods": show_rcp_methods,
+    "thanks": thanks,
     "what ingredients are used in this step": show_step_ingredients,
     "what tools are used in this step": show_step_tools,
     "what methods are used in this step": show_step_methods,
