@@ -350,12 +350,12 @@ def proceedingWords(token, pos=['NOUN', 'PROPN'], restrictions=[]):
     while True:
         nxtToken = nextToken(currToken)
         if nxtToken and nxtToken.pos_ in pos and nxtToken.text not in restrictions:
-            words = nxtToken.text + " " + words
+            words = words + " " + nxtToken.text
             currToken = nxtToken
         else:
             break
 
-    return words
+    return token.text + words
 
 def tokenHasProperties(token, pos="", tag="", dep="", parent="", child=[]):
     if not token: return False

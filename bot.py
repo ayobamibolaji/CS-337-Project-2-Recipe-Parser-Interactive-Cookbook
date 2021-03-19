@@ -3,6 +3,8 @@ from RecipeInfo import RecipeInfo
 from tabulate import tabulate
 import random
 from NLP import mostSimilar
+from DecomposedText import DecomposedText
+from helpers import proceedingWords
 
 def initiate_bot():
     print(f"\nHello! I am {random.choice(bot_names)}.")
@@ -33,7 +35,7 @@ def initiate_recipe(N, Q):
     # Starting a new recipe
     else:
         p_q = input("You want to walk through a different recipe?\n")
-        p_q_sim = mostSimilar(p_q_sim, [cmd for cmd in commands])[0]
+        p_q_sim = mostSimilar(p_q, [cmd for cmd in commands])[0]
         ans = commands[p_q_sim] if p_q_sim in commands else None
         if isinstance(ans, bool):
             if ans:
@@ -181,7 +183,7 @@ def show_step_ingredients(N, Q):
     else:
         ingredients = []
         rcp = state["curr_recipe"]
-        text_of_step = rcp.Steps[curr_step]
+        text_of_step = rcp.Steps[curr_step].lower()
 
         for ingredient in rcp.Ingredients:
             if ingredient.name in text_of_step:
@@ -206,7 +208,7 @@ def show_step_tools(N, Q):
     else:
         tools = []
         rcp = state["curr_recipe"]
-        text_of_step = rcp.Steps[curr_step]
+        text_of_step = rcp.Steps[curr_step].lower()
 
         for tool in rcp.Tools:
             if tool in text_of_step:
@@ -243,7 +245,7 @@ def show_step_methods(N, Q):
         pri_methods = []
         sec_methods = []
         rcp = state["curr_recipe"]
-        text_of_step = rcp.Steps[curr_step]
+        text_of_step = rcp.Steps[curr_step].lower()
 
         for method in rcp.primaryMethods:
             if method in text_of_step:
@@ -338,7 +340,15 @@ def vague_query(N, Q):
         next_cmd = input("I'm not sure I understand. Would you like to go over the steps?")
         process_command(next_cmd)
     else:
-        print("Sorry, idk ¯\_(ツ)_/¯ ")
+        Text = DecomposedText(state["curr_recipe"].Steps[state["curr_step"]].lower())
+        root = Text.getRoot()
+        Q = proceedingWords(root, pos=["NOUN", "VERB", "ADV", "DET", "CCONJ", "ADP", "PART", "ADJ"])
+        Q = ("how to " + Q).split()
+        google_url = "https://www.google.com/search?q=" + "+".join(Q)
+        youtube_url = "https://www.youtube.com/results?search_query=" + "+".join(Q)
+        print("No worries. I found these links for you:")
+        print(google_url)
+        print(youtube_url)
         default()
 
 
