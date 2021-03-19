@@ -1,4 +1,5 @@
 from bot_helpers import *
+from DecomposedText import DecomposedText
 from RecipeInfo import RecipeInfo
 from tabulate import tabulate
 import random
@@ -322,6 +323,9 @@ def forward_steps(N, Q):
     else: 
         jump_to_step(state["curr_step"] + 1 + N, Q)
 
+def repeat_step(N, Q):
+    jump_to_step(state["curr_step"] + 1, Q)
+
 def specific_query(N, Q):
     Q.insert(0, "how")
     Q.insert(1, "to")
@@ -340,12 +344,43 @@ def vague_query(N, Q):
         next_cmd = input("I'm not sure I understand. Would you like to go over the steps?")
         process_command(next_cmd)
     else:
-        Text = DecomposedText(state["curr_recipe"].Steps[state["curr_step"]].lower())
-        root = Text.getRoot()
-        Q = proceedingWords(root, pos=["NOUN", "VERB", "ADV", "DET", "CCONJ", "ADP", "PART", "ADJ"])
-        Q = ("how to " + Q).split()
-        google_url = "https://www.google.com/search?q=" + "+".join(Q)
-        youtube_url = "https://www.youtube.com/results?search_query=" + "+".join(Q)
+        rcp = state["curr_recipe"]
+        step = rcp.Steps[state["curr_step"]]
+        doc = DecomposedText(step)
+        #doc.show()
+        root = doc.getRoot()
+        ingredients = []
+        for ingredient in rcp.Ingredients:
+            if ingredient.name in step:
+                ingredients.append(ingredient.name)
+        tools = []
+        for tool in rcp.Tools:
+            if tool in step:
+                tools.append(tool)
+        #print(root)
+        query = ["how", "to", root.text.lower()]
+        if len(ingredients) > 0:
+            query.append("using")
+            ingredients = ",+".join(ingredients)
+            query.append(ingredients)
+        elif len(ingredients) == 0 and len(tools) > 0:
+            query.append("using")
+            tools = ",+".join(tools)
+            query.append(tools)
+        else:
+            Text = DecomposedText(state["curr_recipe"].Steps[state["curr_step"]].lower())
+            root = Text.getRoot()
+            Q = proceedingWords(root, pos=["NOUN", "VERB", "ADV", "DET", "CCONJ", "ADP", "PART", "ADJ"])
+            Q = ("how to " + Q).split()
+            google_url = "https://www.google.com/search?q=" + "+".join(Q)
+            youtube_url = "https://www.youtube.com/results?search_query=" + "+".join(Q)
+            print("No worries. I found these links for you:")
+            print(google_url)
+            print(youtube_url)
+            default()
+        query = [x.replace(" ", "+") for x in query]
+        google_url = "https://www.google.com/search?q=" + "+".join(query)
+        youtube_url = "https://www.youtube.com/results?search_query=" + "+".join(query)
         print("No worries. I found these links for you:")
         print(google_url)
         print(youtube_url)
@@ -380,10 +415,13 @@ commands = {
     "go forward NUMBER steps": forward_steps,
     "take me to the NUMBER step": jump_to_step, 
     "take me to step NUMBER": jump_to_step,
+    "repeat the step": repeat_step,
     "how do i do that": vague_query,
     "how do i QUERY": specific_query,
     "that will be all": quit_bot,
-    "goodbye": quit_bot
+    "goodbye": quit_bot,
+    "exit": quit_bot,
+    "quit": quit_bot
 }
 
 initiate_bot()

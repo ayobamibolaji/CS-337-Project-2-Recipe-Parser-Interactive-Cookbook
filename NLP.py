@@ -76,6 +76,6 @@ def mostSimilar(str, lstOfStr):
         if score > bestScore:
             bestScore = score[0][0]
             mostSim = aStr
-    print((mostSim, bestScore))
+    # print((mostSim, bestScore))
     return (mostSim, bestScore) if bestScore > .5 else (str, 0)
 
